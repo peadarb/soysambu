@@ -17,17 +17,15 @@ mapview::mapview(s) +
   mapview::mapview(build) +
   mapview::mapview(adm)
 
-# Create a named list to store the sf layers
+# Create a list to store sf layers
 admin_areas_sf_list <- setNames(vector("list", nrow(adm)), adm$NAME_5)
 
-# Loop through each administrative area and store the buildings within it
+# Loop through each area and store buildings within it
 for (i in 1:nrow(adm)) {
   adm_area <- adm[i, ]
-  
-  # Use st_intersection to find buildings within the administrative area
+    # buildings within the area
   buildings_within_area <- st_intersection(build, adm_area)
-  
-  # Store the buildings in the list with the corresponding name
+    # buildings in a list
   admin_areas_sf_list[[i]] <- buildings_within_area
 }
 
@@ -44,5 +42,4 @@ mapview::mapview(s, alpha.regions = 0.1, color = "darkgreen", col.regions = "dar
   mapview::mapview(kiambogo, lwd = 0.1, col.regions = "darkblue") +
   mapview::mapview(elementaita, lwd = 0.1, col.regions = "orange") +
   mapview::mapview(nakuru_np, lwd = 0.1, col.regions = "yellow")
-
   
