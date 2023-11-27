@@ -42,4 +42,10 @@ mapview::mapview(s, alpha.regions = 0.1, color = "darkgreen", col.regions = "dar
   mapview::mapview(kiambogo, lwd = 0.1, col.regions = "darkblue") +
   mapview::mapview(elementaita, lwd = 0.1, col.regions = "orange") +
   mapview::mapview(nakuru_np, lwd = 0.1, col.regions = "yellow")
-  
+
+
+
+library(rnaturalearth)
+countries <- ne_countries()
+library(rnaturalearth)
+library(sp)  
