@@ -8,6 +8,8 @@ library(survey)
 library(srvyr, warn.conflicts = FALSE)
 library(sjPlot)
 library(dplyr)
+library(leaflet)
+
 ggsave <- function(..., bg = 'white') ggplot2::ggsave(..., bg = bg)
 
 ######################################################################################################################
@@ -16,159 +18,99 @@ ggsave <- function(..., bg = 'white') ggplot2::ggsave(..., bg = bg)
 #  -99 indicates don't know and these are converted to NA in continuous or "Don't know" in categorical   #######
 
 rm(list=ls())
-# bring in sheet ----------------------------------------------------------
-gs4_deauth()
-hhs<-googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1FA5UUiUtW6oHuHmQV6DGJs07dS8tWvm3XWQ_mME5MMI" , sheet = 1) %>% 
-  as.data.frame()
-saveRDS(hhs, "hhs_raw.rds")
+# # bring in sheet ----------------------------------------------------------
+# gs4_deauth()
+# hhs<-googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1FA5UUiUtW6oHuHmQV6DGJs07dS8tWvm3XWQ_mME5MMI" , sheet = 1) %>%
+#  as.data.frame()
+# hhs_codes <-googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1FA5UUiUtW6oHuHmQV6DGJs07dS8tWvm3XWQ_mME5MMI" , sheet = 4) %>%
+#  as.data.frame() %>%
+#  select(column_titles)
+# 
+# # transpose the column of codes to replace the header row
+# new_header <- as.character(hhs_codes$column_titles)
+# colnames(hhs) <- new_header
+# 
+# saveRDS(hhs, "hhs_raw.rds")
+
+
 ########################################################
 # set all data types correctly before importation
 ########################################################
+hhs <- readRDS("hhs_raw.rds")
 
-hhs$start <- lubridate::ymd_hms(hhs$start) # convert to date
-hhs$end <- lubridate::ymd_hms(hhs$end) # convert to date time
+hhs$start <- lubridate::ymd(hhs$start) # convert to date
+hhs$end <- lubridate::ymd(hhs$end) # convert to date time
 
-hhs2 <- hhs %>% 
-  rename(start = 1, end = 2, agreed = 8, gender = 17, edu = 20, m_child = 22, f_child = 23, m_adult = 24, f_adult = 25, sch_child = 26, int_phon = 27, norm_phon = 28, radio = 29, torch = 30, tv = 31, elec = 32, gen = 33, sola = 34, piki = 35, car = 36,
-         table = 37, sofa = 38, lat = 39, mpesa = 40, bank = 41, fuel = 42, roof = 43, wall = 44, mobility = 45, all_conserve = 47, conserve_lemek = 48, conserve_olchorro = 49, conserve_enonkishu = 50, conserve_mbokishi = 51,
-         conserve_enarau = 52, conserve_other = 53, land_size = 58, activity_before1 = 63, activity_before2 = 65, activity_before3 = 66, skip_meal_before = 67, wellbeing_before = 69, wellbeing_after = 70, activity_current1 = 72, activity_current2 = 73, activity_current3 = 74,
-         skip_meal_after = 75, occupation = 77, access_edu = 79, access_health = 80, access_elec = 81, access_water = 82, cow_before = 85, sheep_before = 86, goat_before = 87, donkey_before = 88, cow_now = 90, sheep_now = 91, goat_now = 92, donkey_now = 93, crop_yn = 104, crop_acre = 105, conserve_authority = 111,
-         agree_before = 112, agree_now = 113, graz_hhcons = 114, graz_rules = 115, graz_rules_help = 116, settle_rules = 117, settle_rules_help = 118, forest_rules = 119, forest_rules_help = 120, water_rules = 121, water_rules_help = 122,
-         wildlife_rules =123, wildlife_rules_help = 124, receive_income = 125, cons_payment = 127, hhnum_tourism = 128, hhnum_conserve = 129, income_informed = 130, influence = 132, transparency = 133, accountability = 134, women_power = 135, wild_perception = 137, wild_conf_cow = 140, wild_conf_shoat = 141, sample = 254) %>% # rename by index
-  mutate(id = row_number()) %>% 
-  filter(agreed == "Yes") 
-
-%>%
+hhs_agreed <- hhs %>% 
+  filter(agreed == "Yes") %>% 
+  select(-name_respondent) %>%
   mutate(
-    stype = case_when(
-      sample == "Mbokishi" ~ "mbo",
-      sample == "Enonkishu" ~ "enon",
-      sample == "Lemek" ~ "lem",
-      sample == "Ol Chorro" ~ "chor",
-      sample == "Outside" ~ "out")) %>% 
+    village = case_when(
+      village == "Soysambu Area" ~ "Soysambu North",
+      village == "Jolai1,2, Sleeping Warrior gate, Jolai gate" ~ "Soysambu South",
+      .default = as.character(village)))%>% 
   mutate(
-    fpc = case_when(
-      sample == "Mbokishi" ~ 48,
-      sample == "Enonkishu" ~ 27,
-      sample == "Lemek" ~ 213,
-      sample == "Ol Chorro" ~ 100,
-      sample == "Outside" ~ 26)) %>% 
-  mutate(fpc1 = 414) %>% 
-  mutate(
-    pw = case_when(
-      sample == "Mbokishi" ~ 2.086957, # 23 sampled out of 48
-      sample == "Enonkishu" ~ 3, # 9 sampled out of 27
-      sample == "Lemek" ~ 3.380952, # 63 sampled out of 213
-      sample == "Ol Chorro" ~ 5.263158, # 19 sampled out of 100
-      sample == "Outside" ~ 2.363636)) %>% # 11 sampled out of 26
-  mutate(more_conservancies = conserve_lemek + conserve_olchorro + conserve_enonkishu + conserve_mbokishi + conserve_enarau + conserve_other) %>% 
-  mutate(cow_before = replace(cow_before, cow_before == -99, NA)) %>% 
-  mutate(cow_now = replace(cow_now, cow_now == -99, NA)) %>% 
-  mutate(sheep_before = replace(sheep_before, sheep_before == -99, NA)) %>% 
-  mutate(sheep_now = replace(sheep_now, sheep_now == -99, NA)) %>% 
-  mutate(goat_before = replace(goat_before, goat_before == -99, NA)) %>% 
-  mutate(goat_now = replace(goat_now, goat_now == -99, NA)) %>% 
-  mutate(donkey_before = replace(donkey_before, donkey_before == -99, NA)) %>% 
-  mutate(donkey_now = replace(donkey_now, donkey_now == -99, NA)) %>% 
-  mutate(cow_before_tlu = cow_before*0.71) %>% #based on Grandin 1988
-  mutate(cow_now_tlu = cow_now*0.71) %>%   #based on Grandin 1988
-  mutate(sheep_before_tlu = sheep_before*0.17) %>% #based on Grandin 1988
-  mutate(sheep_now_tlu = sheep_now*0.17) %>% #based on Grandin 1988
-  mutate(goat_before_tlu = goat_before*0.17) %>% #based on Grandin 1988
-  mutate(goat_now_tlu = goat_now*0.17) %>% #based on Grandin 1988
-  mutate(total_before_tlu = cow_before_tlu+sheep_before_tlu+goat_before_tlu) %>% 
-  mutate(total_now_tlu = cow_now_tlu+sheep_now_tlu+goat_now_tlu) %>% 
+    dnum = case_when(
+      village == "Jogoo" ~ 4,
+      village == "Kelelwa" ~ 24,
+      village == "Muranga" ~ 11,
+      village == "Kapkures" ~ 26,
+      village == "Ngatta" ~ 38,
+      village == "Leleshwa" ~ 20,
+      village == "Oldubey" ~ 23, 
+      village == "Pema" ~ 13, 
+      village == "Kiambogo" ~ 15,
+      village == "Central Utut" ~ 25,
+      village == "Kiwanja Ndege Mkulima" ~ 14,
+      village == "Echeraria" ~ 21,
+      village == "Kapedo" ~ 29,
+      village == "Soysambu North" ~ 41,
+      village == "Mbaruk" ~ 22,
+      village == "Soysambu South" ~ 43,
+      village == "Mololine" ~ 17, 
+      village == "Kampi Turkana" ~ 39)) %>% 
+  mutate(snum = row_number()) %>% 
+  mutate(fpc1 = 44) %>% 
+  mutate(   
+    fpc2 = case_when(
+    village == "Jogoo" ~ 500,
+    village == "Kelelwa" ~ 282,
+    village == "Muranga" ~ 90,
+    village == "Kapkures" ~ 274,
+    village == "Ngatta" ~ 250,
+    village == "Leleshwa" ~ 80,
+    village == "Oldubey" ~ 260, 
+    village == "Pema" ~ 200, 
+    village == "Kiambogo" ~ 70,
+    village == "Central Utut" ~ 178,
+    village == "Kiwanja Ndege Mkulima" ~ 5000,
+    village == "Echeraria" ~ 300,
+    village == "Kapedo" ~ 189,
+    village == "Soysambu North" ~ 183,
+    village == "Mbaruk" ~ 500,
+    village == "Soysambu South" ~ 50,
+    village == "Mololine" ~ 80, 
+    village == "Kampi Turkana" ~ 117)) %>% 
+  mutate(stype = locat) %>% 
+# mutate(
+#    pw = fpc2/9, 10 or 11 depending on how many were sampled) # no need to do as can be infered. 
+ 
+  mutate(cattle_tlu = cattle*0.71) %>% #based on Grandin 1988
+  mutate(sheep_tlu = sheep*0.17) %>% #based on Grandin 1988
+  mutate(goat_tlu = goat*0.17) %>% #based on Grandin 1988
+  mutate(total_tlu = cattle_tlu+sheep_tlu+goat_tlu) %>% 
   mutate(crop_acre = if_else(is.na(crop_acre), 0, crop_acre)) %>% #there were no -99s here 
-  mutate(ppl_in_hh = m_child + f_child + m_adult + f_adult+1) %>% #don't include themselves
-  mutate(tlu_per_person = total_now_tlu/ppl_in_hh) %>% 
-  mutate(perc_child_in_edu = sch_child/ppl_in_hh) %>%  # N.B. this does not give true indication as it includes adults 
-  mutate(graze_cons = fct_recode(graz_hhcons, "1" = "Always", "1" = "Often","1" = "Sometimes", "1" = "Rarely", "0" = "Never")) %>%  # graze in cons area yes or no 
-  mutate(land_size_fct = fct_recode(land_size, "1" = "Less than 10 acres", "2" = "Between 10 and 20 acres", "3" = "Between 20 and 30 acres", 
-                                    "4" = "Over 30 acres", NULL = "I do not want to answer")) %>%  # graze in cons area yes or no 
-  mutate(land_size_fct = fct_inseq(land_size_fct)) %>% 
-  mutate(cons_payment_fct = fct_recode(cons_payment, "1" = "0 – KES 50,000", "2" = "KES 50,001 – KES 100,000","3" = "KES100,001 – KES 150,000", 
-                                       "4" = "KES 150,001 – KES 200,000", "5" = "KES 200,001 – KES 250,000", "6" = "KES 250,000+", NULL = "I do not want to answer")) %>%  # graze in cons area yes or no 
-  mutate(cons_payment_fct = fct_inseq(cons_payment_fct)) %>% 
-  mutate(hwc_cow_tlu = wild_conf_cow*0.71) %>% #NO -99 in data - tlu based on Grandin 1988)
-  mutate(hwc_shoat_tlu = wild_conf_shoat*0.17) %>% #NO -99 in data - tlu based on Grandin 1988)
-  mutate(hwc_total_tlu = hwc_cow_tlu + hwc_shoat_tlu) %>% 
-  mutate(activity_current1 = as.factor(activity_current1)) %>%  
-  mutate(activity_current1 = fct_collapse(activity_current1,
-                                          "Conservancy" = c("Conservancy land access payment"),
-                                          "Cultivation" = c("Cultivation"),
-                                          "Livestock" = c("Livestock and related products"),
-                                          "Tourism" = c("Tourism related employment"),
-                                          "Employed" = c("Other skilled or permanent employment", "Government Employment"),
-                                          "Own business" = c("Own business"),
-                                          "None" = c("None"),
-                                          "Refused" = c("I do not want to answer"))) %>% 
-  mutate(activity_current2 = as.factor(activity_current2)) %>%  
-  mutate(activity_current2 = fct_collapse(activity_current2,
-                                          "Conservancy" = c("Conservancy land access payment"),
-                                          "Cultivation" = c("Cultivation"),
-                                          "Livestock" = c("Livestock and related products"),
-                                          "Tourism" = c("Tourism related employment"),
-                                          "Employed" = c("Other skilled or permanent employment"),
-                                          "Dependent" = c("Cash remittances"),
-                                          "Loans or credit" = c("Loans or credit"),
-                                          "Own business" = c("Own business"),
-                                          "None" = c("None"))) %>% 
-  mutate(activity_current3 = as.factor(activity_current3)) %>%  
-  mutate(activity_current3 = fct_collapse(activity_current3,
-                                          "Conservancy" = c("Conservancy land access payment"),
-                                          "Cultivation" = c("Cultivation"),
-                                          "Livestock" = c("Livestock and related products"),
-                                          "Tourism" = c("Tourism related employment"),
-                                          "Employed" = c("Other skilled or permanent employment", "Government Employment"),
-                                          "Dependent" = c("Cash remittances", "Food aid"),
-                                          "Loans or credit" = c("Loans or credit"),
-                                          "Own business" = c("Own business"),
-                                          "Other" = c("Kibarua or short-term employment (includes working for someone as bodaboda driver or herder)"),
-                                          "None" = c("None"))) %>% 
-  mutate(activity_before1 = as.factor(activity_before1)) %>%  
-  mutate(activity_before1 = fct_collapse(activity_before1,
-                                         "Cultivation" = c("Cultivation"),
-                                         "Livestock" = c("Livestock and related products"),
-                                         "Tourism" = c("Tourism related employment"),
-                                         "Employed" = c("Other skilled or permanent employment"),
-                                         "Own business" = c("Own business"),
-                                         "None" = c("None"))) %>% 
-  mutate(activity_before2 = as.factor(activity_before2)) %>%  
-  mutate(activity_before2 = fct_collapse(activity_before2,
-                                         "Conservancy" = c("Conservancy land access payment"),
-                                         "Cultivation" = c("Cultivation"),
-                                         "Livestock" = c("Livestock and related products"),
-                                         "Tourism" = c("Tourism related employment"),
-                                         "Employed" = c("Other skilled or permanent employment", "Government Employment"),
-                                         "Dependent" = c("Cash remittances"),
-                                         "Own business" = c("Own business"),
-                                         "Other" = c("Kibarua or short-term employment (includes working for someone as bodaboda driver or herder)"),
-                                         "None" = c("None"))) %>% 
-  mutate(activity_before3 = as.factor(activity_before3)) %>%  
-  mutate(activity_before3 = fct_collapse(activity_before3,
-                                         "Conservancy" = c("Conservancy land access payment"),
-                                         "Cultivation" = c("Cultivation"),
-                                         "Livestock" = c("Livestock and related products"),
-                                         "Tourism" = c("Tourism related employment"),
-                                         "Employed" = c("Other skilled or permanent employment", "Government Employment"),
-                                         "Dependent" = c("Cash remittances"),
-                                         "Loans or credit" = c("Loans or credit"),
-                                         "Own business" = c("Own business"),
-                                         "Other" = c("Kibarua or short-term employment (includes working for someone as bodaboda driver or herder)"),
-                                         "None" = c("None")))
+  mutate(tlu_per_person = total_tlu/hh_total_numb) %>% 
+#  mutate(graze_cons = fct_recode(graz_hhcons, "1" = "Always", "1" = "Often","1" = "Sometimes", "1" = "Rarely", "0" = "Never")) %>%  # graze in cons area yes or no 
+#  mutate(land_size_fct = fct_recode(land_size, "1" = "Less than 10 acres", "2" = "Between 10 and 20 acres", "3" = "Between 20 and 30 acres", 
+#                                    "4" = "Over 30 acres", NULL = "I do not want to answer")) %>%  # graze in cons area yes or no 
+#  mutate(land_size_fct = fct_inseq(land_size_fct)) %>% 
+  mutate(livelihood_activity1 = as.factor(livelihood_activity1)) %>% 
+  mutate(livelihood_activity2 = as.factor(livelihood_activity2)) %>% 
+  mutate(livelihood_activity3 = as.factor(livelihood_activity3)) 
 
-hhs$start <- lubridate::ymd_hms(hhs$start) # convert to date
-hhs$end <- lubridate::ymd_hms(hhs$end) # convert to date time
-hhs <- hhs %>% 
-  mutate(elapsed = end-start)
-#change outliers in expenditure to NA
-#wealth_index_all$expenditure[wealth_index_all$expenditure > quantile(wealth_index_all$expenditure, 0.99, na.rm = T)] <- NA
+saveRDS(hhs_agreed, "hhs_cleaned.rds")
 
-saveRDS(hhs2, "hhs_cleaned.rds")
-
-#Categorise the household into pastoral only, diversified pastoral, agri only, diversified agri, wage earner, poor, Other
-
-#glimpse(hhs)
 
 ########################################################################################################################################
 #########################################################################################################################################
@@ -180,10 +122,11 @@ saveRDS(hhs2, "hhs_cleaned.rds")
 #######################################################################################################################
 ###### constructing wealth index #####
 #######################################################################################################################
-
+#### GOT TO HERE
+hhs2 <- readRDS("hhs_cleaned.rds")
 # 1. exploratory data analysis of variables to potentially use in PCA ######
 hhs_pca_eda <- hhs2 %>% 
-  select(id, int_phon, norm_phon, radio, torch, tv, elec, gen, sola, piki, car, table, sofa, lat, mpesa, bank, fuel, 
+  select(snum, int_phon, norm_phon, radio, torch, tv, elec, gen, sola, piki, car, table, sofa, lat, mpesa, bank, fuel, 
          roof, wall, land_size, cow_now_tlu, sheep_now_tlu, goat_now_tlu, total_now_tlu, crop_acre, more_conservancies) %>% 
   mutate(int_phon = ifelse(int_phon == "Yes", 1, 0)) %>% 
   mutate(norm_phon = ifelse(norm_phon == "Yes", 1, 0)) %>% 
