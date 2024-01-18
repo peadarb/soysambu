@@ -422,9 +422,7 @@ ggsave(filename = here::here("images", "change_wellbeing_5 years.png"))
 # Negative impact
 ############################################################################################################################################
 ############################################################################################################################################
-
-
-# List of variables
+# List of negative variables
 variables <- c(
   "transmn_diseases",
   "conflict_wild",
@@ -437,10 +435,9 @@ variables <- c(
   "tree_cutting"
 )
 
-# Create a data frame to store the results for all variables
+# Create empty frame to store the results 
 all_by_location <- data.frame()
 
-# Loop through each variable
 for (variable in variables) {
   by_location <- dclus2 %>% 
     group_by_at(vars({{variable}})) %>% 
@@ -449,81 +446,156 @@ for (variable in variables) {
       total = survey_total(vartype = "ci", na.rm = TRUE),
       n = unweighted(n())
     ) %>% 
-    filter(!{{variable}} == "I do not want to answer") %>% 
-    drop_na({{variable}}) %>% 
-    mutate({{variable}} := fct_relevel({{variable}}, "High", "Medium", "Low", "Zero"))
-  
-  # Bind the results to the all_by_location data frame
+    mutate(responses := fct_relevel({{variable}}, "High", "Medium", "Low", "Zero")) %>%
+    # Pivot to long format
+    pivot_longer(
+      cols = starts_with("responses"),
+      names_to = "variable",
+      values_to = "value"
+    )
+
   all_by_location <- bind_rows(all_by_location, by_location)
 }
 
-# Create a Likert-style bar chart function
-likert_bar_chart <- function(data, variable) {
-  # Filter data for the specified variable
-  variable_data <- data %>%
-    filter(variable == !!variable)
+all_by_location <- all_by_location %>%
+  mutate(variable = coalesce(transmn_diseases, conflict_wild, compensation_wild, access_restrictn, priority_employ,
+                             involved_projects, soys_appreciate, access_graze, tree_cutting)) %>% 
+  select(!c("transmn_diseases",
+            "conflict_wild",
+            "compensation_wild",
+            "access_restrictn",
+            "priority_employ",
+            "involved_projects",
+            "soys_appreciate",
+            "access_graze",
+            "tree_cutting")) %>% 
+  filter(!variable == "I do not want to answer") %>% 
+  mutate(variable = fct_relevel(variable, "High", "Medium", "Low", "Zero")) %>% 
+  mutate(value = case_when(
+    value == "tree_cutting" ~ "No cutting of trees allowed in Soysambu",
+    value == "access_graze" ~ "Little access to grazing allowed in Soysambu",
+    value == "soys_appreciate" ~ "Lack of appreciation when Soysambu receive help from community",
+    value == "involved_projects" ~ "Community are not involved in development projects",
+    value == "priority_employ" ~ "Community not prioritised in employment in Soysambu",
+    value == "access_restrictn" ~ "Restriction on acccess to public utilities (e.g.roads)",
+    value == "compensation_wild" ~ "No KWS compensation for damages by wildlife",
+    value == "conflict_wild" ~ "Conflict with wildlife from Soysambu",
+    value == "transmn_diseases" ~ "Transmission of disease from wildlife and livestock in Soysambu"
+    ))
   
-  # Set the palette
-  my_palette <- c("High" = "#FF0000", "Medium" = "#FFA500", "Low" = "#FFFF00", "Zero" = "#00FF00")
+# Create a bar plot
+ggplot(all_by_location, aes(x = reorder(value, proportion), y = proportion, fill = variable)) +
+  geom_col(position = "stack", stat = "identity") +
+  coord_flip() +
+  scale_fill_brewer(palette = "PRGn") +
+  guides(fill = guide_legend(title = NULL)) +
+  labs(title = "Negative impacts", x = "", y = "Proportion of Households who feel impact is:") +
+  theme_sjplot() + 
+  theme(legend.position = "bottom") +
+  scale_x_discrete(
+    breaks = all_by_location$value,
+    labels = str_wrap(all_by_location$value, width = 30)  # Adjust width as needed
+  )
+
+ggsave(filename = here::here("images", "negative impacts overall.png"))
+
+
+############################################################################################################################################
+############################################################################################################################################
+# Positive impact
+############################################################################################################################################
+############################################################################################################################################
+# List of positive variables
+
+variables <- c(
+  "provide_water",
+  "infrastr",
+  "health_projects",
+  "donations",
+  "vaccin",
+  "educate_comm",
+  "sponsor",
+  "educatn_trips",
+  "envt_conservatn",
+  "offer_firewd"
+)
+
+# Create empty frame to store the results 
+all_by_location <- data.frame()
+
+for (variable in variables) {
+  by_location <- dclus2 %>% 
+    group_by_at(vars({{variable}})) %>% 
+    summarise(
+      proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+      total = survey_total(vartype = "ci", na.rm = TRUE),
+      n = unweighted(n())
+    ) %>% 
+    mutate(responses := fct_relevel({{variable}}, "High", "Medium", "Low", "Zero")) %>%
+    # Pivot to long format
+    pivot_longer(
+      cols = starts_with("responses"),
+      names_to = "variable",
+      values_to = "value"
+    )
   
-  # Create the Likert-style bar chart
-  ggplot(variable_data, aes(x = factor(n), y = proportion, group = factor(n), fill = factor(n))) +
-    geom_bar(stat = "identity", position = position_dodge(preserve = "single"), width = 0.95) +
-    geom_errorbar(aes(ymax = ifelse(proportion_upp > 1, 1, proportion_upp),
-                      ymin = ifelse(proportion_low < 0, 0, proportion_low)),
-                  position = position_dodge(preserve = "single", width = 0.95), width = 0.1) +
-    scale_fill_manual(values = my_palette) +
-    guides(fill = guide_legend(title = NULL)) +
-    labs(title = paste("Likert-style Bar Chart -", variable),
-         x = "Number of Responses",
-         y = "Proportion of Households") +
-    scale_y_continuous(limits = c(0, 1)) +
-    theme_sjplot() + 
-    theme(legend.position = c(0.75, 0.85))
+  all_by_location <- bind_rows(all_by_location, by_location)
 }
 
-# Create Likert-style bar charts for each variable
-all_by_location %>%
-  filter(!is.na(variable)) %>%
-  pull(variable) %>%
-  unique() %>%
-  walk(~ likert_bar_chart(all_by_location, .))
+all_by_location <- all_by_location %>%
+  mutate(variable = coalesce(provide_water,
+                             infrastr,
+                             health_projects,
+                             donations,
+                             vaccin,
+                             educate_comm,
+                             sponsor,
+                             educatn_trips,
+                             envt_conservatn,
+                             offer_firewd)) %>% 
+  select(!c("provide_water",
+              "infrastr",
+              "health_projects",
+              "donations",
+              "vaccin",
+              "educate_comm",
+              "sponsor",
+              "educatn_trips",
+              "envt_conservatn",
+              "offer_firewd")) %>% 
+  filter(!variable == "I do not want to answer") %>% 
+  mutate(variable = fct_relevel(variable, "High", "Medium", "Low", "Zero")) %>% 
+  mutate(value = case_when(
+    value == "provide_water" ~ "Provide water to community",
+    value == "infrastr" ~ "Build or maintain infrastructure (e.g. police post, school, roads)",
+    value == "health_projects" ~ "Support health projects",
+    value == "donations" ~ "Donate to schools (e.g. meals, desks, balls)",
+    value == "vaccin" ~ "Provide anti-rabies vaccinations",
+    value == "educate_comm" ~ "Education (e.g. livestock production, health talks, waste management)",
+    value == "sponsor" ~ "Sponsorship opportunities for students",
+    value == "educatn_trips" ~ "Guided educational trips to Soysambu",
+    value == "envt_conservatn" ~ "Assist in environmental conservation e.g tree planting",
+    value == "offer_firewd" ~ "Offer firewood to bush-clearing workers"
+  ))
 
-For each negative impact: % reporting impact as high or medium significance
-transmn_diseases
-conflict_wild
-compensation_wild
-access_restrictn
-priority_employ
-involved_projects
-soys_appreciate
-access_graze
-tree_cutting
-
-by_location <- dclus2 %>% 
-  group_by(transmn_diseases) %>% 
-  summarise(
-    proportion = survey_mean(vartype = "ci", na.rm = TRUE),
-    total = survey_total(vartype = "ci", na.rm = TRUE),
-    n = unweighted(n())
-  ) %>% 
-  filter(!transmn_diseases == "I do not want to answer") %>% 
-    drop_na(transmn_diseases) %>% 
-  mutate(transmn_diseases = fct_relevel(transmn_diseases, "High", "Medium", "Low", "Zero"))
-
-ggplot(by_location, aes(x = transmn_diseases, y = proportion, group = transmn_diseases, fill = transmn_diseases)) +
-  geom_bar(stat = "identity", position = position_dodge(preserve = "single"), width = 0.95) +
-  geom_errorbar(data=by_location, aes(ymax = ifelse(proportion_upp > 1, 1, proportion_upp), ymin = ifelse(proportion_low < 0, 0, proportion_low)), 
-                position = position_dodge(preserve = "single", width = 0.95), width = 0.1) +
-  scale_fill_manual(values = my_palette) +  
+# Create a bar plot
+ggplot(all_by_location, aes(x = reorder(value, proportion), y = proportion, fill = variable)) +
+  geom_col(position = "stack", stat = "identity") +
+  coord_flip() +
+  scale_fill_brewer(palette = "PRGn") +
   guides(fill = guide_legend(title = NULL)) +
-  labs(title = "transmn_diseases", x = "Location", y = "Proportion of Households") +
-  scale_y_continuous(limits=c(0, 1)) +
+  labs(title = "Positive impacts", x = "", y = "Proportion of Households who feel impact is:") +
   theme_sjplot() + 
-  theme(legend.position = c(0.75, 0.85))
+  theme(legend.position = "bottom") +
+  scale_x_discrete(
+    breaks = all_by_location$value,
+    labels = str_wrap(all_by_location$value, width = 30)  # Adjust width as needed
+  )
 
-7 For each positive impact: % reporting impact as high or medium significance
-8.1
+ggsave(filename = here::here("images", "positive impacts overall.png"))
+
+
+
 Overall impact on wellbeing: % reporting overall impact as positive, neutral
 or negative
 8.2
