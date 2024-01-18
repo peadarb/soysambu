@@ -50,6 +50,13 @@ hhs_agreed <- hhs %>%
       village == "Jolai1,2, Sleeping Warrior gate, Jolai gate" ~ "Soysambu South",
       .default = as.character(village)))%>% 
   mutate(
+    locat = case_when(
+      locat == "OlJorai Location" ~ "OlJorai",
+      locat == "Kiptangwanyi Location" ~ "Kiptangwanyi",
+      locat == "Mbaruk Location" ~ "Mbaruk",
+      locat == "Soysambu" ~ "Soysambu"
+    ))%>% 
+  mutate(
     dnum = case_when(
       village == "Jogoo" ~ 4,
       village == "Kelelwa" ~ 24,
