@@ -19,14 +19,14 @@ ggsave <- function(..., bg = 'white') ggplot2::ggsave(..., bg = bg)
 rm(list=ls())
 
 #hhs_wealth <- readRDS("hhs_cleaned_wealth.rds")
-hhs_wealth <- readRDS("hhs_cleaned.rds")
-head(hhs_wealth)
+hhs_cleaned <- readRDS("hhs_cleaned.rds")
+head(hhs_cleaned)
 
 #Sustain EA colour pallette
 my_palette <- c("#202C39", "#d77e5e", "#3d5919", "#e6e7e2", "#381D2A","#a4b792",  "#000000","#202C39", "#d77e5e")
 
 # Set survey design
-dclus2 <- hhs_wealth %>%
+dclus2 <- hhs_cleaned %>%
   as_survey_design(c(dnum, snum), fpc = c(fpc1, fpc2))
 
 # Explanation of the terms above
@@ -589,26 +589,91 @@ ggplot(all_by_location, aes(x = reorder(value, proportion), y = proportion, fill
   theme(legend.position = "bottom") +
   scale_x_discrete(
     breaks = all_by_location$value,
-    labels = str_wrap(all_by_location$value, width = 30)  # Adjust width as needed
+    labels = str_wrap(all_by_location$value, width = 40)  # Adjust width as needed
   )
 
 ggsave(filename = here::here("images", "positive impacts overall.png"))
 
+############################################################################################################################################
+############################################################################################################################################
+# Overall impact on wellbeing
+############################################################################################################################################
+############################################################################################################################################
+
+by_location <- dclus2 %>% 
+  group_by(locat, overall_impact) %>% 
+  summarise(
+    proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+    total = survey_total(vartype = "ci", na.rm = TRUE),
+    n = unweighted(n())
+  ) %>% 
+  filter(!overall_impact == "I do not want to answer") %>% 
+  mutate(overall_impact = fct_relevel(overall_impact, "Increased our wellbeing", "Neutral", "Reduced our wellbeing"))
 
 
-Overall impact on wellbeing: % reporting overall impact as positive, neutral
-or negative
-8.2
-Contribution of PA/CA to wellbeing: % reporting increase, no change
-or decrease
-9.1 Crop damage by wildlife: % reporting damage in the last year
-9.2 Livestock damaged by wildlife: % reporting damage in the last year
-9.3 Problem animals: % reporting each different type of problem animal
-9.4 Attribution: % believing problem animal spends all/most of its time within the PA
+ggplot(by_location, aes(x = locat, y = proportion, group = overall_impact, fill = overall_impact)) +
+  geom_bar(stat = "identity", position = position_dodge(preserve = "single"), width = 0.95) +
+  geom_errorbar(data=by_location, aes(ymax = ifelse(proportion_upp > 1, 1, proportion_upp), ymin = ifelse(proportion_low < 0, 0, proportion_low)), 
+                position = position_dodge(preserve = "single", width = 0.95), width = 0.1) +
+  scale_fill_manual(values = my_palette) +  
+  guides(fill = guide_legend(title = NULL)) +
+  labs(title = "overall_impact", x = "Location", y = "Proportion of Households") +
+  scale_y_continuous(limits=c(0, 1)) +
+  theme_sjplot() + 
+  theme(legend.position = c(0.75, 0.85))
+
+ggsave(filename = here::here("images", "summarise the overall impact of Soysambu on the well-being of your household.png"))
+
+############################################################################################################################################
+############################################################################################################################################
+# contribute_wellbeing
+############################################################################################################################################
+############################################################################################################################################
+
+by_location <- dclus2 %>% 
+  group_by(locat, contribute_wellbeing) %>% 
+  summarise(
+    proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+    total = survey_total(vartype = "ci", na.rm = TRUE),
+    n = unweighted(n())
+  ) %>% 
+  filter(!contribute_wellbeing == "I do not want to answer") %>% 
+  mutate(contribute_wellbeing = fct_relevel(contribute_wellbeing, "Increased our wellbeing", "Neutral", "Reduced our wellbeing"))
 
 
-For cross-tabulation by wellbeing status, use the food security variable (per cent
-                                                                          skipping meals), taking people responding ‘never’ as having higher wellbeing and the other
-three categories (merged into one category) as lower wellbeing (or poorer). If for some reason
-the food security variable does not provide reliable results, use one of the asset indicators.
+ggplot(by_location, aes(x = locat, y = proportion, group = contribute_wellbeing, fill = contribute_wellbeing)) +
+  geom_bar(stat = "identity", position = position_dodge(preserve = "single"), width = 0.95) +
+  geom_errorbar(data=by_location, aes(ymax = ifelse(proportion_upp > 1, 1, proportion_upp), ymin = ifelse(proportion_low < 0, 0, proportion_low)), 
+                position = position_dodge(preserve = "single", width = 0.95), width = 0.1) +
+  scale_fill_manual(values = my_palette) +  
+  guides(fill = guide_legend(title = NULL)) +
+  labs(title = "contribute_wellbeing", x = "Location", y = "Proportion of Households") +
+  scale_y_continuous(limits=c(0, 1)) +
+  theme_sjplot() + 
+  theme(legend.position = c(0.85, 0.85))
+
+ggsave(filename = here::here("images", "Soysambu contribution to hhs well-being changed over past 5 years.png"))
+
+
+#######
+#still to do:
+# Crop damage by wildlife: % reporting damage in the last year
+# Livestock damaged by wildlife: % reporting damage in the last year
+# Problem animals: % reporting each different type of problem animal
+# Attribution: % believing problem animal spends all/most of its time within the PA
+# 
+# GOVERNANCE:
+# Rights statements 1–4: % reporting each category of response
+# Participation statements 1–4: % reporting each category of response
+# Transparency question 1–4: % reporting each category of response
+# Impact mitigation question 1–4: % reporting each category of response
+# Benefit sharing question 1–4: % reporting each category of response
+# 
+# do we do wealth index? 
+#   
+# well-being vs food security 
+# wellbeing vs wall material
+# 
+# does location and or activity dictate the relationship?
+  
 

@@ -114,7 +114,21 @@ hhs_agreed <- hhs %>%
 #  mutate(land_size_fct = fct_inseq(land_size_fct)) %>% 
   mutate(livelihood_activity1 = as.factor(livelihood_activity1)) %>% 
   mutate(livelihood_activity2 = as.factor(livelihood_activity2)) %>% 
-  mutate(livelihood_activity3 = as.factor(livelihood_activity3)) 
+  mutate(livelihood_activity3 = as.factor(livelihood_activity3)) %>% 
+  mutate(overall_impact = case_when(
+    overall_impact == "It has increased our wellbeing" ~ "Increased our wellbeing",
+    overall_impact == "It has not increased or decreased in wellbeing" ~ "Neutral",
+    overall_impact == "It has reduced our wellbeing" ~ "Reduced our wellbeing",
+    overall_impact == "It has slightly increased our wellbeing" ~ "Increased our wellbeing",
+    overall_impact == "It has slightly reduced our wellbeing" ~ "Reduced our wellbeing"
+  )) %>% 
+  mutate(contribute_wellbeing = case_when(
+    contribute_wellbeing == "It has increased our wellbeing" ~ "Increased our wellbeing",
+    contribute_wellbeing == "It has not increased or decreased in wellbeing" ~ "Neutral",
+    contribute_wellbeing == "It has reduced our wellbeing" ~ "Reduced our wellbeing",
+    contribute_wellbeing == "It has slightly increased our wellbeing" ~ "Increased our wellbeing",
+    contribute_wellbeing == "It has slightly reduced our wellbeing" ~ "Reduced our wellbeing"
+  ))
 
 saveRDS(hhs_agreed, "hhs_cleaned.rds")
 
