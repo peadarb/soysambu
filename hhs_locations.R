@@ -19,14 +19,18 @@ hhs_agreed <- hhs %>%
   select(-name_respondent) %>% 
   select(locatn_lat, locatn_long, locat, village)
 hhs_location1 <- hhs_agreed %>%
-  group_by(village) %>%
+  group_by(locat) %>%
   summarize(num_samples = n())
 hhs_location2 <- hhs_agreed %>%
-  group_by(village) %>%
+  group_by(locat) %>%
   summarize(mean_latitude = mean(locatn_lat),
             mean_longitude = mean(locatn_long))
-hhs_location <- merge(hhs_location1, hhs_location2, by = 'village')
-distinct_colors <- rainbow(length(unique(hhs_location$village)))
+hhs_location <- merge(hhs_location1, hhs_location2, by = 'locat')
+my_palette <- c("#202C39", "#d77e5e", "#3d5919", "#381D2A"
+                #"#e6e7e2","#a4b792",  "#000000","#202C39", "#d77e5e"
+                )
+
+distinct_colors <- my_palette(length(unique(hhs_location$locat)))
 map <- leaflet(data = hhs_location) %>%
   addTiles()
 map <- map %>%
@@ -34,11 +38,11 @@ map <- map %>%
     lat = ~mean_latitude,
     lng = ~mean_longitude,
     radius = ~sqrt(num_samples) * 5,
-    color = ~distinct_colors,
+    color = ~my_palette,
     fillOpacity = 0.7
   ) %>%
   addLegend("bottomright", 
-            colors = distinct_colors,
-            labels = unique(hhs_location$village),
+            colors = my_palette,
+            labels = unique(hhs_location$locat),
             opacity = 1)
 print(map)

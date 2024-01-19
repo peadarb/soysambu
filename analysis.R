@@ -8,11 +8,11 @@ library(stats4)
 library(survey)
 library(srvyr, warn.conflicts = FALSE)
 library(sjPlot)
+library(cowplot)
+library(egg)
 ggsave <- function(..., bg = 'white') ggplot2::ggsave(..., bg = bg)
 
-######################################################################################################################
-####### import cleaned household survey data with wealth index
-######################################################################################################################
+# import cleaned household survey data with wealth index --------------------------------- 
 
 #test with api data
 #data(api)
@@ -35,11 +35,7 @@ dclus2 <- hhs_cleaned %>%
 # FPC1 is the finite population correction of the total number of potential villages to sample
 # FPC2 is the finite population correction of the total number of potential households in the cluster
 
-############################################################################################################################################
-############################################################################################################################################
-# attempt at looping through - sort of working
-############################################################################################################################################
-############################################################################################################################################
+# attempt at looping through - sort of working --------------------------------- 
 
 variables <- c("gender", "age", "hh_head_born")
 
@@ -71,11 +67,8 @@ for (variable in variables) {
   ggsave(filename = here::here("images", paste0(variable, ".png")))
 }
 
-############################################################################################################################################
-############################################################################################################################################
-# gender
-############################################################################################################################################
-############################################################################################################################################
+# gender --------------------------------- 
+
 by_location <- dclus2 %>% 
   group_by(locat, gender) %>% 
   summarise(
@@ -94,11 +87,8 @@ ggplot(by_location, aes(x = locat, y = n, group = gender, fill = gender)) +
 
 ggsave(filename = here::here("images", "gender_respondents.png"))
 
-############################################################################################################################################
-############################################################################################################################################
-# born in area
-############################################################################################################################################
-############################################################################################################################################
+# born in area --------------------------------- 
+
 by_location <- dclus2 %>% 
   group_by(locat, hh_head_born) %>% 
   summarise(proportion = survey_mean(vartype = "ci", na.rm=TRUE),
@@ -118,11 +108,8 @@ ggplot(by_location, aes(x=locat, y=proportion, group = hh_head_born, fill = hh_h
 
 ggsave(filename = here::here("images", "hh_head_born.png"))
 
-############################################################################################################################################
-############################################################################################################################################
-# ppl in household
-############################################################################################################################################
-############################################################################################################################################
+# ppl in hhs --------------------------------- 
+
 by_location <- dclus2 %>% 
   mutate(hh_total_numb_cat = cut(hh_total_numb, c(1, 2, 5, 10, 100), include.lowest = TRUE,
                            labels = c("<2", "2-5", "5-10", ">10"))) %>%
@@ -143,11 +130,8 @@ ggplot(by_location, aes(x = locat, y = n, group = hh_total_numb_cat, fill = hh_t
 
 ggsave(filename = here::here("images", "hh_total_numb_respondents.png"))
 
-############################################################################################################################################
-############################################################################################################################################
-# age
-############################################################################################################################################
-############################################################################################################################################
+# age --------------------------------- 
+
 by_location <- dclus2 %>% 
   mutate(age_cat = cut(age, c(18, 25, 35, 55, 100), include.lowest = TRUE,
                        labels = c("18-25", "25-35", "35-55", ">55"))) %>% 
@@ -169,12 +153,8 @@ ggplot(by_location, aes(x=locat, y=n, group = age_cat, fill = age_cat)) +
 
 ggsave(filename = here::here("images", "age_respondents.png"))
 
+# children in hhs --------------------------------- 
 
-############################################################################################################################################
-############################################################################################################################################
-# children in household
-############################################################################################################################################
-############################################################################################################################################
 by_location <- dclus2 %>% 
   mutate(numb_child_cat = cut(numb_child, c(1, 2, 4, 6, 8), include.lowest = TRUE,
                               labels = c("1-2", "3-4", "5-6", "7 or more"))) %>%
@@ -199,11 +179,7 @@ ggplot(by_location, aes(x = locat, y = proportion, group = numb_child_cat, fill 
 
 ggsave(filename = here::here("images", "numb_child_proportions.png"))
 
-############################################################################################################################################
-############################################################################################################################################
-# Principal livelihood
-############################################################################################################################################
-############################################################################################################################################
+# Principal livelihood --------------------------------- 
 
 dclus2 <- dclus2 %>% 
   mutate(   
@@ -239,11 +215,7 @@ ggplot(by_location, aes(x = locat, y = proportion, group = livelihood_activity1,
 
 ggsave(filename = here::here("images", "principal_livelihood.png"))
 
-############################################################################################################################################
-############################################################################################################################################
-# Skip meal
-############################################################################################################################################
-############################################################################################################################################
+# skip meals --------------------------------- 
 
 dclus2 <- dclus2 %>% 
   mutate(   
@@ -275,11 +247,8 @@ ggplot(by_location, aes(x = locat, y = proportion, group = skip_meal, fill = ski
 
 ggsave(filename = here::here("images", "skip_meal.png"))
 
-############################################################################################################################################
-############################################################################################################################################
-# housing material
-############################################################################################################################################
-############################################################################################################################################
+# housing material --------------------------------- 
+
 by_location <- dclus2 %>% 
   group_by(locat, wall) %>% 
   summarise(
@@ -302,11 +271,7 @@ ggplot(by_location, aes(x = locat, y = proportion, group = wall, fill = wall)) +
 
 ggsave(filename = here::here("images", "wall.png"))
 
-############################################################################################################################################
-############################################################################################################################################
-# influence over decision making
-############################################################################################################################################
-############################################################################################################################################
+# influence over decision making --------------------------------- 
 
 by_location <- dclus2 %>% 
   group_by(locat, influence_level) %>% 
@@ -331,11 +296,7 @@ ggplot(by_location, aes(x = locat, y = proportion, group = influence_level, fill
 
 ggsave(filename = here::here("images", "influence_level.png"))
 
-############################################################################################################################################
-############################################################################################################################################
-# secure feelings
-############################################################################################################################################
-############################################################################################################################################
+# secure feelings --------------------------------- 
 
 by_location <- dclus2 %>% 
   group_by(locat, secure_feelings) %>% 
@@ -360,11 +321,8 @@ ggplot(by_location, aes(x = locat, y = proportion, group = secure_feelings, fill
 
 ggsave(filename = here::here("images", "secure_feelings.png"))
 
-############################################################################################################################################
-############################################################################################################################################
-# Wellbeing score
-############################################################################################################################################
-############################################################################################################################################
+# wellbeing score --------------------------------- 
+
 by_location <- dclus2 %>% 
   mutate(note_life_cat = cut(note_life, c(1, 3, 5, 8, 10), include.lowest = TRUE, labels = c("Very Bad", "Bad", "Good", "Very Good")
   )) %>% 
@@ -389,11 +347,7 @@ ggplot(by_location, aes(x = locat, y = proportion, group = note_life_cat, fill =
 
 ggsave(filename = here::here("images", "wellbeing_cat.png"))
 
-############################################################################################################################################
-############################################################################################################################################
-# Wellbeing score
-############################################################################################################################################
-############################################################################################################################################
+# wellbeing change over last 5 years --------------------------------- 
 
 by_location <- dclus2 %>% 
   group_by(locat, change_wellbeing) %>% 
@@ -417,11 +371,8 @@ ggplot(by_location, aes(x = locat, y = proportion, group = change_wellbeing, fil
 
 ggsave(filename = here::here("images", "change_wellbeing_5 years.png"))
 
-############################################################################################################################################
-############################################################################################################################################
-# Negative impact
-############################################################################################################################################
-############################################################################################################################################
+# negative impact --------------------------------- 
+
 # List of negative variables
 variables <- c(
   "transmn_diseases",
@@ -499,12 +450,8 @@ ggplot(all_by_location, aes(x = reorder(value, proportion), y = proportion, fill
 
 ggsave(filename = here::here("images", "negative impacts overall.png"))
 
+# positive impact --------------------------------- 
 
-############################################################################################################################################
-############################################################################################################################################
-# Positive impact
-############################################################################################################################################
-############################################################################################################################################
 # List of positive variables
 
 variables <- c(
@@ -594,11 +541,7 @@ ggplot(all_by_location, aes(x = reorder(value, proportion), y = proportion, fill
 
 ggsave(filename = here::here("images", "positive impacts overall.png"))
 
-############################################################################################################################################
-############################################################################################################################################
-# Overall impact on wellbeing
-############################################################################################################################################
-############################################################################################################################################
+# soysambu overall impact on wellbeing --------------------------------- 
 
 by_location <- dclus2 %>% 
   group_by(locat, overall_impact) %>% 
@@ -624,11 +567,7 @@ ggplot(by_location, aes(x = locat, y = proportion, group = overall_impact, fill 
 
 ggsave(filename = here::here("images", "summarise the overall impact of Soysambu on the well-being of your household.png"))
 
-############################################################################################################################################
-############################################################################################################################################
-# contribute_wellbeing
-############################################################################################################################################
-############################################################################################################################################
+# soysambu contribution to change in wellbeing --------------------------------- 
 
 by_location <- dclus2 %>% 
   group_by(locat, contribute_wellbeing) %>% 
@@ -654,6 +593,270 @@ ggplot(by_location, aes(x = locat, y = proportion, group = contribute_wellbeing,
 
 ggsave(filename = here::here("images", "Soysambu contribution to hhs well-being changed over past 5 years.png"))
 
+# positive impact by location  --------------------------------- 
+
+variables <- c(
+  "provide_water",
+  "infrastr",
+  "health_projects",
+  "donations",
+  "vaccin",
+  "educate_comm",
+  "sponsor",
+  "educatn_trips",
+  "envt_conservatn",
+  "offer_firewd"
+)
+# List of locations
+locations <- c("Kiptangwanyi", "OlJorai", "Mbaruk", "Soysambu")
+
+# Create an empty list to store results for each location
+all_by_location_list <- list()
+
+for (location in locations) {
+  # Create empty frame to store the results for the current location
+  all_by_location <- data.frame()
+  
+  for (variable in variables) {
+    by_location <- dclus2 %>% 
+      filter(locat == location) %>%  # Filter data for the specific location
+      group_by_at(vars({{variable}})) %>% 
+      summarise(
+        proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+        total = survey_total(vartype = "ci", na.rm = TRUE),
+        n = unweighted(n())
+      ) %>% 
+      mutate(responses := fct_relevel({{variable}}, "High", "Medium", "Low", "Zero")) %>%
+      # Pivot to long format
+      pivot_longer(
+        cols = starts_with("responses"),
+        names_to = "variable",
+        values_to = "value"
+      )
+    
+    all_by_location <- bind_rows(all_by_location, by_location)
+  }
+  
+  all_by_location <- all_by_location %>%
+    mutate(variable = coalesce(provide_water,
+                               infrastr,
+                               health_projects,
+                               donations,
+                               vaccin,
+                               educate_comm,
+                               sponsor,
+                               educatn_trips,
+                               envt_conservatn,
+                               offer_firewd)) %>% 
+    select(!c("provide_water",
+              "infrastr",
+              "health_projects",
+              "donations",
+              "vaccin",
+              "educate_comm",
+              "sponsor",
+              "educatn_trips",
+              "envt_conservatn",
+              "offer_firewd")) %>% 
+    filter(!variable == "I do not want to answer") %>% 
+    mutate(variable = fct_relevel(variable, "High", "Medium", "Low", "Zero")) %>% 
+    mutate(value = case_when(
+      value == "provide_water" ~ "Provide water to community",
+      value == "infrastr" ~ "Build or maintain infrastructure (e.g. police post, school, roads)",
+      value == "health_projects" ~ "Support health projects",
+      value == "donations" ~ "Donate to schools (e.g. meals, desks, balls)",
+      value == "vaccin" ~ "Provide anti-rabies vaccinations",
+      value == "educate_comm" ~ "Education (e.g. livestock production, health talks, waste management)",
+      value == "sponsor" ~ "Sponsorship opportunities for students",
+      value == "educatn_trips" ~ "Guided educational trips to Soysambu",
+      value == "envt_conservatn" ~ "Assist in environmental conservation e.g tree planting",
+      value == "offer_firewd" ~ "Offer firewood to bush-clearing workers"
+    ))
+  
+  all_by_location_list[[location]] <- all_by_location
+}
+
+# Function to create ggplot for each location
+create_ggplot <- function(df) {
+  ggplot(df, aes(x = reorder(value, proportion), y = proportion, fill = variable)) +
+    geom_col(position = "stack") +
+    scale_fill_brewer(palette = "PRGn") +
+    guides(fill = guide_legend(title = NULL)) +
+    labs(x = "", y = "Proportion of Households who feel impact is:") +
+    theme_sjplot() + 
+    theme(legend.position = "bottom") +
+    scale_x_discrete(
+      breaks = df$value,
+      labels = str_wrap(df$value, width = 40)  # Adjust width as needed
+    )
+}
+# Create the ggplots for each location with horizontal bars
+p_kip <- create_ggplot(all_by_location_list$Kiptangwanyi) +
+  coord_flip()
+p_kip <- p_kip + labs(title="Kiptangwanyi")
+
+p_ol <- create_ggplot(all_by_location_list$OlJorai) +
+  coord_flip()
+p_ol <- p_ol + labs(title="OlJorai")
+
+p_mba <- create_ggplot(all_by_location_list$Mbaruk) +
+  coord_flip()
+p_mba <- p_mba + labs(title="Mbaruk")
+
+p_soy <- create_ggplot(all_by_location_list$Soysambu) +
+  coord_flip()
+p_soy <- p_soy + labs(title="Soysambu")
+
+pos <- ggarrange(p_kip + theme(legend.position="none", 
+                 axis.title.y = element_blank(),
+                 axis.title.x = element_blank()),
+          p_ol + theme(legend.position="none", axis.text.y = element_blank(),
+                       axis.ticks.y = element_blank(),
+                       axis.title.y = element_blank(),
+                       axis.title.x = element_blank()),
+          p_mba + theme(legend.position="bottom", axis.text.y = element_blank(),
+                        axis.ticks.y = element_blank()), 
+          p_soy + theme(legend.position="none",axis.text.y = element_blank(),
+                        axis.ticks.y = element_blank(),
+                        axis.title.y = element_blank(),
+                        axis.title.x = element_blank()),
+          nrow = 1
+          # labels = c("Kiptangwanyi", "OlJorai", "Mbaruk", "Soysambu"),
+          # label.args = list(hjust = -0.8, vjust = 0.9)
+          )
+pos
+
+ggsave(pos, filename = here::here("images", "positive impacts by location.png"))
+
+
+# negative impacts by location --------------------------------- 
+
+# List of negative variables
+variables <- c(
+  "transmn_diseases",
+  "conflict_wild",
+  "compensation_wild",
+  "access_restrictn",
+  "priority_employ",
+  "involved_projects",
+  "soys_appreciate",
+  "access_graze",
+  "tree_cutting"
+)
+
+# List of locations
+locations <- c("Kiptangwanyi", "OlJorai", "Mbaruk", "Soysambu")
+
+# Create an empty list to store results for each location
+all_by_location_list <- list()
+
+for (location in locations) {
+  # Create empty frame to store the results for the current location
+  all_by_location <- data.frame()
+  
+  for (variable in variables) {
+    by_location <- dclus2 %>% 
+      filter(locat == location) %>%  # Filter data for the specific location
+      group_by_at(vars({{variable}})) %>% 
+      summarise(
+        proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+        total = survey_total(vartype = "ci", na.rm = TRUE),
+        n = unweighted(n())
+      ) %>% 
+      mutate(responses := fct_relevel({{variable}}, "High", "Medium", "Low", "Zero")) %>%
+      # Pivot to long format
+      pivot_longer(
+        cols = starts_with("responses"),
+        names_to = "variable",
+        values_to = "value"
+      )
+    
+    all_by_location <- bind_rows(all_by_location, by_location)
+  }
+  
+  all_by_location <- all_by_location %>%
+    mutate(variable = coalesce(transmn_diseases, conflict_wild, compensation_wild, access_restrictn, priority_employ,
+                               involved_projects, soys_appreciate, access_graze, tree_cutting)) %>%  
+    select(!c("transmn_diseases",
+              "conflict_wild",
+              "compensation_wild",
+              "access_restrictn",
+              "priority_employ",
+              "involved_projects",
+              "soys_appreciate",
+              "access_graze",
+              "tree_cutting")) %>% 
+    filter(!variable == "I do not want to answer") %>% 
+    mutate(variable = fct_relevel(variable, "High", "Medium", "Low", "Zero")) %>% 
+    mutate(value = case_when(
+      value == "tree_cutting" ~ "No cutting of trees allowed in Soysambu",
+      value == "access_graze" ~ "Little access to grazing allowed in Soysambu",
+      value == "soys_appreciate" ~ "Lack of appreciation when Soysambu receive help from community",
+      value == "involved_projects" ~ "Community are not involved in development projects",
+      value == "priority_employ" ~ "Community not prioritised in employment in Soysambu",
+      value == "access_restrictn" ~ "Restriction on acccess to public utilities (e.g.roads)",
+      value == "compensation_wild" ~ "No KWS compensation for damages by wildlife",
+      value == "conflict_wild" ~ "Conflict with wildlife from Soysambu",
+      value == "transmn_diseases" ~ "Transmission of disease from wildlife and livestock in Soysambu"
+    ))
+  
+  all_by_location_list[[location]] <- all_by_location
+}
+
+# Function to create ggplot for each location
+create_ggplot <- function(df) {
+  ggplot(df, aes(x = reorder(value, proportion), y = proportion, fill = variable)) +
+    geom_col(position = "stack") +
+    scale_fill_brewer(palette = "PRGn") +
+    guides(fill = guide_legend(title = NULL)) +
+    labs(x = "", y = "Proportion of Households who feel impact is:") +
+    theme_sjplot() + 
+    theme(legend.position = "bottom") +
+    scale_x_discrete(
+      breaks = df$value,
+      labels = str_wrap(df$value, width = 40)  # Adjust width as needed
+    )
+}
+# Create the ggplots for each location with horizontal bars
+p_kip <- create_ggplot(all_by_location_list$Kiptangwanyi) +
+  coord_flip()
+p_kip <- p_kip + labs(title="Kiptangwanyi")
+
+p_ol <- create_ggplot(all_by_location_list$OlJorai) +
+  coord_flip()
+p_ol <- p_ol + labs(title="OlJorai")
+
+p_mba <- create_ggplot(all_by_location_list$Mbaruk) +
+  coord_flip()
+p_mba <- p_mba + labs(title="Mbaruk")
+
+p_soy <- create_ggplot(all_by_location_list$Soysambu) +
+  coord_flip()
+p_soy <- p_soy + labs(title="Soysambu")
+
+neg <- ggarrange(p_kip + theme(legend.position="none", 
+                               axis.title.y = element_blank(),
+                               axis.title.x = element_blank()),
+                 p_ol + theme(legend.position="none", axis.text.y = element_blank(),
+                              axis.ticks.y = element_blank(),
+                              axis.title.y = element_blank(),
+                              axis.title.x = element_blank()),
+                 p_mba + theme(legend.position="bottom", axis.text.y = element_blank(),
+                               axis.ticks.y = element_blank()), 
+                 p_soy + theme(legend.position="none",axis.text.y = element_blank(),
+                               axis.ticks.y = element_blank(),
+                               axis.title.y = element_blank(),
+                               axis.title.x = element_blank()),
+                 nrow = 1
+                 # labels = c("Kiptangwanyi", "OlJorai", "Mbaruk", "Soysambu"),
+                 # label.args = list(hjust = -0.8, vjust = 0.9)
+)
+neg
+
+ggsave(pos, filename = here::here("images", "negative impacts by location.png"))
+
+
+# crop damage --------------------------------- 
 
 #######
 #still to do:
@@ -675,5 +878,4 @@ ggsave(filename = here::here("images", "Soysambu contribution to hhs well-being 
 # wellbeing vs wall material
 # 
 # does location and or activity dictate the relationship?
-  
 
