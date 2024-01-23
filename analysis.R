@@ -1563,14 +1563,3 @@ agree <- ggarrange(p_kip + theme(legend.position="none",
 
 ggsave(agree, filename = here::here("images", "agree disagree governance theme benefit sharing.png"), width = 1300, height = 500, dpi = 140, units = "px")
 
-
-
-# map of wealth index
-
-
-# wealth vs how they feel about soysambu
-# age vs how they feel about soysambu/wellbeing impact of soysambu
-# well-being vs food security 
-# wellbeing vs wall material
-# does location and or activity dictate the relationship?
-
