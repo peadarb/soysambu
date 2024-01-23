@@ -23,7 +23,7 @@ hhs_cleaned <- readRDS("hhs_cleaned.rds")
 head(hhs_cleaned)
 
 #Sustain EA colour pallette
-my_palette <- c("#202C39", "#d77e5e", "#3d5919", "#e6e7e2", "#381D2A","#a4b792",  "#000000","#202C39", "#d77e5e")
+my_palette <- c("#202C39", "#d77e5e", "#3d5919", "#e6e7e2","#a4b792", "#381D2A", "#000000","#202C39", "#d77e5e")
 
 # Set survey design
 dclus2 <- hhs_cleaned %>%
@@ -134,11 +134,14 @@ ggsave(filename = here::here("images", "hh_total_numb_respondents.png"))
 
 by_location <- dclus2 %>% 
   mutate(age_cat = cut(age, c(18, 25, 35, 55, 100), include.lowest = TRUE,
-                       labels = c("18-25", "25-35", "35-55", ">55"))) %>% 
+                       labels = c("18-25", "25-35", "35-55", "55 +"))) %>% 
   group_by(locat, age_cat) %>% 
   summarise(proportion = survey_mean(vartype = "ci", na.rm=TRUE),
             total = survey_total(vartype = "ci", na.rm=TRUE),
             n= unweighted(n())) 
+
+by_location$age_cat <- by_location$age_cat %>% coalesce(by_location$age_cat, "Didn't answer")
+  
 
 ggplot(by_location, aes(x=locat, y=n, group = age_cat, fill = age_cat)) +
   geom_bar(stat = "identity", position = position_dodge(preserve = "single"), width = 0.95) +
@@ -853,29 +856,721 @@ neg <- ggarrange(p_kip + theme(legend.position="none",
 )
 neg
 
-ggsave(pos, filename = here::here("images", "negative impacts by location.png"))
+ggsave(neg, filename = here::here("images", "negative impacts by location.png"))
 
+
+# cultivated crop acreage  --------------------------------- 
+
+by_location <- dclus2 %>% 
+  mutate(crop_acre_cat = cut(crop_acre, c(0, 0.01, 1, 5, 10, Inf), include.lowest = TRUE,
+                       labels = c("None", "Less than 1 acre", "1 - 5 acres", "5 - 10 acres", "more than 10 acres"))) %>% 
+  group_by(locat, crop_acre_cat) %>% 
+  summarise(
+    proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+    total = survey_total(vartype = "ci", na.rm = TRUE),
+    n = unweighted(n())
+  )
+ggplot(by_location, aes(x = locat, y = proportion, group = crop_acre_cat, fill = crop_acre_cat)) +
+  geom_bar(stat = "identity", position = position_dodge(preserve = "single"), width = 0.95) +
+  geom_errorbar(data=by_location, aes(ymax = ifelse(proportion_upp > 1, 1, proportion_upp), ymin = ifelse(proportion_low < 0, 0, proportion_low)), 
+                position = position_dodge(preserve = "single", width = 0.95), width = 0.1) +
+  scale_fill_manual(values = my_palette) +  
+  guides(fill = guide_legend(title = NULL)) +
+  labs(title = "cultivated crops in this location in the last year", x = "Location", y = "Proportion of Households") +
+  scale_y_continuous(limits=c(0, 1)) +
+  theme_sjplot() + 
+  theme(legend.position = c(0.88, 0.85))
+
+ggsave(filename = here::here("images", "acres cultivated in this location in the last year.png"))
+
+# crop cultivated --------------------------------- 
+by_location <- dclus2 %>% 
+  group_by(locat, crop_cultivated) %>% 
+  summarise(
+    proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+    total = survey_total(vartype = "ci", na.rm = TRUE),
+    n = unweighted(n())
+  ) %>% 
+  drop_na(crop_cultivated)
+
+write.xlsx(by_location, here::here("images", "main crop cultivated.xlsx"))
+
+# crop use --------------------------------- 
+
+by_location <- dclus2 %>% 
+  group_by(locat, crops_use) %>% 
+  summarise(
+    proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+    total = survey_total(vartype = "ci", na.rm = TRUE),
+    n = unweighted(n())
+  ) %>% 
+  drop_na(crops_use)
+
+write.xlsx(by_location, here::here("images", "main use of crop.xlsx"))
 
 # crop damage --------------------------------- 
 
-#######
-#still to do:
-# Crop damage by wildlife: % reporting damage in the last year
-# Livestock damaged by wildlife: % reporting damage in the last year
-# Problem animals: % reporting each different type of problem animal
-# Attribution: % believing problem animal spends all/most of its time within the PA
-# 
-# GOVERNANCE:
-# Rights statements 1–4: % reporting each category of response
-# Participation statements 1–4: % reporting each category of response
-# Transparency question 1–4: % reporting each category of response
-# Impact mitigation question 1–4: % reporting each category of response
-# Benefit sharing question 1–4: % reporting each category of response
-# 
-# do we do wealth index? 
-#   
+by_location <- dclus2 %>% 
+  group_by(locat, crops_damg_yn) %>% 
+  summarise(
+    proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+    total = survey_total(vartype = "ci", na.rm = TRUE),
+    n = unweighted(n())
+  ) %>% 
+  drop_na(crops_damg_yn)
+
+ggplot(by_location, aes(x = locat, y = proportion, group = crops_damg_yn, fill = crops_damg_yn)) +
+    geom_bar(stat = "identity", position = position_dodge(preserve = "single"), width = 0.95) +
+    geom_errorbar(data=by_location, aes(ymax = ifelse(proportion_upp > 1, 1, proportion_upp), ymin = ifelse(proportion_low < 0, 0, proportion_low)), 
+                  position = position_dodge(preserve = "single", width = 0.95), width = 0.1) +
+    scale_fill_manual(values = my_palette) +  
+    guides(fill = guide_legend(title = NULL)) +
+    labs(title = "crops been damaged by wild animals in the last year", x = "Location", y = "Proportion of Households") +
+    scale_y_continuous(limits=c(0, 1)) +
+    theme_sjplot() + 
+    theme(legend.position = c(0.88, 0.85))
+
+ggsave(filename = here::here("images", "crops been damaged by wild animals in the last year.png"))
+
+write.xlsx(by_location, here::here("images", "crops been damaged by wild animals in the last year.xlsx"))
+
+
+# crop damage animal --------------------------- 
+
+# Briefly looking at the problem animals - most are baboons and vervet monkeys with a few others (porcupine, buffalo)
+# some pastoralists listed hyaenas
+
+by_location <- dclus2 %>% 
+  group_by(locat, damage_animal) %>% 
+  summarise(
+    proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+    total = survey_total(vartype = "ci", na.rm = TRUE),
+    n = unweighted(n())
+  ) %>% 
+  drop_na(damage_animal)
+
+by_location <- dclus2 %>% 
+  group_by(locat, what_wild) %>% 
+  summarise(
+    proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+    total = survey_total(vartype = "ci", na.rm = TRUE),
+    n = unweighted(n())
+  ) 
+
+# human injury or death --------------------------------- 
+
+by_location <- dclus2 %>% 
+  group_by(hwc_yn) %>% 
+  summarise(
+    proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+    total = survey_total(vartype = "ci", na.rm = TRUE),
+    n = unweighted(n())
+  )
+
+write.xlsx(by_location, here::here("images", "ppl in hhs injured or killed by wildlife in the last year.xlsx"))
+
+
+# livestock TLU --------------------------------- 
+
+by_location <- dclus2 %>% 
+  mutate(total_tlu_cat = cut(total_tlu, c(0, 0.01, 1, 5, 10, Inf), include.lowest = TRUE,
+                                  labels = c("None", "Less than 1", "1 - 5", "5 - 10", "More than 10"))) %>% 
+  group_by(locat, total_tlu_cat) %>% 
+  summarise(
+    proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+    total = survey_total(vartype = "ci", na.rm = TRUE),
+    n = unweighted(n())
+  ) %>% 
+  filter(! total_tlu_cat == "NA") %>% 
+  filter(! total_tlu_cat == "None")
+
+ggplot(by_location, aes(x = locat, y = proportion, group = total_tlu_cat, fill = total_tlu_cat)) +
+  geom_bar(stat = "identity", position = position_dodge(preserve = "single"), width = 0.95) +
+  geom_errorbar(data=by_location, aes(ymax = ifelse(proportion_upp > 1, 1, proportion_upp), ymin = ifelse(proportion_low < 0, 0, proportion_low)), 
+                position = position_dodge(preserve = "single", width = 0.95), width = 0.1) +
+  scale_fill_manual(values = my_palette) +  
+  guides(fill = guide_legend(title = NULL)) +
+  labs(title = "total livestock tlu in hhs", x = "Location", y = "Proportion of Households") +
+  scale_y_continuous(limits=c(0, 1)) +
+  theme_sjplot() + 
+  theme(legend.position = c(0.9, 0.85))
+
+write.xlsx(by_location, here::here("images", "total livestock tlu in hhs.xlsx"))
+ggsave(filename = here::here("images", "total livestock tlu in hhs.png"))
+
+# livestock injury or death --------------------------------- 
+
+by_location <- dclus2 %>% 
+  group_by(locat, wild_conf_yn) %>% 
+  summarise(
+    proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+    total = survey_total(vartype = "ci", na.rm = TRUE),
+    n = unweighted(n())
+  ) %>% 
+  drop_na(wild_conf_yn)
+
+ggplot(by_location, aes(x = locat, y = proportion, group = wild_conf_yn, fill = wild_conf_yn)) +
+  geom_bar(stat = "identity", position = position_dodge(preserve = "single"), width = 0.95) +
+  geom_errorbar(data=by_location, aes(ymax = ifelse(proportion_upp > 1, 1, proportion_upp), ymin = ifelse(proportion_low < 0, 0, proportion_low)), 
+                position = position_dodge(preserve = "single", width = 0.95), width = 0.1) +
+  scale_fill_manual(values = my_palette) +  
+  guides(fill = guide_legend(title = NULL)) +
+  labs(title = "livestock been damaged by wild animals in the last year", x = "Location", y = "Proportion of Households") +
+  scale_y_continuous(limits=c(0, 1)) +
+  theme_sjplot() + 
+  theme(legend.position = c(0.9, 0.85))
+
+write.xlsx(by_location, here::here("images", "livestock been damaged by wild animals in the last year.xlsx"))
+ggsave(filename = here::here("images", "livestock been damaged by wild animals in the last year.png"))
+
+# agree/disagree statements rights --------------------------------- 
+
+variables <- c(
+  "men_wmen_rights",
+  "harvest_firewd",
+  "staff_violate"
+)
+
+# List of locations
+locations <- c("OlJorai", "Kiptangwanyi", "Mbaruk", "Soysambu")
+
+# Create an empty list to store results for each location
+all_by_location_list <- list()
+
+for (location in locations) {
+  # Create empty frame to store the results for the current location
+  all_by_location <- data.frame()
+  
+  for (variable in variables) {
+    by_location <- dclus2 %>% 
+      filter(locat == location) %>%  # Filter data for the specific location
+      group_by_at(vars({{variable}})) %>% 
+      summarise(
+        proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+        total = survey_total(vartype = "ci", na.rm = TRUE),
+        n = unweighted(n())) %>% 
+      filter(!variable == "I do not want to answer") %>% 
+      mutate(responses := fct_relevel({{variable}}, "Disagree", "Neutral", "Agree", "Dont Know")) %>%
+      # Pivot to long format
+      pivot_longer(
+        cols = starts_with("responses"),
+        names_to = "variable",
+        values_to = "value"
+      )
+    
+    all_by_location <- bind_rows(all_by_location, by_location)
+  }
+  
+  all_by_location <- all_by_location %>%
+    mutate(variable = coalesce(men_wmen_rights,
+                               harvest_firewd,
+                               staff_violate)) %>%  
+    select(!c("men_wmen_rights",
+              "harvest_firewd",
+              "staff_violate")) %>%
+    filter(!variable == "I do not want to answer") %>% 
+    mutate(variable = fct_relevel(variable, "Disagree", "Neutral", "Agree", "Dont Know")) %>% 
+    mutate(value = case_when(
+      value == "men_wmen_rights" ~ "Soysambu recognises and respect the rights of local women and men",
+      value == "harvest_firewd" ~ "Some community members have the right to harvest firewood",
+      value == "staff_violate" ~ "Law enforcement staff violate the law or local people’s rights"))
+ 
+  all_by_location_list[[location]] <- all_by_location
+}
+
+# Function to create ggplot for each location
+create_ggplot <- function(df) {
+  ggplot(df, aes(x = reorder(value, proportion), y = proportion, fill = variable)) +
+    geom_col(position = "stack") +
+    scale_fill_manual(values = c("Disagree" = "#7B3294", "Neutral" = "#C2A5CF", "Agree" = "#008837", "Dont Know" = "#EFEBF0")) +
+    guides(fill = guide_legend(title = NULL)) +
+    labs(x = "", y = "Governance theme: Rights") +
+    theme_sjplot() + 
+    theme(legend.position = "bottom") +
+    scale_x_discrete(
+      breaks = df$value,
+      labels = str_wrap(df$value, width = 40)  # Adjust width as needed
+    )
+}
+# Create the ggplots for each location with horizontal bars
+p_kip <- create_ggplot(all_by_location_list$Kiptangwanyi) +
+  coord_flip()
+p_kip <- p_kip + labs(title="Kiptangwanyi")
+
+p_ol <- create_ggplot(all_by_location_list$OlJorai) +
+  coord_flip()
+p_ol <- p_ol + labs(title="OlJorai")
+
+p_mba <- create_ggplot(all_by_location_list$Mbaruk) +
+  coord_flip()
+p_mba <- p_mba + labs(title="Mbaruk")
+
+p_soy <- create_ggplot(all_by_location_list$Soysambu) +
+  coord_flip()
+p_soy <- p_soy + labs(title="Soysambu")
+
+agree <- ggarrange(p_kip + theme(legend.position="none", 
+                               axis.title.y = element_blank(),
+                               axis.title.x = element_blank()),
+                 p_ol + theme(legend.position="none", axis.text.y = element_blank(),
+                              axis.ticks.y = element_blank(),
+                              axis.title.y = element_blank(),
+                              axis.title.x = element_blank()),
+                 p_mba + theme(legend.position="bottom", axis.text.y = element_blank(),
+                               axis.ticks.y = element_blank()), 
+                 p_soy + theme(legend.position="none",axis.text.y = element_blank(),
+                               axis.ticks.y = element_blank(),
+                               axis.title.y = element_blank(),
+                               axis.title.x = element_blank()),
+                 nrow = 1
+                 # labels = c("Kiptangwanyi", "OlJorai", "Mbaruk", "Soysambu"),
+                 # label.args = list(hjust = -0.8, vjust = 0.9)
+)
+
+ggsave(agree, filename = here::here("images", "agree disagree governance theme rights.png"), width = 1300, height = 500, dpi = 140, units = "px")
+
+
+# agree/disagree statements participation --------------------------------- 
+
+variables <- c("partcipt_decisions",
+  "community_rep",
+  "community_rep_select",
+  "good_comms",
+  "decision_influence"
+)
+
+# List of locations
+locations <- c("OlJorai", "Kiptangwanyi", "Mbaruk", "Soysambu")
+
+# Create an empty list to store results for each location
+all_by_location_list <- list()
+
+for (location in locations) {
+  # Create empty frame to store the results for the current location
+  all_by_location <- data.frame()
+  
+  for (variable in variables) {
+    by_location <- dclus2 %>% 
+      filter(locat == location) %>%  # Filter data for the specific location
+      group_by_at(vars({{variable}})) %>% 
+      summarise(
+        proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+        total = survey_total(vartype = "ci", na.rm = TRUE),
+        n = unweighted(n())) %>% 
+      filter(!variable == "I do not want to answer") %>% 
+      mutate(responses := fct_relevel({{variable}}, "Disagree", "Neutral", "Agree", "Dont Know")) %>%
+      # Pivot to long format
+      pivot_longer(
+        cols = starts_with("responses"),
+        names_to = "variable",
+        values_to = "value"
+      )
+    
+    all_by_location <- bind_rows(all_by_location, by_location)
+  }
+  
+  all_by_location <- all_by_location %>%
+    mutate(variable = coalesce(partcipt_decisions,
+                               community_rep,
+                               community_rep_select,
+                               good_comms,
+                               decision_influence)) %>%  
+    select(!c("partcipt_decisions",
+              "community_rep",
+              "community_rep_select",
+              "good_comms",
+              "decision_influence")) %>%
+    filter(!variable == "I do not want to answer") %>% 
+    mutate(variable = fct_relevel(variable, "Disagree", "Neutral", "Agree", "Dont Know")) %>% 
+    mutate(value = case_when(
+     value == "partcipt_decisions" ~ "Local people participate in Soysambu's decision-making that impacts community",
+      value == "community_rep" ~ "Know community representative for meetings with Soysambu",
+      value == "community_rep_select" ~ "Community representative for meetings with Soysambu were properly selected",
+      value == "good_comms" ~ "Communication between community rep and community members is good",
+      value == "decision_influence" ~ "Soysambu decisions are often influenced by suggestions from local communities"
+     ))
+  
+  all_by_location_list[[location]] <- all_by_location
+}
+
+# Function to create ggplot for each location
+create_ggplot <- function(df) {
+  ggplot(df, aes(x = reorder(value, proportion), y = proportion, fill = variable)) +
+    geom_col(position = "stack") +
+    scale_fill_manual(values = c("Disagree" = "#7B3294", "Neutral" = "#C2A5CF", "Agree" = "#008837", "Dont Know" = "#EFEBF0")) +
+    guides(fill = guide_legend(title = NULL)) +
+    labs(x = "", y = "Governance theme: Participation") +
+    theme_sjplot() + 
+    theme(legend.position = "bottom") +
+    scale_x_discrete(
+      breaks = df$value,
+      labels = str_wrap(df$value, width = 40)  # Adjust width as needed
+    )
+}
+# Create the ggplots for each location with horizontal bars
+p_kip <- create_ggplot(all_by_location_list$Kiptangwanyi) +
+  coord_flip()
+p_kip <- p_kip + labs(title="Kiptangwanyi")
+
+p_ol <- create_ggplot(all_by_location_list$OlJorai) +
+  coord_flip()
+p_ol <- p_ol + labs(title="OlJorai")
+
+p_mba <- create_ggplot(all_by_location_list$Mbaruk) +
+  coord_flip()
+p_mba <- p_mba + labs(title="Mbaruk")
+
+p_soy <- create_ggplot(all_by_location_list$Soysambu) +
+  coord_flip()
+p_soy <- p_soy + labs(title="Soysambu")
+
+agree <- ggarrange(p_kip + theme(legend.position="none", 
+                                 axis.title.y = element_blank(),
+                                 axis.title.x = element_blank()),
+                   p_ol + theme(legend.position="none", axis.text.y = element_blank(),
+                                axis.ticks.y = element_blank(),
+                                axis.title.y = element_blank(),
+                                axis.title.x = element_blank()),
+                   p_mba + theme(legend.position="bottom", axis.text.y = element_blank(),
+                                 axis.ticks.y = element_blank()), 
+                   p_soy + theme(legend.position="none",axis.text.y = element_blank(),
+                                 axis.ticks.y = element_blank(),
+                                 axis.title.y = element_blank(),
+                                 axis.title.x = element_blank()),
+                   nrow = 1
+                   # labels = c("Kiptangwanyi", "OlJorai", "Mbaruk", "Soysambu"),
+                   # label.args = list(hjust = -0.8, vjust = 0.9)
+)
+
+ggsave(agree, filename = here::here("images", "agree disagree governance theme participation.png"), width = 1300, height = 500, dpi = 140, units = "px")
+
+# agree/disagree statements transparency --------------------------------- 
+
+variables <- c("access_info",
+  "annual_meetings",
+  "info_sharing"
+)
+
+# List of locations
+locations <- c("OlJorai", "Kiptangwanyi", "Mbaruk", "Soysambu")
+
+# Create an empty list to store results for each location
+all_by_location_list <- list()
+
+for (location in locations) {
+  # Create empty frame to store the results for the current location
+  all_by_location <- data.frame()
+  
+  for (variable in variables) {
+    by_location <- dclus2 %>% 
+      filter(locat == location) %>%  # Filter data for the specific location
+      group_by_at(vars({{variable}})) %>% 
+      summarise(
+        proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+        total = survey_total(vartype = "ci", na.rm = TRUE),
+        n = unweighted(n())) %>% 
+      filter(!variable == "I do not want to answer") %>% 
+      mutate(responses := fct_relevel({{variable}}, "Disagree", "Neutral", "Agree", "Dont Know")) %>%
+      # Pivot to long format
+      pivot_longer(
+        cols = starts_with("responses"),
+        names_to = "variable",
+        values_to = "value"
+      )
+    
+    all_by_location <- bind_rows(all_by_location, by_location)
+  }
+  
+  all_by_location <- all_by_location %>%
+    mutate(variable = coalesce(access_info,
+                               annual_meetings,
+                               info_sharing)) %>%  
+    select(!c("access_info",
+              "annual_meetings",
+              "info_sharing"
+              )) %>%
+    filter(!variable == "I do not want to answer") %>% 
+    mutate(variable = fct_relevel(variable, "Disagree", "Neutral", "Agree", "Dont Know")) %>% 
+    mutate(value = case_when(
+      value == "access_info" ~ "People have timely access to information about decisions made by Soysambu which will affect them",
+      value == "annual_meetings" ~ "There are meetings at least once a year between Soysambu and community to keep them well informed",
+      value == "info_sharing" ~ "Community share information with Soysambu about key issues"
+      ))
+  
+  all_by_location_list[[location]] <- all_by_location
+}
+
+# Function to create ggplot for each location
+create_ggplot <- function(df) {
+  ggplot(df, aes(x = reorder(value, proportion), y = proportion, fill = variable)) +
+    geom_col(position = "stack") +
+    scale_fill_manual(values = c("Disagree" = "#7B3294", "Neutral" = "#C2A5CF", "Agree" = "#008837", "Dont Know" = "#EFEBF0")) +
+    guides(fill = guide_legend(title = NULL)) +
+    labs(x = "", y = "Governance theme: Transparency") +
+    theme_sjplot() + 
+    theme(legend.position = "bottom") +
+    scale_x_discrete(
+      breaks = df$value,
+      labels = str_wrap(df$value, width = 40)  # Adjust width as needed
+    )
+}
+# Create the ggplots for each location with horizontal bars
+p_kip <- create_ggplot(all_by_location_list$Kiptangwanyi) +
+  coord_flip()
+p_kip <- p_kip + labs(title="Kiptangwanyi")
+
+p_ol <- create_ggplot(all_by_location_list$OlJorai) +
+  coord_flip()
+p_ol <- p_ol + labs(title="OlJorai")
+
+p_mba <- create_ggplot(all_by_location_list$Mbaruk) +
+  coord_flip()
+p_mba <- p_mba + labs(title="Mbaruk")
+
+p_soy <- create_ggplot(all_by_location_list$Soysambu) +
+  coord_flip()
+p_soy <- p_soy + labs(title="Soysambu")
+
+agree <- ggarrange(p_kip + theme(legend.position="none", 
+                                 axis.title.y = element_blank(),
+                                 axis.title.x = element_blank()),
+                   p_ol + theme(legend.position="none", axis.text.y = element_blank(),
+                                axis.ticks.y = element_blank(),
+                                axis.title.y = element_blank(),
+                                axis.title.x = element_blank()),
+                   p_mba + theme(legend.position="bottom", axis.text.y = element_blank(),
+                                 axis.ticks.y = element_blank()), 
+                   p_soy + theme(legend.position="none",axis.text.y = element_blank(),
+                                 axis.ticks.y = element_blank(),
+                                 axis.title.y = element_blank(),
+                                 axis.title.x = element_blank()),
+                   nrow = 1
+                   # labels = c("Kiptangwanyi", "OlJorai", "Mbaruk", "Soysambu"),
+                   # label.args = list(hjust = -0.8, vjust = 0.9)
+)
+
+ggsave(agree, filename = here::here("images", "agree disagree governance theme transparency.png"), width = 1300, height = 500, dpi = 140, units = "px")
+
+# agree/disagree statements mitigation --------------------------------- 
+
+variables <- c(
+  "mitigate_negative",
+  "system_wild_conf",
+  "help_wild_conf",
+  "measures_wild_conf"
+)
+
+# List of locations
+locations <- c("OlJorai", "Kiptangwanyi", "Mbaruk", "Soysambu")
+
+# Create an empty list to store results for each location
+all_by_location_list <- list()
+
+for (location in locations) {
+  # Create empty frame to store the results for the current location
+  all_by_location <- data.frame()
+  
+  for (variable in variables) {
+    by_location <- dclus2 %>% 
+      filter(locat == location) %>%  # Filter data for the specific location
+      group_by_at(vars({{variable}})) %>% 
+      summarise(
+        proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+        total = survey_total(vartype = "ci", na.rm = TRUE),
+        n = unweighted(n())) %>% 
+      filter(!variable == "I do not want to answer") %>% 
+      mutate(responses := fct_relevel({{variable}}, "Disagree", "Neutral", "Agree", "Dont Know")) %>%
+      # Pivot to long format
+      pivot_longer(
+        cols = starts_with("responses"),
+        names_to = "variable",
+        values_to = "value"
+      )
+    
+    all_by_location <- bind_rows(all_by_location, by_location)
+  }
+  
+  all_by_location <- all_by_location %>%
+    mutate(variable = coalesce(mitigate_negative,
+                               system_wild_conf,
+                               help_wild_conf,
+                               measures_wild_conf)) %>%  
+    select(!c("mitigate_negative",
+              "system_wild_conf",
+              "help_wild_conf",
+              "measures_wild_conf")) %>%
+    filter(!variable == "I do not want to answer") %>% 
+    mutate(variable = fct_relevel(variable, "Disagree", "Neutral", "Agree", "Dont Know")) %>% 
+    mutate(value = case_when(
+      value == "mitigate_negative" ~ "Soysambu use effective measures to mitigate negative impacts of conservancy",
+      value == "system_wild_conf" ~ "There's a good system for collecting information on damage by wild animals who spend most of their time on Soysambu",
+      value == "help_wild_conf" ~ "Soysambu help when there are serious issues of damage by wild animals who spend most of their time on Soysambu",
+      value == "measures_wild_conf" ~ "Measures to reduce crop damage by wild animals who spend most of their time on Soysambu work well" ))
+  
+  all_by_location_list[[location]] <- all_by_location
+}
+
+# Function to create ggplot for each location
+create_ggplot <- function(df) {
+  ggplot(df, aes(x = reorder(value, proportion), y = proportion, fill = variable)) +
+    geom_col(position = "stack") +
+    scale_fill_manual(values = c("Disagree" = "#7B3294", "Neutral" = "#C2A5CF", "Agree" = "#008837", "Dont Know" = "#EFEBF0")) +
+    guides(fill = guide_legend(title = NULL)) +
+    labs(x = "", y = "Governance theme: Mitigation of negative impacts") +
+    theme_sjplot() + 
+    theme(legend.position = "bottom") +
+    scale_x_discrete(
+      breaks = df$value,
+      labels = str_wrap(df$value, width = 40)  # Adjust width as needed
+    )
+}
+# Create the ggplots for each location with horizontal bars
+p_kip <- create_ggplot(all_by_location_list$Kiptangwanyi) +
+  coord_flip()
+p_kip <- p_kip + labs(title="Kiptangwanyi")
+
+p_ol <- create_ggplot(all_by_location_list$OlJorai) +
+  coord_flip()
+p_ol <- p_ol + labs(title="OlJorai")
+
+p_mba <- create_ggplot(all_by_location_list$Mbaruk) +
+  coord_flip()
+p_mba <- p_mba + labs(title="Mbaruk")
+
+p_soy <- create_ggplot(all_by_location_list$Soysambu) +
+  coord_flip()
+p_soy <- p_soy + labs(title="Soysambu")
+
+agree <- ggarrange(p_kip + theme(legend.position="none", 
+                                 axis.title.y = element_blank(),
+                                 axis.title.x = element_blank()),
+                   p_ol + theme(legend.position="none", axis.text.y = element_blank(),
+                                axis.ticks.y = element_blank(),
+                                axis.title.y = element_blank(),
+                                axis.title.x = element_blank()),
+                   p_mba + theme(legend.position="bottom", axis.text.y = element_blank(),
+                                 axis.ticks.y = element_blank()), 
+                   p_soy + theme(legend.position="none",axis.text.y = element_blank(),
+                                 axis.ticks.y = element_blank(),
+                                 axis.title.y = element_blank(),
+                                 axis.title.x = element_blank()),
+                   nrow = 1
+                   # labels = c("Kiptangwanyi", "OlJorai", "Mbaruk", "Soysambu"),
+                   # label.args = list(hjust = -0.8, vjust = 0.9)
+)
+
+ggsave(agree, filename = here::here("images", "agree disagree governance theme negative impact.png"), width = 1300, height = 500, dpi = 140, units = "px")
+
+# agree/disagree statements benefit sharing --------------------------------- 
+
+variables <- c("benefit_sharing",
+  "women_influence"
+)
+
+# List of locations
+locations <- c("OlJorai", "Kiptangwanyi", "Mbaruk", "Soysambu")
+
+# Create an empty list to store results for each location
+all_by_location_list <- list()
+
+for (location in locations) {
+  # Create empty frame to store the results for the current location
+  all_by_location <- data.frame()
+  
+  for (variable in variables) {
+    by_location <- dclus2 %>% 
+      filter(locat == location) %>%  # Filter data for the specific location
+      group_by_at(vars({{variable}})) %>% 
+      summarise(
+        proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+        total = survey_total(vartype = "ci", na.rm = TRUE),
+        n = unweighted(n())) %>% 
+      filter(!variable == "I do not want to answer") %>% 
+      mutate(responses := fct_relevel({{variable}}, "Disagree", "Neutral", "Agree", "Dont Know")) %>%
+      # Pivot to long format
+      pivot_longer(
+        cols = starts_with("responses"),
+        names_to = "variable",
+        values_to = "value"
+      )
+    
+    all_by_location <- bind_rows(all_by_location, by_location)
+  }
+  
+  all_by_location <- all_by_location %>%
+    mutate(variable = coalesce(benefit_sharing,
+                               women_influence)) %>%  
+    select(!c("benefit_sharing",
+              "women_influence")) %>%
+    filter(!variable == "I do not want to answer") %>% 
+    mutate(variable = fct_relevel(variable, "Disagree", "Neutral", "Agree", "Dont Know")) %>% 
+    mutate(value = case_when(
+      value == "benefit_sharing" ~ "Benefits from Soysambu are equitably shared within and between local communities",
+      value == "women_influence" ~ "Women have as much influence as men in determining allocation of benefits from Soysambu"
+    ))
+  
+  all_by_location_list[[location]] <- all_by_location
+}
+
+# Function to create ggplot for each location
+create_ggplot <- function(df) {
+  ggplot(df, aes(x = reorder(value, proportion), y = proportion, fill = variable)) +
+    geom_col(position = "stack") +
+    scale_fill_manual(values = c("Disagree" = "#7B3294", "Neutral" = "#C2A5CF", "Agree" = "#008837", "Dont Know" = "#EFEBF0")) +
+    guides(fill = guide_legend(title = NULL)) +
+    labs(x = "", y = "Governance theme: Benefit Sharing") +
+    theme_sjplot() + 
+    theme(legend.position = "bottom") +
+    scale_x_discrete(
+      breaks = df$value,
+      labels = str_wrap(df$value, width = 40)  # Adjust width as needed
+    )
+}
+# Create the ggplots for each location with horizontal bars
+p_kip <- create_ggplot(all_by_location_list$Kiptangwanyi) +
+  coord_flip()
+p_kip <- p_kip + labs(title="Kiptangwanyi")
+
+p_ol <- create_ggplot(all_by_location_list$OlJorai) +
+  coord_flip()
+p_ol <- p_ol + labs(title="OlJorai")
+
+p_mba <- create_ggplot(all_by_location_list$Mbaruk) +
+  coord_flip()
+p_mba <- p_mba + labs(title="Mbaruk")
+
+p_soy <- create_ggplot(all_by_location_list$Soysambu) +
+  coord_flip()
+p_soy <- p_soy + labs(title="Soysambu")
+
+agree <- ggarrange(p_kip + theme(legend.position="none", 
+                                 axis.title.y = element_blank(),
+                                 axis.title.x = element_blank()),
+                   p_ol + theme(legend.position="none", axis.text.y = element_blank(),
+                                axis.ticks.y = element_blank(),
+                                axis.title.y = element_blank(),
+                                axis.title.x = element_blank()),
+                   p_mba + theme(legend.position="bottom", axis.text.y = element_blank(),
+                                 axis.ticks.y = element_blank()), 
+                   p_soy + theme(legend.position="none",axis.text.y = element_blank(),
+                                 axis.ticks.y = element_blank(),
+                                 axis.title.y = element_blank(),
+                                 axis.title.x = element_blank()),
+                   nrow = 1
+                   # labels = c("Kiptangwanyi", "OlJorai", "Mbaruk", "Soysambu"),
+                   # label.args = list(hjust = -0.8, vjust = 0.9)
+)
+
+ggsave(agree, filename = here::here("images", "agree disagree governance theme benefit sharing.png"), width = 1300, height = 500, dpi = 140, units = "px")
+
+
+
+# map of wealth index
+
+
+# wealth vs how they feel about soysambu
+# age vs how they feel about soysambu/wellbeing impact of soysambu
 # well-being vs food security 
 # wellbeing vs wall material
-# 
 # does location and or activity dictate the relationship?
 

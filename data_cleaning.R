@@ -128,7 +128,14 @@ hhs_agreed <- hhs %>%
     contribute_wellbeing == "It has reduced our wellbeing" ~ "Reduced our wellbeing",
     contribute_wellbeing == "It has slightly increased our wellbeing" ~ "Increased our wellbeing",
     contribute_wellbeing == "It has slightly reduced our wellbeing" ~ "Reduced our wellbeing"
-  ))
+  ))%>% 
+  mutate(community_rep = case_when(
+    community_rep == "Yes" ~ "Agree",
+    community_rep == "No" ~ "Disagree",
+    community_rep == "Dont Know" ~ "Dont Know",
+    community_rep == "I do not want to answer" ~ "I do not want to answer"
+  )) %>% 
+  rename("elec" = "main-elec")
 
 saveRDS(hhs_agreed, "hhs_cleaned.rds")
 
@@ -146,49 +153,46 @@ saveRDS(hhs_agreed, "hhs_cleaned.rds")
 #### GOT TO HERE
 hhs2 <- readRDS("hhs_cleaned.rds")
 # 1. exploratory data analysis of variables to potentially use in PCA ######
+
 hhs_pca_eda <- hhs2 %>% 
-  select(snum, int_phon, norm_phon, radio, torch, tv, elec, gen, sola, piki, car, table, sofa, lat, mpesa, bank, fuel, 
-         roof, wall, land_size, cow_now_tlu, sheep_now_tlu, goat_now_tlu, total_now_tlu, crop_acre, more_conservancies) %>% 
-  mutate(int_phon = ifelse(int_phon == "Yes", 1, 0)) %>% 
+  select(dnum, snum, fpc1, fpc2, stype, inter_phon, norm_phon, radio, torch,  tv, elec, gen, 
+         solar_elec, piki, vehicle, table, sofa, pit_lat, tank, mpesa,skip_meal, wall,fuel,
+         total_tlu, crop_acre, "_index") %>% 
+  mutate(inter_phon = ifelse(inter_phon == "Yes", 1, 0)) %>% 
   mutate(norm_phon = ifelse(norm_phon == "Yes", 1, 0)) %>% 
   mutate(radio = ifelse(radio == "Yes", 1, 0)) %>% 
   mutate(torch = ifelse(torch == "Yes", 1, 0)) %>% 
   mutate(tv = ifelse(tv == "Yes", 1, 0)) %>% 
   mutate(elec = ifelse(elec == "Yes", 1, 0)) %>% 
   mutate(gen = ifelse(gen == "Yes", 1, 0)) %>% 
-  mutate(sola = ifelse(sola == "Yes", 1, 0)) %>% 
+  mutate(solar_elec = ifelse(solar_elec == "Yes", 1, 0)) %>% 
   mutate(piki = ifelse(piki == "Yes", 1, 0)) %>% 
-  mutate(car = ifelse(car == "Yes", 1, 0)) %>% 
+  mutate(vehicle = ifelse(vehicle == "Yes", 1, 0)) %>% 
   mutate(table = ifelse(table == "Yes", 1, 0)) %>% 
   mutate(sofa = ifelse(sofa == "Yes", 1, 0)) %>% 
-  mutate(lat = ifelse(lat == "Yes", 1, 0)) %>% 
+  mutate(pit_lat = ifelse(pit_lat == "Yes", 1, 0)) %>% 
+  mutate(tank = ifelse(tank == "Yes", 1, 0)) %>% 
   mutate(mpesa = ifelse(mpesa == "Yes", 1, 0)) %>% 
-  mutate(bank = ifelse(bank == "Yes", 1, 0)) %>% 
   mutate(gas_fuel = ifelse(fuel == "Gas", 1, 0)) %>% 
-  mutate(cement_brick_iron_roof = ifelse(roof == "Corrugated Iron" | roof == "Cement/Bricks", 1, 0)) %>% 
+  mutate(skip_meal = ifelse(skip_meal == "Never", 1, 0)) %>% 
   mutate(brick_cement_wall = ifelse(wall == "Bricks (or mud bricks) with Cement (Durable)", 1, 0)) %>% 
-  mutate(large_land_size = ifelse(land_size == "Over 30 acres", 1, 0)) %>% 
-  mutate(more_conservancies_binary= ifelse(more_conservancies > 1, 1, 0)) %>% 
-  select(!c(fuel, roof, wall, land_size))
-#change outliers to NA for total TLU and crop area
-#hhs_pca_eda$total_tlu[hhs_pca_eda$total_tlu > quantile(hhs_pca_eda$total_tlu, 0.99, na.rm = T)] <- NA
-#hhs_pca_eda$crop_acre[hhs_pca_eda$crop_acre > quantile(hhs_pca_eda$crop_acre, 0.99, na.rm = T)] <- NA
+  mutate(crop_acre= ifelse(crop_acre > 1, 1, 0)) %>% 
+  mutate(total_tlu= ifelse(total_tlu > 5, 1, 0)) %>% 
+  select(!c(fuel, wall))
 
 # 2. Select all the subset of variables to be used to construct the PCA and omit all NA
 # this one contains all the ones possible including some continuous variables
-# could remove large land size as this has a number of NAs
+#removed tlu as this excluded too many people
 hhs_pca_eda_subset_all <- hhs_pca_eda %>% 
-  select(!c(more_conservancies, large_land_size, total_now_tlu, cow_now_tlu, sheep_now_tlu, goat_now_tlu, crop_acre, more_conservancies_binary)) %>% 
+  select(!c(dnum, snum, fpc1, fpc2, stype, total_tlu)) %>% 
   na.omit()
 
 ### for all, checked all scaling and centering and both scaling and centering are needed - means it is a correlation matrix
 hhs_pca_all <- prcomp(hhs_pca_eda_subset_all, center = TRUE, scale = TRUE)
 summary(hhs_pca_all)
 
-
 #boxplot of all the variables with red cross at mean 
-plot <- hhs_pca_eda_subset_all %>% 
-  select(-id)
+plot <- hhs_pca_eda_subset_all 
 
 #### for binary variables, checked all scaling and centering and only centering needed - means it is a covariance matrix 
 hhs_pca_binary <- prcomp(plot, center = TRUE, scale = FALSE)
@@ -203,7 +207,6 @@ hhs_pca_eda_subset_all <- hhs_pca_eda_subset_all %>%
   mutate(quintiles = as.factor(cut(index_all, breaks=5, labels=nlab))) %>% 
   mutate(wealth_pca = index_all) 
 
-hhs_wealth <- full_join(hhs2, hhs_pca_eda_subset_all, by = "id")
+hhs_wealth <- full_join(hhs2, hhs_pca_eda_subset_all, by = "_index")
 
-#write_csv(hhs, "C:/Users/peada/Documents/PhD/Research/4_data/2_analysis/hhsurvey/1_raw/hhs_cleaned.csv")
 saveRDS(hhs_wealth, "hhs_cleaned_wealth.rds")
