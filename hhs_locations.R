@@ -31,7 +31,7 @@ nakuru_np <- adm %>%
 ###########################################################################################
 
 # prepare data -----------------------------------------------------------
-
+hhs <- readRDS("hhs_cleaned_wealth.rds")
 
 #individual locations
 hhs_locations <- readRDS("hhs_cleaned_wealth.rds") %>% 
@@ -256,7 +256,7 @@ map <- leaflet(data = hhs_wealth) %>%
     pal,
     values = ~quintiles,
     opacity = 0.7,
-    title = "Wealth Quintile (higher is wealthier)"
+    title = "Wealth quintiles (higher is poorer)"
   )
 
 # Print the map
