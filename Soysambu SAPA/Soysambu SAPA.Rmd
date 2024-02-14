@@ -1,0 +1,509 @@
+---
+title: "Soysambu Conservancy"
+subtitle: "Social Assessment of Protected Area"
+author: 
+  - "Sustain East Africa"
+  - "Peter Tyrrell"
+  - "Peadar Brehony"
+date: "February 2024"
+output: 
+  sea::sea_paged:
+    draft_watermark: false
+    remove_footer_title: false
+    front_cover:
+      - "img/flamingos.png"
+      #- "img/image_cover2.jpg"
+      #- "img/image_cover3.jpg"
+      #- "img/image_cover4.jpg"
+
+bibliography: references.bib  
+biblio-style: "apalike"
+nocite: '@*'
+toc-title: "Table of Contents"
+lof: true
+lot: true
+lof-unlisted: true
+lot-unlisted: true
+knit: pagedown::chrome_print
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+```{r}
+library(sea)
+library(tidyverse)
+library(xfun)
+library(lubridate)
+library(openxlsx)
+library(scales)
+library(googlesheets4)
+library(stats)
+library(stats4)
+library(survey)
+library(srvyr, warn.conflicts = FALSE)
+library(sjPlot)
+library(cowplot)
+library(egg)
+
+hhs_cleaned <- readRDS("hhs_cleaned.rds")
+#Sustain EA colour pallette
+
+# Set survey design
+dclus2 <- hhs_cleaned %>%
+  as_survey_design(c(dnum, snum), fpc = c(fpc1, fpc2))
+```
+
+<!-- remove if useless -->
+\newpage
+
+## Summary
+
+### Context
+
+The Social Assessment for Protected and Conserved Areas (SAPA), launched in 2014,
+responded to a need for a standardised, low-cost and relatively simple approach to
+assessing social impacts of protected or conserved areas (PCAs). SAPA can help identify
+positive and negative social impacts of PCAs, understand the underlying causes of
+problems related to governance and identify actions that could improve the situation. The
+methodology can also be used to establish a baseline for social impacts and their overall
+contribution to human wellbeing against which changes can be tracked over time.
+SAPA is a multi-stakeholder assessment methodology for use by site-level stakeholders.
+The methodology is based on a standardised process that can be replicated across PCAs
+while remaining flexible enough for tailoring to local needs and contexts.
+
+### Key Findings
+
+#### Positive social impacts
+Most positive social impacts across the six case studies fall under five main categories:
+1) Ecosystem service benefits
+2) PA-related employment
+3) PA-supported development projects
+4) Reduced human-wildlife conflict, and
+5) Improved security
+
+Short detail about each
+
+#### Negative social impacts
+
+Most negative social impacts across the six case studies fall under five main categories:
+1) Ecosystem service benefits
+2) PA-related employment
+3) PA-supported development projects
+4) Reduced human-wildlife conflict, and
+5) Improved security
+
+Short detail about each
+
+#### Overall contribution to wellbeing
+
+A
+
+#### Governance
+
+a
+
+#### Differences by location and wellbeing
+
+a
+
+### Recommendations going forward
+
+Recommend xyz
+
+
+### Disclaimer
+
+The views and opinions expressed in this report reflect those of the authors. Whilst every care has been taken in the writing of this report, the authors accept no responsibility for any resultant errors herein, any damages or loss whatsoever caused or suffered by any individual or organisation.
+
+### Rights
+
+The information in this report is copyrighted, therefore, copying or transmitting any part of this report without permission from the authors may be a violation. However, we encourage dissemination and use of this report with appropriate citation and acknowledgement.
+
+### Suggested citation
+
+Please cite this report as such :
+
+Brehony, P., Tyrrell, P., Muiyuro, R., Wairimu, E. 2024. Social Assessment of Protected Area for Soysambu Conservancy. Sustain East Africa, Nairobi, Kenya.
+
+### Acknowledgements
+
+Soysambu Conservancy would like to thank: 
+Funder 1
+As well as Helen, Chiefs, Nyumba Kumi, Enumerators, etc. 
+
+<!-- inverse rust page -->
+<div class="section-rust-inverse">
+
+# The Social Assessment of Protected Areas (SAPA) approach
+
+SAPA, launched in 2014, responded to this need for a standardised, low-cost and
+relatively simple approach to assessing social impacts of PCAs. Rather than determining
+the actual contributions to wellbeing of a PCA, SAPA identifies ways to reduce negative
+impacts and increase the positive ones. It also shows how positive impacts can be shared
+within the community more equitably.
+
+The framework also shows the two complementary ways of assessing social impacts
+used in SAPA. The first explores how wellbeing has changed over a given period
+(improved, deteriorated, no change) and the more significant factors that have contributed
+to this change. The second explores the main positive and negative impacts of the PCA
+on wellbeing and their significance over the same period.
+
+SAPA uses a set of standard assessment questions directly related to social impacts
+and governance quality (Box 2.1). It also includes a process of developing site-specific
+questions that respond to specific information needs of actors. This combination of
+standard questions and site-specific questions enables comparison and aggregation
+across sites, as well as tailoring of the assessment to the needs of a specific site.
+
+The inclusion of a governance and equity assessment in the second edition of SAPA
+strengthens the results and action planning processes. Governance is distinct from
+management and pays attention to who defines objectives and how. It also looks
+at allocation of responsibility and accountability for delivering on these objectives.
+Governance quality measures how well a PCA performs in terms of good governance
+principles (Borrini-Feyerabend et al. 2013). In the context of conservation, equity
+principles are of three main types – recognition, procedure and distribution (Pascual et al.
+2014). These principles are considered a subset of good governance (Franks, Small and
+Booker 2018).
+
+As another important strength, SAPA can distinguish between how a positive or negative
+impact differs among people according to various factors. These include food security,
+ethnicity, age, gender and their residential proximity to the PCA. This is important because
+an overall positive impression of the social impacts of conservation often hides serious
+inequities in their distribution. Negative impacts tend to fall on poorer people, particularly
+women. Meanwhile, benefits tend to go to the less poor, particularly men, who often have
+more influence on decision making.
+
+</div>
+
+<!-- rust page -->
+<div class ="section-rust">
+
+<!-- columns layout -->
+<!-- article instead of a div if you have titles to should go in the TOC -->
+
+## Approach and Methods
+
+<div class ="wrap-columns">
+<div class ="column-50">
+
+SAPA uses a classic mixed methods approach that combines different tools to gather
+information, assess results and generate ideas for action in response to the results.
+Table 2.1 shows a timeline for the 19 activities of SAPA spread over five phases, along
+with corresponding outputs.
+The methods are all linked to a stakeholder analysis designed to ensure that all key
+actors are engaged effectively in the assessment. This process ranges from design and
+analysis to interpretation of results and actions that can improve the situation.
+The multi-stakeholder nature of the process increases the accuracy and credibility of
+results. It enhances transparency and ownership of the assessment. And it builds support
+for action and accountability for implementation.
+But the resistance of key actors can compromise the effectiveness of SAPA. Care and
+sensitivity are needed to manage the process and develop a sense of shared problemsolving,
+while avoiding conflict. More details about the methodology, the analytical
+framework, research design and process can be found in the SAPA manual (Franks, Small
+and Booker 2018).
+
+## Preparation
+
+Preparation
+
+## Scoping
+
+Scoping
+
+## Information Gathering
+
+### Existing reports
+
+Existing reports
+
+### Developing household questionnaire
+
+Developing household questionnaire
+
+### Enumerator Training
+
+Enumerator Training
+
+### Household Survey
+
+Household Survey
+
+</div>
+<div class ="column-50">
+
+Aute aliqua consequat fugiat reprehenderit nostrud. Nisi nostrud ex laboris non. Minim dolore esse consequat magna cillum sunt labore dolor Lorem minim.Cupidatat occaecat elit proident ad anim est cupidatat excepteur aute cillum ipsum minim mollit enim. Proident do incididunt occaecat magna esse ipsum elit dolore sint culpa dolore sint qui. Ex do in excepteur irure incididunt ea sint aliqua culpa Lorem et ipsum proident. Adipisicing ea adipisicing amet proident laborum Lorem magna commodo deserunt officia veniam laboris.
+Nostrud laboris ullamco ut non eu elit amet. Mollit qui et cillum. Ex Lorem ea officia id est sint. Nulla consectetur ad ea consequat anim exercitation est consequat voluptate tempor dolor irure pariatur elit sit. Proident qui ad cupidatat. Do amet duis labore et.
+
+</div>
+</div>
+
+<!-- quote -->
+> Soysambu are amazing or not
+
+
+```{r, fig.cap='Flamingos', fig.align='center', out.width = '90%'}
+knitr::include_graphics('img/flamingos.png')
+```
+
+Ex magna consectetur consectetur est pariatur id. Excepteur proident laborum commodo voluptate officia cupidatat commodo ad laborum nulla. Qui ea proident amet fugiat officia consequat fugiat esse sit fugiat in dolor ipsum laborum. Est irure ipsum nisi nostrud commodo duis laborum cupidatat esse ex nostrud consequat officia ad. Proident et ex aliqua in esse sint do reprehenderit voluptate enim cillum duis deserunt irure enim. In laborum sit ipsum aliquip elit do elit nulla nisi laboris voluptate.
+
+
+```{r}
+add_lot_link(caption = 'Number of households sampled')
+
+mtcars %>%
+  head(7) %>%
+  sea::sea_table(
+    dark_color = sea_colors("rust_orange"),
+    pale_color = sea_colors("grey"),
+    third_color = "white"
+  ) |>
+  flextable::autofit()
+```
+
+\newpage
+
+`r wrap_columns_elements(c(big_numbers("36%", "Did one thing"), big_numbers("45%", "Did one thing"), big_numbers("86%", "Did one thing")))`
+
+`r wrap_columns_elements(c(big_numbers("5%", "Did one thing"), big_numbers("36%"), big_numbers("77%", "Did one thing")))`
+
+`r wrap_columns_elements(c(big_numbers(fontawesome::fa("car"), "A nice car"), big_numbers(fontawesome::fa("plane"), "A nice plane"), big_numbers("36%", "Did one thing")))`
+
+<!-- `r wrap_double_page("img/map sample sizes.png", caption = "Figure 2. Map of surveyed areas and sample sizes.")` -->
+
+
+```{r, fig.cap='Figure 2. Map of survey locations', fig.align='center', out.width = '90%'}
+
+library(mapview)
+library(sf)
+library(dplyr)
+library(readxl)
+library(readr)
+library(leaflet)
+library(tidyr)
+
+hhs_locations_village <- readRDS("hhs_cleaned.rds") %>%
+  select("locat", "locatn_lat", "locatn_long", "enum", "village", "livelihood_activity1", "livelihood_activity2") %>%
+  rename("y" = "locatn_lat", "x" = "locatn_long")
+
+hhs_location1 <- hhs_locations_village %>%
+  group_by(locat) %>%
+  summarize(num_samples = n())
+hhs_location2 <- hhs_locations_village %>%
+  group_by(locat) %>%
+  summarize(mean_latitude = mean(y),
+            mean_longitude = mean(x))
+hhs_location <- merge(hhs_location1, hhs_location2, by = 'locat')
+
+my_palette <- c("#202C39", "#d77e5e", "#3d5919", "#381D2A"
+                #"#e6e7e2","#a4b792",  "#000000","#202C39", "#d77e5e"
+                )
+
+distinct_colors <- my_palette[1:length(unique(hhs_location$locat))]
+
+map <- leaflet(data = hhs_location) %>%
+  addTiles()
+map <- map %>%
+  addCircleMarkers(
+    lat = ~mean_latitude,
+    lng = ~mean_longitude,
+    radius = ~sqrt(num_samples) * 5,
+    color = ~distinct_colors,
+    fillOpacity = 0.7
+  ) %>%
+  addLegend("bottomright",
+            colors = distinct_colors,
+            labels = unique(hhs_location$locat),
+            opacity = 1)
+```
+<!-- `r wrap_double_page(map)` -->
+
+
+```{r, fig.cap='Figure 3. Gender of respondents', fig.align='center', out.width = '90%'}
+library(ggplot2)
+
+# # map of the world
+# world <- rnaturalearth::ne_countries(scale = "small", returnclass = "sf")
+# 
+# p <- ggplot(world) +
+#   geom_sf(aes(fill = income_grp),
+#           color = "lightgrey") +
+#   sea::scale_fill_sea_discrete(reverse = TRUE) +
+#   guides(fill = "none") +
+#   theme_void()
+
+
+gender_respond <- dclus2 %>% 
+  group_by(locat, gender) %>% 
+  summarise(
+    proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+    total = survey_total(vartype = "ci", na.rm = TRUE),
+    n = unweighted(n())
+  ) 
+
+a <- ggplot(gender_respond, aes(x = locat, y = n, group = gender, fill = gender)) +
+  geom_bar(stat = "identity", position = position_dodge(preserve = "single"), width = 0.95) +
+  sea::scale_fill_sea_discrete(reverse = TRUE) +
+  guides(fill = guide_legend(title = NULL)) +
+  labs(x = "Location", y = "Number of Households") +
+  theme_sjplot() + 
+  #guides(fill = "none") +
+  #theme_void() +
+  theme(legend.position = c(0.9, 0.9))
+a
+```
+
+</div>
+
+<!-- inverse gunmetal page -->
+<div class="section-gunmetal-inverse">
+
+# Findings
+
+Nulla consequat deserunt anim labore dolor nulla anim et. Id officia nostrud officia pariatur eiusmod velit id elit sit ut duis pariatur duis. Officia et veniam cupidatat sint velit nisi ut. Duis enim est labore ea laborum officia ad occaecat ex non tempor commodo ea tempor elit. Eu reprehenderit amet duis irure aute proident Lorem laborum do eu. Cillum eiusmod irure sint id dolor do amet. Ad sunt sunt voluptate anim qui aliqua voluptate.
+
+
+## Some more title
+
+Nulla consequat deserunt anim labore dolor nulla anim et. Id officia nostrud officia pariatur eiusmod velit id elit sit ut duis pariatur duis. Officia et veniam cupidatat sint velit nisi ut. Duis enim est labore ea laborum officia ad occaecat ex non tempor commodo ea tempor elit.
+
+`r wrap_columns_elements(c(big_numbers("36%", "Did one thing"), big_numbers("36%", "Did one thing"), big_numbers("36%", "Did one thing")))`
+
+Eu reprehenderit amet duis irure aute proident Lorem laborum do eu. Cillum eiusmod irure sint id dolor do amet. Ad sunt sunt voluptate anim qui aliqua voluptate.
+
+</div>
+
+<!-- gunmetal page -->
+<div class="section-gunmetal">
+
+
+```{r, fig.cap='Figure 4. Proportion of Households born in their area', fig.align='center', out.width = '90%'}
+
+born <- dclus2 %>% 
+  group_by(locat, hh_head_born) %>% 
+  summarise(proportion = survey_mean(vartype = "ci", na.rm=TRUE),
+            total = survey_total(vartype = "ci", na.rm=TRUE),
+            n= unweighted(n())) 
+
+a <- ggplot(born, aes(x=locat, y=proportion, group = hh_head_born, fill = hh_head_born)) +
+  geom_bar(stat = "identity", position = position_dodge(preserve = "single"), width = 0.95) +
+  geom_errorbar(data=born, aes(ymax = ifelse(proportion_upp > 1, 1, proportion_upp), ymin = ifelse(proportion_low < 0, 0, proportion_low)), 
+                position = position_dodge(preserve = "single", width = 0.95), width = 0.1) +
+  sea::scale_fill_sea_discrete(reverse = TRUE) +
+  guides(fill=guide_legend(title=NULL)) +
+  labs(x="Location", y = "Proportion of Households") +
+  scale_y_continuous(limits=c(0, 1)) +
+  theme_sjplot() + 
+  theme(legend.position=c(0.80,0.950))
+a
+
+```
+
+<!-- columns layout -->
+<div class="wrap-columns">
+<div class="column-60">
+
+Ex magna consectetur consectetur est pariatur id. Excepteur proident laborum commodo voluptate officia cupidatat commodo ad laborum nulla. Qui ea proident amet fugiat officia consequat fugiat esse sit fugiat in dolor ipsum laborum. Est irure ipsum nisi nostrud commodo duis laborum cupidatat esse ex nostrud consequat officia ad. Proident et ex aliqua in esse sint do reprehenderit voluptate enim cillum duis deserunt irure enim. In laborum sit ipsum aliquip elit do elit nulla nisi laboris voluptate.
+
+## Title inside column
+
+Ex magna consectetur consectetur est pariatur id. Excepteur proident laborum commodo voluptate officia cupidatat commodo ad laborum nulla. Qui ea proident amet fugiat officia consequat fugiat esse sit fugiat in dolor ipsum laborum. 
+
+</div>
+<div class="column-40">
+
+Aute aliqua consequat fugiat reprehenderit nostrud. Nisi nostrud ex laboris non. Minim dolore esse consequat magna cillum sunt labore dolor Lorem minim.Cupidatat occaecat elit proident ad anim est cupidatat excepteur aute cillum ipsum minim mollit enim. Proident do incididunt occaecat magna esse ipsum elit dolore sint culpa dolore sint qui. Ex do in excepteur irure incididunt ea sint aliqua culpa Lorem et ipsum proident. Adipisicing ea adipisicing amet proident laborum Lorem magna commodo deserunt officia veniam laboris.
+Nostrud laboris ullamco ut non eu elit amet. Mollit qui et cillum. Ex Lorem ea officia id est sint. Nulla consectetur ad ea consequat anim exercitation est consequat voluptate tempor dolor irure pariatur elit sit. Proident qui ad cupidatat. Do amet duis labore et.
+
+</div>
+</div>
+
+<!-- <aside> tags have inverse background -->
+<aside>
+
+### Aside title
+
+Proident do incididunt occaecat magna esse ipsum elit dolore sint culpa dolore sint qui. Ex do in excepteur irure incididunt ea sint aliqua culpa Lorem et ipsum proident. Adipisicing ea adipisicing amet proident laborum Lorem magna commodo deserunt officia veniam laboris.
+
+</aside>
+
+</div>
+
+<!-- inverse purple page -->
+<div class="section-purple-inverse">
+
+# Conclusion
+
+## Level 2
+
+Nulla consequat deserunt anim labore dolor nulla anim et. Id officia nostrud officia pariatur eiusmod velit id elit sit ut duis pariatur duis. Officia et veniam cupidatat sint velit nisi ut. Duis enim est labore ea laborum officia ad occaecat ex non tempor commodo ea tempor elit. Eu reprehenderit amet duis irure aute proident Lorem laborum do eu. Cillum eiusmod irure sint id dolor do amet. Ad sunt sunt voluptate anim qui aliqua voluptate.
+
+### Some more title level 3
+
+Nulla consequat deserunt anim labore dolor nulla anim et. Id officia nostrud officia pariatur eiusmod velit id elit sit ut duis pariatur duis. Officia et veniam cupidatat sint velit nisi ut. Duis enim est labore ea laborum officia ad occaecat ex non tempor commodo ea tempor elit. Eu reprehenderit amet duis irure aute proident Lorem laborum do eu. Cillum eiusmod irure sint id dolor do amet. Ad sunt sunt voluptate anim qui aliqua voluptate.
+
+</div>
+
+<!-- purple page -->
+<div class="section-purple">
+
+Ex magna consectetur consectetur est pariatur id. Excepteur proident laborum commodo voluptate officia cupidatat commodo ad laborum nulla. Qui ea proident amet fugiat officia consequat fugiat esse sit fugiat in dolor ipsum laborum. Est irure ipsum nisi nostrud commodo duis laborum cupidatat esse ex nostrud consequat officia ad. Proident et ex aliqua in esse sint do reprehenderit voluptate enim cillum duis deserunt irure enim. In laborum sit ipsum aliquip elit do elit nulla nisi laboris voluptate.
+
+## Some more title
+
+Ex magna consectetur consectetur est pariatur id. Excepteur proident laborum commodo voluptate officia cupidatat commodo ad laborum nulla. Qui ea proident amet fugiat officia consequat fugiat esse sit fugiat in dolor ipsum laborum. Est irure ipsum nisi nostrud commodo duis laborum cupidatat esse ex nostrud consequat officia ad. Proident et ex aliqua in esse sint do reprehenderit voluptate enim cillum duis deserunt irure enim. In laborum sit ipsum aliquip elit do elit nulla nisi laboris voluptate.
+
+> Deserunt consectetur veniam irure pariatur occaecat eu elit officia minim. Eiusmod irure consectetur sunt mollit in ad ea veniam ut.
+
+Aute aliqua consequat fugiat reprehenderit nostrud. Nisi nostrud ex laboris non. Minim dolore esse consequat magna cillum sunt labore dolor Lorem minim.Cupidatat occaecat elit proident ad anim est cupidatat excepteur aute cillum ipsum minim mollit enim. Proident do incididunt occaecat magna esse ipsum elit dolore sint culpa dolore sint qui. Ex do in excepteur irure incididunt ea sint aliqua culpa Lorem et ipsum proident. Adipisicing ea adipisicing amet proident laborum Lorem magna commodo deserunt officia veniam laboris.
+Nostrud laboris ullamco ut non eu elit amet. Mollit qui et cillum. Ex Lorem ea officia id est sint. Nulla consectetur ad ea consequat anim exercitation est consequat voluptate tempor dolor irure pariatur elit sit. Proident qui ad cupidatat. Do amet duis labore et.
+
+Duis esse amet enim officia Lorem anim culpa consequat consectetur. Consequat duis Lorem laboris ullamco tempor enim cupidatat ea laborum proident. Quis ullamco mollit ipsum ullamco ea culpa. Veniam ad duis duis aliquip amet aute laboris id eu labore sint ad exercitation pariatur.
+
+Aute aliqua consequat fugiat reprehenderit nostrud. Nisi nostrud ex laboris non. Minim dolore esse consequat magna cillum sunt labore dolor Lorem minim.Cupidatat occaecat elit proident ad anim est cupidatat excepteur aute cillum ipsum minim mollit enim. Proident do incididunt occaecat magna esse ipsum elit dolore sint culpa dolore sint qui. Ex do in excepteur irure incididunt ea sint aliqua culpa Lorem et ipsum proident. Adipisicing ea adipisicing amet proident laborum Lorem magna commodo deserunt officia veniam laboris.
+Nostrud laboris ullamco ut non eu elit amet. Mollit qui et cillum. Ex Lorem ea officia id est sint. Nulla consectetur ad ea consequat anim exercitation est consequat voluptate tempor dolor irure pariatur elit sit. Proident qui ad cupidatat. Do amet duis labore et.
+
+Duis esse amet enim officia Lorem anim culpa consequat consectetur. Consequat duis Lorem laboris ullamco tempor enim cupidatat ea laborum proident. Quis ullamco mollit ipsum ullamco ea culpa. Veniam ad duis duis aliquip amet aute laboris id eu labore sint ad exercitation pariatur.
+
+Aute aliqua consequat fugiat reprehenderit nostrud. Nisi nostrud ex laboris non. Minim dolore esse consequat magna cillum sunt labore dolor Lorem minim.Cupidatat occaecat elit proident ad anim est cupidatat excepteur aute cillum ipsum minim mollit enim. Proident do incididunt occaecat magna esse ipsum elit dolore sint culpa dolore sint qui. Ex do in excepteur irure incididunt ea sint aliqua culpa Lorem et ipsum proident. Adipisicing ea adipisicing amet proident laborum Lorem magna commodo deserunt officia veniam laboris.
+Nostrud laboris ullamco ut non eu elit amet. Mollit qui et cillum. Ex Lorem ea officia id est sint. Nulla consectetur ad ea consequat anim exercitation est consequat voluptate tempor dolor irure pariatur elit sit. Proident qui ad cupidatat. Do amet duis labore et.
+
+Duis esse amet enim officia Lorem anim culpa consequat consectetur. Consequat duis Lorem laboris ullamco tempor enim cupidatat ea laborum proident. Quis ullamco mollit ipsum ullamco ea culpa. Veniam ad duis duis aliquip amet aute laboris id eu labore sint ad exercitation pariatur.
+
+</div>
+
+<!-- putting bibliography before appendix -->
+<div id="refs">
+## Bibliography
+</div>
+
+<!-- grey section - for appendix only -->
+<div class="appendix-section-grey">
+
+# Appendix
+
+## Appendix 1
+
+Ex magna consectetur consectetur est pariatur id. Excepteur proident laborum commodo voluptate officia cupidatat commodo ad laborum nulla. Qui ea proident amet fugiat officia consequat fugiat esse sit fugiat in dolor ipsum laborum. Est irure ipsum nisi nostrud commodo duis laborum cupidatat esse ex nostrud consequat officia ad. Proident et ex aliqua in esse sint do reprehenderit voluptate enim cillum duis deserunt irure enim. In laborum sit ipsum aliquip elit do elit nulla nisi laboris voluptate.
+
+\newpage
+
+## Appendix 2
+
+```{r}
+mtcars %>%
+  head(20) %>%
+  sea::sea_table(
+    dark_color = "darkgrey",
+    pale_color = sea_colors("grey"),
+    third_color = "white"
+  ) |>
+  flextable::autofit()
+```
+
+
+</div>
+

@@ -17,20 +17,20 @@ ggsave <- function(..., bg = 'white') ggplot2::ggsave(..., bg = bg)
 ######################################################################################################################
 #  -99 indicates don't know and these are converted to NA in continuous or "Don't know" in categorical   #######
 
-rm(list=ls())
-# bring in sheet ----------------------------------------------------------
-gs4_deauth()
-hhs<-googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1FA5UUiUtW6oHuHmQV6DGJs07dS8tWvm3XWQ_mME5MMI" , sheet = 1) %>%
- as.data.frame()
-hhs_codes <-googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1FA5UUiUtW6oHuHmQV6DGJs07dS8tWvm3XWQ_mME5MMI" , sheet = 4) %>%
- as.data.frame() %>%
- select(column_titles)
-
-# transpose the column of codes to replace the header row
-new_header <- as.character(hhs_codes$column_titles)
-colnames(hhs) <- new_header
-hhs <- hhs %>% 
-  select(-c("name_respondent", "phon_numb"))
+# rm(list=ls())
+# # bring in sheet ----------------------------------------------------------
+# gs4_deauth()
+# hhs<-googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1FA5UUiUtW6oHuHmQV6DGJs07dS8tWvm3XWQ_mME5MMI" , sheet = 1) %>%
+#  as.data.frame()
+# hhs_codes <-googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1FA5UUiUtW6oHuHmQV6DGJs07dS8tWvm3XWQ_mME5MMI" , sheet = 4) %>%
+#  as.data.frame() %>%
+#  select(column_titles)
+# 
+# # transpose the column of codes to replace the header row
+# new_header <- as.character(hhs_codes$column_titles)
+# colnames(hhs) <- new_header
+# hhs <- hhs %>% 
+#   select(-c("name_respondent", "phon_numb"))
 saveRDS(hhs, "hhs_raw.rds")
 
 
