@@ -3,16 +3,16 @@ title: "Soysambu Conservancy"
 subtitle: "Social Assessment of Protected Area"
 author: 
   - "Sustain East Africa"
-  - "Peter Tyrrell"
-  - "Peadar Brehony"
-date: "February 2024"
+  #- "Peter Tyrrell"
+  #- "Peadar Brehony"
+date: "March 2024"
 output: 
   sea::sea_paged:
     draft_watermark: false
     remove_footer_title: false
     front_cover:
       - "img/flamingos.png"
-      #- "img/image_cover2.jpg"
+      - "img/giraffe.jpg"
       #- "img/image_cover3.jpg"
       #- "img/image_cover4.jpg"
 
@@ -60,34 +60,39 @@ dclus2 <- hhs_cleaned %>%
 <!-- remove if useless -->
 \newpage
 
-## Summary
+# Summary
 
-### Context
+## Context
 
-The Social Assessment for Protected and Conserved Areas (SAPA), launched in 2014,
-responded to a need for a standardised, low-cost and relatively simple approach to
-assessing social impacts of protected or conserved areas (PCAs). SAPA can help identify
-positive and negative social impacts of PCAs, understand the underlying causes of
-problems related to governance and identify actions that could improve the situation. The
-methodology can also be used to establish a baseline for social impacts and their overall
-contribution to human wellbeing against which changes can be tracked over time.
-SAPA is a multi-stakeholder assessment methodology for use by site-level stakeholders.
-The methodology is based on a standardised process that can be replicated across PCAs
-while remaining flexible enough for tailoring to local needs and contexts.
+The Social Assessment for Protected and Conserved Areas (SAPA) is a standardised, low-cost and relatively simple approach to assessing social impacts of protected or conserved areas. SAPA can help identify positive and negative social impacts of protected or conserved areas, understand the underlying causes of problems related to governance and identify actions that could improve the situation. The methodology can also be used to establish a baseline for social impacts and their overall contribution to human wellbeing against which changes can be tracked over time. It is a multi-stakeholder assessment methodology for use by site-level stakeholders. 
 
-### Key Findings
+## Key Findings
 
-#### Positive social impacts
-Most positive social impacts across the six case studies fall under five main categories:
-1) Ecosystem service benefits
-2) PA-related employment
-3) PA-supported development projects
-4) Reduced human-wildlife conflict, and
-5) Improved security
+### Positive social impacts
 
-Short detail about each
+Based on the findings of the SAPA process, the main positive social impacts that contributed to household well-being in communities neighbouring or within Soysambu Conservancy were: 
+1) Improving access to water
+2) Building or maintaining infrastructure
+3) Support for education
+4) Support for health projects
+5) Outreach services and training
 
-#### Negative social impacts
+Soysambu conservancy provides water to the community either through trucks or by building water tanks, ensuring access to clean and safe water for local residents. 
+
+<!-- quote -->
+> Soysambu are amazing for proving access to water
+
+Soysambu conservancy's support in building or maintaining infrastructure including police posts, schools, and roads, were reported to enhance the overall quality of life for community members.
+
+Soysambu conservancy’s initiative to offer sponsorship opportunities for students, enabling access to education and fostering academic achievement, was seen as a positive social impact by some households. Additionally, Soysambu's contributions to local schools, such as providing school meals for students, school uniforms, desks, and sports equipment, positively impact educational outcomes and student well-being. The Conservancy also provides free guided educational trips to community members, offering valuable learning experiences and fostering appreciation for conservation efforts.
+
+Soysambu conservancy’s support for health projects, including the provision of equipment to clinics and cancer screening for women, contributed to improved healthcare access and outcomes within the community. Additionally, Soysambu Conservancy also provided anti-rabies vaccinations for dogs and donkeys, demonstrating a commitment to community health.
+
+Soysambu conservancy also offered outreach services in the form of training in improved livestock production, health, and waste management, empowering residents with valuable knowledge and skills.
+
+Soysambu actively participates in environmental conservation initiatives, such as tree planting, contributing to the preservation of natural resources and biodiversity. Furthermore, some households also felt that providing access to firewood also demonstrated a commitment to community support.
+
+### Negative social impacts
 
 Most negative social impacts across the six case studies fall under five main categories:
 1) Ecosystem service benefits
@@ -98,21 +103,40 @@ Most negative social impacts across the six case studies fall under five main ca
 
 Short detail about each
 
-#### Overall contribution to wellbeing
+<!-- quote -->
+> Scholarships should be transparent and target vulnerable children
 
-A
 
-#### Governance
+<!-- quote -->
+> My child needs compensation. He was injured by a buffalo and was a security in conservancy
 
-a
+### Overall contribution to wellbeing
 
-#### Differences by location and wellbeing
+The survey results indicated that the majority of respondents perceived Soysambu's overall contribution to well-being as neutral, taking into account both positive and negative impacts. There were exceptions, particularly in Oljorai and Mbaruk locations, where a few respondents felt that Soysambu had increased their well-being. 
 
-a
+Interestingly, over `r big_numbers("75%")` of respondents residing within Soysambu felt that the conservancy had increased their well-being. On the other hand, approximately `r big_numbers("12%")` of respondents living in Oljorai agreed that Soysambu had reduced their overall well-being.
+
+### Governance
+
+SAPA encompasses four key principles of effective governance:  participation in decision-making, transparency and accessibility to information, mitigation of negative impacts, and equitable benefit-sharing process.
+
+#### Participation
+
+In Mbaruk and Oljorai locations, the majority of people disagree that there is participation in Soysambu’s decision-making that impacts the community. However, in Soysambu itself, a large percentage of people feel that there is some level of participation, particularly in knowing their community representative for meetings with Soysambu and communicating with them. In Kiptangwani, there is a mix in opinions with most people feeling that there is no participation, some agreeing that there is participation, and quite a number do not know whether there is any participation.
+
+#### Transparency and access to information
+
+`r big_numbers("75%", "Did one thing")`
+
+#### Rights
+
+#### Benefit Sharing Process
+
+#### Mitigation of Negative Impacts
 
 ### Recommendations going forward
 
-Recommend xyz
+Given that there are significant differences between locations, we recommend xyz
 
 
 ### Disclaimer
@@ -131,50 +155,45 @@ Brehony, P., Tyrrell, P., Muiyuro, R., Wairimu, E. 2024. Social Assessment of Pr
 
 ### Acknowledgements
 
-Soysambu Conservancy would like to thank: 
-Funder 1
-As well as Helen, Chiefs, Nyumba Kumi, Enumerators, etc. 
+This Social Assessment of Protected Areas for Soysambu Conservancy is the result of a collaborative effort between Sustain East Africa, Soysambu Conservancy, and representatives from communities bordering the Conservancy. Thank you to the all those who helped to pull this together.
+
+Particular thanks go to: Helen Jerotich, Community Education Officer (Soysambu Conservancy); Chief Joseph Mwangi and Assistant Chief Felicah Mugi of Mbaruk location; Chief Parit Sururu and Assistant Chief Henry Balozi of Kongasis, Oljorai location; and Chief Simon Mathare and Assistant Chief Benson Mungai of Kiptangwani location. 
+
+We would also like to acknowledgement the MCA of Eburru Mbaruk Ward, Michael Gathanwa, and his ward administration for their insights and input in highlighting areas where Soysambu Conservancy can continue to support neighbouring communities.
+
+We also thank the Nyumba Kumi village elders from the three locations for their input, as well as the dedicated enumerators involved in carrying out the household surveys: Benedicta Wanjiru, Emmanuel Kooli, and Paul Waweru.
 
 <!-- inverse rust page -->
 <div class="section-rust-inverse">
 
-# The Social Assessment of Protected Areas (SAPA) approach
+# Introduction
 
-SAPA, launched in 2014, responded to this need for a standardised, low-cost and
-relatively simple approach to assessing social impacts of PCAs. Rather than determining
-the actual contributions to wellbeing of a PCA, SAPA identifies ways to reduce negative
-impacts and increase the positive ones. It also shows how positive impacts can be shared
-within the community more equitably.
+## Soysambu Conservancy
 
-The framework also shows the two complementary ways of assessing social impacts
-used in SAPA. The first explores how wellbeing has changed over a given period
-(improved, deteriorated, no change) and the more significant factors that have contributed
-to this change. The second explores the main positive and negative impacts of the PCA
-on wellbeing and their significance over the same period.
+Soysambu Conservancy is located within the Rift Valley System. It covers 48,000 acres, encompassing the northern and western shores of Lake Elmenteita. Soysambu Conservancy is renowned for its remarkable biodiversity, including a population of 170 endangered Nubian Giraffes and over 450 bird species, notably hosting 28% of the world's Lesser Flamingo population. Indeed Lake Elmentaita is one of Kenya's Key Biodiversity Areas and RAMSAR sites^[a wetland that is of international importance under the Ramsar Convention, also known as the "Convention on Wetlands"]. Its rich wildlife habitat is home to buffalo, leopard, hippo, hyena, jackal, eland, zebra, impala, Thompson’s and Grant’s Gazelle, waterbuck, reedbuck, klipspringer, warthog, steinbok, colobus monkey, vervet monkey, and baboons.
 
-SAPA uses a set of standard assessment questions directly related to social impacts
-and governance quality (Box 2.1). It also includes a process of developing site-specific
-questions that respond to specific information needs of actors. This combination of
-standard questions and site-specific questions enables comparison and aggregation
-across sites, as well as tailoring of the assessment to the needs of a specific site.
+Soysambu Conservancy was established as a Not-for-Profit Company on April 13th, 2007 and works to conserve the Soysambu Estate as a traditional wildlife area, which supports the integrity of the greater Rift Valley ecosystem, while promoting sustainable coexistence of wildlife with livestock and at the same time being relevant to and part of modern-day Kenya. 
 
-The inclusion of a governance and equity assessment in the second edition of SAPA
-strengthens the results and action planning processes. Governance is distinct from
-management and pays attention to who defines objectives and how. It also looks
-at allocation of responsibility and accountability for delivering on these objectives.
-Governance quality measures how well a PCA performs in terms of good governance
-principles (Borrini-Feyerabend et al. 2013). In the context of conservation, equity
-principles are of three main types – recognition, procedure and distribution (Pascual et al.
-2014). These principles are considered a subset of good governance (Franks, Small and
-Booker 2018).
+Soysambu Conservancy wanted to understand more about the social impact of the conservancy on communities living within and surround the conservancy. Furthermore, they wanted to use the opportunity of assessing the social impacts of the Conservancy to listen to what communities within and surrounding the conservancy had to say about the positive and negative impacts of the Conservancy. This could also serve as an opportunity to establish a baseline for Soysambu Conservancy's contribution to the well-being of communities, over time.
 
-As another important strength, SAPA can distinguish between how a positive or negative
-impact differs among people according to various factors. These include food security,
-ethnicity, age, gender and their residential proximity to the PCA. This is important because
-an overall positive impression of the social impacts of conservation often hides serious
-inequities in their distribution. Negative impacts tend to fall on poorer people, particularly
-women. Meanwhile, benefits tend to go to the less poor, particularly men, who often have
-more influence on decision making.
+
+## The Social Assessment of Protected Areas (SAPA) approach
+
+The Social Assessment for Protected and Conserved Areas (SAPA), launched in 2014, responded to a need for a standardised, low-cost and relatively simple approach to assessing social impacts of protected or conserved areas. 
+
+SAPA is a multi-stakeholder assessment methodology for use by site-level stakeholders. The methodology is based on a standardised process that can be replicated across protected or conserved areas while remaining flexible enough for tailoring to local needs and contexts. SAPA uses a set of standard assessment questions directly related to social impacts and governance quality. It also includes a process of developing site-specific questions that respond to specific needs of actors. 
+
+SAPA can help identify positive and negative social impacts of protected or conserved areas, understand the underlying causes of problems related to governance and identify actions that could improve the situation. The inclusion of a governance and equity assessment in the second edition of SAPA strengthens the results and action planning processes. Governance is distinct from management and pays attention to who defines objectives and how. It also looks at allocation of responsibility and accountability for delivering on these objectives.
+
+The methodology can also be used to establish a baseline for social impacts and their overall contribution to human wellbeing against which changes can be tracked over time. Therefore, the SAPA approach meets the requirements of Soysambu Conservancy as they seek to understand social impacts over time, and to listen to feed back from communities living within and surrounding the conservancy. 
+
+## Objectives of the Social Assessment
+
+Soysambu Conservancy aims to ensure that they provide value to Kenya, its people and the wider international community through sustainable conservation and enjoyment as a national treasure and heritage. 
+
+The conservancy is currently expanding its engagement with communities living within and surrounding the conservancy. Conducting a SAPA will therefore help them better understand the views, needs, and opportunities of the surrounding communities. 
+
+The primary objective of this assessment therefore was to integrate conservation initiatives with community development and foster a positive relationship between Soysambu and their neighbouring communities, principally by increasing positive impacts and reducing negative impacts to communities. 
 
 </div>
 
@@ -184,26 +203,46 @@ more influence on decision making.
 <!-- columns layout -->
 <!-- article instead of a div if you have titles to should go in the TOC -->
 
-## Approach and Methods
+# Approach and Methods
 
 <div class ="wrap-columns">
 <div class ="column-50">
 
-SAPA uses a classic mixed methods approach that combines different tools to gather
-information, assess results and generate ideas for action in response to the results.
-Table 2.1 shows a timeline for the 19 activities of SAPA spread over five phases, along
-with corresponding outputs.
-The methods are all linked to a stakeholder analysis designed to ensure that all key
-actors are engaged effectively in the assessment. This process ranges from design and
-analysis to interpretation of results and actions that can improve the situation.
-The multi-stakeholder nature of the process increases the accuracy and credibility of
-results. It enhances transparency and ownership of the assessment. And it builds support
-for action and accountability for implementation.
-But the resistance of key actors can compromise the effectiveness of SAPA. Care and
-sensitivity are needed to manage the process and develop a sense of shared problemsolving,
-while avoiding conflict. More details about the methodology, the analytical
-framework, research design and process can be found in the SAPA manual (Franks, Small
-and Booker 2018).
+## SAPA overview, process and outputs
+
+The SAPA Assessment uses a mixed methods approach that combines qualitative data and quantitative data to gather information, assess results and generate ideas for action in response to the findings. 
+
+Throughout the SAPA process, there is an emphasis on linking the steps to stakeholder engagement, either through discussions, or feedback, or actions to improve the situation. This ensures that stakeholders, including communities through their representatives, are effectively engaged throughout the assessment. 
+
+This multi-stakeholder approach increases the accuracy and credibility of the findings, enhances transparency and ownership of the assessment process, builds support for action and accountability for implementation.
+
+The main phases of the SAPA include:
+
+Preparing
+  Planning
+  Community mapping
+  Stakeholder analysis
+  Training
+  
+Scoping
+  First community meeting and stakeholder workshop
+  
+Information Gathering
+  Planning
+  Develop household survey
+  Train enumerators
+  Conduct household survey
+  Analyse household survey data
+  
+Assessing
+  Second community meeting and stakeholder workshop
+  
+Taking Action
+  Communicate results
+  Plan actions
+  Monitor progress
+
+For those interested, much greater detail can be found in the SAPA manual @franks_social_2018.
 
 ## Preparation
 
@@ -363,8 +402,63 @@ a
 
 # Findings
 
-Nulla consequat deserunt anim labore dolor nulla anim et. Id officia nostrud officia pariatur eiusmod velit id elit sit ut duis pariatur duis. Officia et veniam cupidatat sint velit nisi ut. Duis enim est labore ea laborum officia ad occaecat ex non tempor commodo ea tempor elit. Eu reprehenderit amet duis irure aute proident Lorem laborum do eu. Cillum eiusmod irure sint id dolor do amet. Ad sunt sunt voluptate anim qui aliqua voluptate.
+## Positive Social Impacts
 
+
+Soysambu conservancy’s initiative to offer sponsorship opportunities for students, enabling access to education and fostering academic achievement, was seen as a positive social impact by some households. Additionally, Soysambu's contributions to local schools, such as providing school meals for students, school uniforms, desks, and sports equipment, positively impact educational outcomes and student well-being. The Conservancy also provides free guided educational trips to community members, offering valuable learning experiences and fostering appreciation for conservation efforts.
+
+Soysambu conservancy’s support for health projects, including the provision of equipment to clinics and cancer screening for women, contributed to improved healthcare access and outcomes within the community. Additionally, Soysambu Conservancy also provided anti-rabies vaccinations for dogs and donkeys, demonstrating a commitment to community health.
+
+Soysambu conservancy provides water to the community either through trucks or by building water tanks, ensuring access to clean and safe water for local residents. 
+
+Soysambu conservancy's support in building or maintaining infrastructure including police posts, schools, and roads, were reported to enhance the overall quality of life for community members.
+
+Soysambu conservancy also offered outreach services in the form of training in improved livestock production, health, and waste management, empowering residents with valuable knowledge and skills.
+
+Soysambu actively participates in environmental conservation initiatives, such as tree planting, contributing to the preservation of natural resources and biodiversity. Moreover, Soysambu offers support to bush-clearing workers by providing firewood for free, demonstrating a commitment to employee welfare and community support.
+
+```{r, fig.cap='Overall positive impacts across all communities', fig.align='center', out.width = '90%'}
+knitr::include_graphics('img/positive impacts overall.png')
+```
+
+## Positive Impacts per Location
+
+The findings of the household survey reveal diverse perspectives across the four locations. When the survey respondents were asked about how important projects previously implemented by Soysambu were to their households the majority of respondents from Kiptangwani location assigned a rating of zero, indicating little importance. A significant portion expressed low importance, while only a few acknowledged medium to high importance, particularly concerning water provision and infrastructure development.
+
+In Mbaruk location, respondents indicated that the previously mentioned projects had zero impact on their households, with very few attributing medium to high importance to them. 
+In the Oljorai location, the influence of Soysambu Conservancy on the community appears notably positive. A majority of respondents affirmed the high importance of the projects to their households, with a significant number rating them as of medium importance. Fewer respondents indicated zero importance, while a minimal number expressed low importance.
+
+The findings revealed mixed perceptions among residents within Soysambu regarding the significance of various projects. While a considerable number regarded most projects as of high importance, some perceived certain initiatives e.g sponsorship opportunities for students and community education programs, as having zero importance to their households. Consequently, the number of respondents expressing medium importance to the projects was minimal.
+
+```{r, fig.cap='Positive impacts broken down into separate locations', fig.align='center', out.width = '90%'}
+knitr::include_graphics('img/positive impacts by location.png')
+```
+
+## Negative Social Impacts
+
+Although Soysambu Conservancy have made considerable efforts to improve relationships with communities within and neighbouring the conservancy, there are still a number of impacts that are having negative impacts on household well-being.
+
+The findings from discussions with community representatives and the household surveys indicate that transmission of disease from wildlife and livestock in Soysambu to local livestock poses a significant concern for community members. Human-wildlife conflict also dominates in the area with wildlife originating from Soysambu exacerbating tensions and challenges for residents. Examples include the damage to crops, livestock and other property; injury of people; and lack of compensation for damage and injury by wildlife from Kenya Wildlife Service (KWS) Moreover, restricted access to certain public utilities, such as roads, creates barriers to mobility and community well-being.
+
+Respondents also said that Soysambu-related benefits are unfairly shared, for example, there was main concern on limited employment opportunities and a lack of prioritisation in employment within Soysambu. This together with the exclusion of the local community from involvement in development projects perpetuates feelings of exclusion. 
+
+There is also a perceived lack of appreciation from Soysambu Conservancy when they receive assistance from the community, such as when the community assists in putting out fires during dry seasons. Limited access to grazing areas and restrictions on tree cutting within Soysambu Conservancy compound the challenges faced by local residents.
+
+
+```{r, fig.cap='Overall negative impacts across all communities', fig.align='center', out.width = '90%'}
+knitr::include_graphics('img/negative impacts overall.png')
+```
+
+## Negative Impacts per Location
+
+The assessment findings suggest that respondents in Oljorai location considered all of the highlighted negative impacts as of high importance, implying a detrimental effect on their household well-being.  Fewer respondents felt that the impacts were of medium importance while a number of them fel that some impacts were of zero importance for example conflict with wildlife, little grazing access to Soysambu and community not being prioritised in employment by Soysambu. 
+
+Opinions among respondents in Kiptangwani location were varied when it came to negative impacts. A significant majority of respondents highlighted that all negative impacts were of high importance and thus had a lot of impact on their household wellbeing, except for the restriction of access to public utilities, where most respondents expressed a perception of zero importance. Some respondents cited the negative impacts as having low importance, while others had no opinion at all. 
+
+
+```{r, fig.cap='Negative impacts broken down into separate locations', fig.align='center', out.width = '90%'}
+knitr::include_graphics('img/negative impacts by location.png')
+```
 
 ## Some more title
 
