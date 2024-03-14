@@ -19,7 +19,7 @@ ggsave <- function(..., bg = 'white') ggplot2::ggsave(..., bg = bg)
 rm(list=ls())
 
 #hhs_wealth <- readRDS("hhs_cleaned_wealth.rds")
-hhs_cleaned <- readRDS("hhs_cleaned.rds")
+hhs_cleaned <- readRDS("Soysambu SAPA/hhs_cleaned.rds")
 head(hhs_cleaned)
 
 #Sustain EA colour pallette
