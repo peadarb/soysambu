@@ -463,7 +463,7 @@ sea_table(combined_table)
 <!--   theme(legend.position=c(0.90,0.950)) -->
 <!-- ``` -->
 
-### Principle livelihoods of the households
+### Principal livelihoods of the households
 
 Residents surrounding Soysambu Conservancy engage in various economic activities, each with distinct needs. To the south, adjacent to Samburu, are pastoralist communities. Along the Pipeline-Elementaita road, there exists a satellite urban settlement area where minimal agriculture is practiced. The northern region comprises a mix of satellite urban communities and pastoralists, while the area along the Nakuru road towards Gilgil is predominantly occupied by smallholder farmers. Following this, the results are presented disaggregated by location.
 
@@ -828,76 +828,65 @@ To capture suggestions from stakeholders, during the survey, respondents were as
 
 In the following section, we outline the main categories under which these suggestions fall. 
 
-## Support on Schools and Education
+## Support for Schools and Education
 
-Mbaruk
-In Mbaruk, 30% of respondents expressed the need for support in constructing and maintaining schools, particularly emphasizing the establishment of educational facilities such as a nursery school in Pema and polytechnics in Kiambogo and Leleshwa. Furthermore, 11% of respondents sought assistance to aid well-performing students facing financial constraints. These insights were predominantly derived from the survey conducted in Mbaruk.
+Soysambu Conservancy has provided land for the construction of Lady Anne Secondary School. One household participant expressed gratitude to Soysambu for this initiative. However, there is a recurring call for greater support for schools and education, as highlighted in both the open-ended survey questions and the stakeholder workshops. Specifically, participants made several requests for investments from Soysambu, including:
 
-Oljorai
-In Oljorai, 6% of respondents highlighted the importance of food programs in schools and requested the construction of a nursery school in Ngatta. Additionally, 34% of respondents requested scholarships, emphasizing the importance of a fair and transparent selection process. These suggestions emerged from both the survey and stakeholder workshops conducted in Oljorai.
+a) Allocation of land between Baraka and Soysambu for the construction of a primary school and other public utilities, as well as the relocation of Kiboko Primary School to this land.
 
-Kiptangwani
-No specific requests were recorded during the survey in Kiptangwani. 
+b) Construction of a primary school in Royal Estate.
 
-Stakeholder workshop
+c) Installation of ablution blocks in primary schools such as Kapkures, Kambi Turkana, Oldubei, Olesirwa, Kelelwa, and Olepolos.
 
-Participants requested the construction of an Early Childhood Education (ECDE) center in Jogoo village, reflecting a need identified during community engagement sessions. Furthermore, workshop participants suggested that Soysambu could provide scholarships to the birghtest students from Primary Schools across all areas. 
+d) Establishment of an Early Childhood Education (ECDE) center in Jogoo village, addressing a recognized need from community engagement sessions.
 
+e) Development of a nursery school in Kiwanja Ndege and Ngatta areas, along with polytechnics and secondary schools.
 
-		“Provide transport for children going to Kiboko Primary.”
-		“Kutengenezea wanajamii shule ya upili katika hiki kiwanja cha ndege”
-“Kutengeneza angalau shule ya chekechea kwa jamii”
-“Scholarships should be transparent and target vulnerable children”
-	“Kutoa udhamini kwa wanafunzi”
-	
-Second feedback workshop participants requested that  Soysambu provides land between Baraka and Soysambu for building a primary school and other public utilities (62%) and Kiboko primary school be transferred to that land to serve a larger community land  (54%). They also wanted a primary school be built in Royal Estate. 
+f) Implementation of school feeding programs in Ol Jorai Primary School.
 
-During the second stakeholder workshop, the participants requested for an ablution block constructed in each of these schools; Kapkures primary school (79%), Kambi Turkana primary school (36%), Oldubei primary school (28%), Olesirwa, Kelelwa and Olepolos primary schools. 
+g) Creation of a library in the Mololine area to engage the youth.
 
-Kiptangwani; None of the survey respondents made any requests. During the second feedback workshop, however, the participants requested for the construction of an Early Childhood Education (ECDE) at Jogoo village (75%). 
+h) Provision of transportation for children commuting to Kiboko Primary.
 
-One respondent expressed gratitude to Soysambu for providing land for the construction of Lady Anne Secondary. 61 respondents suggested support for their schools in different aspects. Some (21 - Oljorai, 6 - Mbaruk) requested scholarships and bursaries. Some felt that scholarship provision was unfair and requested that it be made fair and transparent. Others (16) asked that schools be constructed, specifically a nursery school in Kiwanja Ndege and Ngatta areas, polytechnics and secondary schools. A few (3) requested school feeding programs in Ol Jorai primary school. Others suggested that establishing a library in the Mololine area to engage the youth, and the provision of transportation for children commuting to Kiboko Primary. 
-
+Furthermore, workshop participants suggested that Soysambu could offer scholarships to the brightest students from primary schools across all areas. Some respondents expressed concerns about the fairness of scholarship provisions, emphasizing the importance of ensuring a fair and transparent process.
 
 ## Health and hospital facilities
 
-Mbaruk; 19% of total Mbaruk respondents requested support for health-related initiatives, including the construction of a hospital, provision of hospital equipment, and the development of the Echareria dispensary.
- More emphasis during the workshop was laid when participants requested for Soysambu to build a maternity wing (62%), staff houses (46%) and outpatient wing 15%) In Kiungururia dispensary.
+Perhaps unsurprisingly, support for health initiatives within the communities was another form of support that was reguarly mentioned. During the survey, respondents expressed a collective desire for improved health facilities, including the construction of hospitals, provision of medical equipment, and upgrades to existing dispensaries.
 
-Oljorai; 4% of total Oljorai respondents suggested the need for support in constructing health centers in Kampi Turkana and Kapkures, as well as assistance in addressing an unknown disease.
-	“We need hospital in Kapkures, women loose children because of lacking hospital”
-“Providing health services to curb a strange skin disease from caves boardering Soysambu.”
-More emphasis was laid during the second workshop where they requested for a dispensary at Kampi Turkana (64%) and Kapkures (29%),  and staff houses at Oljorai health centre (29%)
-Kiptangwani; None of the survey respondents made any requests. During the second workshop, the participants requested for maternity wing equipment at Elementaita dispensary in Elementaita village (75%). 
+In the Mbaruk area, one in five respondents echoed the need for expanded healthcare infrastructure, including a hospital and a better-equipped dispensary in Echareria. The sentiment was further reinforced during the stakeholder workshops, with participants emphasizing the importance of constructing essential facilities such as a maternity wing, staff houses for health workers, and an outpatient wing in various locations, including Kiungururia.
+
+Similarly, in Oljorai, some respondents stressed the need for improved health facilities in Kampi Turkana and Kapkures: **“We need a hospital in Kapkures as women are losing children because a hospital is lacking”**. The sentiment was echoed during the stakeholder workshops, where requests for dispensaries at Kampi Turkana and Kapkures, along with staff housing at the Oljorai health center, were highlighted.
+
+While there were not specific requests from respondents in Kiptangwani during the survey, during the stakeholder workshops, participants emphasized the importance of equipping the maternity wing at the Elementaita dispensary in Elementaita village.
 
 ## Water Provision Services
 
-Mbaruk; 33% of Mbaruk’s total respondents. They expressed the need for water infrastructure such as constructed dams and boreholes, reviving a borehole opposite The African Forest and offering access to water that passes through Kiambogo and near their farms to Soysambu.
-“Allow us access the water passing through Kiambogo to Dalamere farm.”
-“Reviving the borehole opposite The African Forest to help with the water problem.”
+The need for reliable access to water was a recurring theme among the communities surveyed. Respondents highlighted the necessity for water infrastructure such as dams and boreholes to address water scarcity, especially during dry seasons.
 
-second stakeholder workshop participants from Mbaruk sublocation wanted a water tower built at Kiungururia (61%) and a borehole drilled in Echareria (61%)
-In Kasambara, the participants wanted a borehole drilled  at Wamagwathi’s farm and a pipe extension at Kianyeni village (69%) and as survey respondents had earlier suggested, 38% wanted the borehole near African Forest (Mt Kenya) to be revived with an additional request of a fence on the land. Also, they requested the land be expanded from ¼ acre to 1 acre. 
+In the Mbaruk area, a significant portion of respondents emphasized the importance of water infrastructure, including the revival of existing boreholes and the construction of new ones. Participants specifically called for a water tower at Kiungururia and a borehole in Echareria during the stakeholder workshops, indicating the critical need for improved water access for water that passes through through Kiambogo and near cultivated land to Soysambu: **“Allow us access the water passing through Kiambogo to Dalamere farm.”**
 
-Oljorai;  29% of Oljorai’s total respondents suggested that dams or water pans be built to help with water scarcity during dry seasons for human and livestock use. 
-“Dams are needed in Soysambu to serve locals during dry weather”
+Similarly, in Kasambara, participants echoed the sentiment for enhanced water infrastructure, with requests for boreholes at Wamagwathi’s farm and a pipe extension at Kianyeni village, to address water scarcity in the region. In particular, participants called for the existing boreholes near African Forest to be revived. 
 
-second stakeholder workshop participants precisely mentioned that they wanted provision of water pipes for water distribution (79% of the participants), a mega-dam at Soysambu to help harvest water heading to Elementaita around Maisha poa area(71%), waterpan in Kampi Turkana (64%), and a borehole drilled in Ngatta (35%)
+In Oljorai, a third of those surveyed underscored the necessity for dams or water pans to mitigate water scarcity, particularly during dry weather.
 
-Kiptangwani; 50% of Kiptangwani’s total survey respondents wanted water provided to the community.
-During the second stakeholder workshop, 50% of the participants agreed with this proposition and wanted assistance in the construction of water points at Mwariki C and the provision of water pipes in Jogoo village.
+Respondents from Kiptangwani also expressed a pressing need for community water provision, with 50% of survey respondents advocating for improved water access. Stakeholder workshops reiterated the importance of constructing water points and providing water pipes in key areas to address water challenges effectively.
+
+Overall, the stakeholder workshops served to emphasize the requests for water distribution infrastructure (e.g. water points at Mwariki C, water pipes in Jogoo village), a mega-dam at Soysambu to help harvest water heading to Elementaita around Maisha poa area, a waterpan in Kampi Turkana, and a borehole in Ngatta. 
 
 ## Livestock Management
 
-Mbaruk; 7% of total Mbaruk respondents requested the following from Soysambu; permission to graze livestock on unused land, education initiatives focused on livestock management for the community and provision of animal vaccination services. 
+Livestock management also emerged as a significant concern among the communities surveyed, but particularly among those for whom livestock are one of their most important livelihoods. The map below shows that the second most important livelihood for most households, is livestock, especially in places like Oljorat. 
 
-In Kasambara, the workshop participants requested the provision of dairy goats and dairy cattle, citing a promise made to them five years ago (46%).
+```{r, fig.cap='Map of 2nd most important livelihood in surveyed households', fig.align='center', out.width = '90%'}
+knitr::include_graphics('img/map livelihood activity 2.png')
+```
 
-Oljorai; 40% of total Oljorai respondents sought assistance from Soysambu in the following areas: provision of grass for livestock, allocation of a portion of land for their livestock to graze during dry seasons and livestock management education and training programs. 
-At the feedback workshop, participants expressed the following requests:
-86% requested grazing fields during the dry season, 71% suggested growing hay in Nderit Primary School, 71% requested the provision of livestock vaccination, 64% proposed building a cattle dip in Kambi Shule and capacity building on livestock management. 50% of the participants suggested installing traps to address the issue of hyenas killing domestic animals.
+Therefore, unsurprisingly, requests and suggestions came primarily from Oljorai, where most of those surveyed sought assistance in multiple aspects of livestock management, including access to grazing fields during dry seasons, provision of grass for livestock, livestock management education programs, compensation for losses due to wildlife encounters, and cessation of harassment by security personnel on herders.
 
-- 20 respondents (80% from Ol Jorai) expressed a need for support in livestock-related matters such as: prompt response from the conservancy when their animals are attacked, grass and water to support livestock during dry seasons; a dam in the farm for livestock water during dry periods; compensation for livestock killed or damaged by wildlife; and a cessation of harassment by security personnel on herders. In Mbaruk people requested permission from Soysambu to graze their livestock on the unused land of the Soysambu farm, as well as training on improved practices in livestock keeping. Several also asked for vaccination and artificial insemination services.
+The stakeholder workshops further elucidated the community's requests, with a majority emphasizing the need for capacity building on improved livestock management, access to grazing areas, hay production (some suggested at Nderit primary school), livestock vaccination, and infrastructure development such as cattle dips (e.g. at Kambi Shule). Participants also highlighted the need for measures to mitigate wildlife-livestock conflict, from Hyaenas in particular, with some people suggesting the use of traps. 
+
+A number of respondents in the Mbaruk area also highlighted the need for support in sustainable livestock management, as well as grazing access (they mentioned on "unused land"), education on livestock management, and access to animal vaccination services and artificial insemination. Additionally, participants in Kasambara emphasized the long-standing request for the provision of dairy goats and dairy cattle, underscoring the community's desire for diversified livestock options.
 
 ## Environment and Sanitation
 
@@ -924,7 +913,7 @@ Soysambu; 35% of Soysambu respondents suggested receiving a portion of land from
 Mbaruk; 10% of total Mbaruk’s respondents expressed a desire for Soysambu to; clearly communicate their rules to the community, hold quarterly general meetings with the community and in Pema, one respondent requested the election of a community representative. 
 Oljorai; 9% of total Mbaruk respondents shared their perspectives on community involvement as follows; they emphasised the importance of Soysambu fostering positive relationships with local communities, advocated for the inclusion of the community in decision-making processes, and suggested holding regular meetings between Soysambu and the community.
 
-Other suggestions that were mentioned which we have not elaborated on here include: employment - that Soysambu prioritise community members for positions in the conservancy; and community participation in game drives to observe wild animals in Soysamb Conservancy.
+Other suggestions that were mentioned which we have not elaborated on here include: employment - that Soysambu prioritise community members for positions in the conservancy; and community participation in game drives to observe wild animals in Soysambu Conservancy.
 
 
 ## Harrassment and compensation
@@ -939,9 +928,13 @@ Here, we outline actionable steps and strategies aimed at enhancing the conserva
 <!-- purple page -->
 <div class="section-purple">
 
+## Requests from communities
+
+
+
 ## Agricultural extension services
 
-Soysambu has already carried out some form of agricultural extension activity through the farmer’s seminar on livestock production. This could be an area that is expanded on to support those in the community who are engaged in smallholder activities. 
+In the requests and suggestions from those surveyed and workshop participants, there were a number of calls for education programs to improve livelihoods. For most households, the principal livelihoods are still agriculture based (with Kibarua or livestock for some). Soysambu has already carried out some form of agricultural extension activity through the farmer’s seminar on livestock production. This could be an area that is expanded on to support those in the community who are engaged in smallholder activities. 
 
 An extension programme could be designed to promote new methods and solutions to inform smallholders on how to increase production (and income) and become more food secure. 
 
