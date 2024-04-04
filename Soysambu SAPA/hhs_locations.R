@@ -31,10 +31,10 @@ nakuru_np <- adm %>%
 ###########################################################################################
 
 # prepare data -----------------------------------------------------------
-hhs <- readRDS("hhs_cleaned_wealth.rds")
+hhs <- readRDS("Soysambu SAPA/hhs_cleaned_wealth.rds")
 
 #individual locations
-hhs_locations <- readRDS("hhs_cleaned_wealth.rds") %>% 
+hhs_locations <- readRDS("Soysambu SAPA/hhs_cleaned_wealth.rds") %>% 
   select("locat", "locatn_lat", "locatn_long", "enum", "village", "livelihood_activity1", "livelihood_activity2", "quintiles") %>% 
   rename("y" = "locatn_lat", "x" = "locatn_long") %>%
   st_as_sf(coords = c("x", "y"), crs = 4326) %>% 
@@ -65,7 +65,7 @@ hhs_locations <- readRDS("hhs_cleaned_wealth.rds") %>%
 
 # sampling by village -----------------------------------------------------------
 
-hhs_locations_village <- readRDS("hhs_cleaned.rds") %>% 
+hhs_locations_village <- readRDS("Soysambu SAPA/hhs_cleaned.rds") %>% 
   select("locat", "locatn_lat", "locatn_long", "enum", "village", "livelihood_activity1", "livelihood_activity2") %>% 
   rename("y" = "locatn_lat", "x" = "locatn_long")
 
@@ -147,7 +147,7 @@ map <- leaflet(data = hhs_locations) %>%
     pal,
     values = ~livelihood_activity1,
     opacity = 0.7,
-    title = "Principle Livelihood"
+    title = "Principal Livelihood"
   )
 
 # Print the map

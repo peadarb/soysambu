@@ -105,9 +105,12 @@ We also thank the Nyumba Kumi village elders from the three locations
 for their input, as well as the dedicated enumerators involved in
 carrying out the household surveys: Benedicta Wanjiru, Emmanuel Kooli,
 and Paul Waweru.
-
+:::
 \newpage
 
+<!-- inverse gunmetal page -->
+
+::: section-gunmetal-inverse
 # Summary
 
 ## Context
@@ -150,6 +153,12 @@ equipment, positively impact educational outcomes and student
 well-being. The Conservancy also provides free guided educational trips
 to community members, offering valuable learning experiences and
 fostering appreciation for conservation efforts.
+
+:::
+
+<!-- gunmetal page -->
+
+::: section-gunmetal
 
 > We appreciate Soysambu for giving land to construct Lady Anne
 > Secondary School - Respondent from Mbaruk
@@ -236,7 +245,7 @@ any participation.
 Given that there are significant differences between locations, we
 recommend xyz
 
-\newpage
+:::
 
 <!-- inverse rust page -->
 
@@ -330,8 +339,12 @@ negative impacts to communities.
 <!-- inverse gunmetal page -->
 
 ::: section-gunmetal-inverse
+<article class="section-gunmetal-inverse">
+
 # Approach and Methods
 
+::: wrap-columns
+::: column-50
 ## SAPA overview, process and outputs
 
 The SAPA Assessment uses a mixed methods approach that combines
@@ -349,7 +362,9 @@ of the findings, enhances transparency and ownership of the assessment
 process, builds support for action and accountability for
 implementation. For those interested, much greater detail can be found
 in the SAPA manual @franks_social_2018.
+:::
 
+::: column-50
 ## Preparation
 
 ### Feasibility and planning
@@ -366,10 +381,17 @@ covering Soysambu and its neighboring communities. Finally, the managers
 of Soysambu were willing to implement specific action plans aimed at
 improving social impacts and governance within the conservancy.
 :::
+:::
+
+</article>
+:::
 
 <!-- gunmetal page -->
 
-::: section-gunmetal
+<article class="section-gunmetal">
+
+::: wrap-columns
+::: column-50
 In order to plan the SAPA process, together with the Soysambu
 management, the Sustain East Africa team put together a work plan with
 dates for key steps in the SAPA process, and those responsible for
@@ -394,6 +416,9 @@ within Soysambu.
 
 Futhermore, at this stage of the process, some of the questions that
 would be specifically tailored to the Soysambu context were formulated.
+:::
+
+::: column-50
 While many of these raised issues that were already aligned with
 standard assessment questions, some were articulated as additional
 queries in the household questionnaire.
@@ -417,7 +442,13 @@ introductions to the heads of village. At this stage, the survey were
 able to understand the local context, ensure that community
 representatives were willing to participate in group discussions, and to
 secure permission to carry out the household surveys.
+:::
+:::
 
+\newpage
+
+::: wrap-columns
+::: column-50
 ## Scoping
 
 The scoping phase of SAPA is dedicated to defining the assessment's
@@ -447,7 +478,9 @@ aspects of assessment include:
     impacts on local women and men.
 -   Evaluation of the equitable distribution of benefits related to
     Soysambu within and between local communities.
+:::
 
+::: column-50
 However, even these aspects of the assessment might overlook important
 issues. To address this, as part of the scoping step, a community
 meeting and stakeholder workshop is conducted. Furthermore, the
@@ -468,6 +501,10 @@ chance to raise any outstanding issues that were not being asked about.
 This workshop plays a vital role in ensuring the SAPA's relevance to
 local needs, active participation of the key stakeholders, and fostering
 ownership of the process among key stakeholders.
+:::
+:::
+
+\newpage
 
 ## Information Gathering
 
@@ -507,8 +544,13 @@ data <- data %>%
   rename("Location" = "Location",
          "No. of Respondents" = "Respondents",
          "% of total" = "Percentage")
-
-sea_table(data) 
+data %>%
+  sea::sea_table(
+    dark_color = sea_colors("gunmetal"),
+    pale_color = sea_colors("grey"),
+    third_color = "white"
+  ) %>%
+  flextable::autofit()
 
 # for reference colours: black, white, grey, pale_green, dark_green, rust_orange, gunmetal, dark_purple
 ```
@@ -525,6 +567,8 @@ reports from the Soysambu Conservancy team. Furthermore, custom
 governance statements were developed to address rights, participation,
 transparency, and impact mitigation or benefit sharing.
 
+::: wrap-columns
+::: column-50
 The survey was initially drafted in English, it was then translated into
 Swahili. A back-translation process to English ensured accuracy and that
 the intended meaning was correct. Adjustments based on feedback from the
@@ -549,7 +593,9 @@ questions, the information the survey was to capture, and why this was
 important. The enumerators were trained in the use of ODK and
 KoboToolbox. The training also included a review of survey and research
 ethics, and appropriate behaviour before and after the survey.
+:::
 
+::: column-50
 The enumerators conducted practice interviews, focused on comprehension
 and questionnaire adjustments.
 
@@ -579,6 +625,8 @@ and Kampi Turkana.
 Each survey began with an explanation of the purpose of the survey, how
 data would be used, confidentiality measures, the participant's rights,
 and sought their consent before proceeding.
+:::
+:::
 
 Following each survey, the respondent was given a small token of
 appreciation in the form of sugar.
@@ -595,6 +643,10 @@ were received.
 knitr::include_graphics('img/map sample sizes.png')
 ```
 
+\newpage
+
+::: wrap-columns
+::: column-50
 ### Analyse Household Survey
 
 The first step in data analysis was to ensure that there was anonymity.
@@ -607,7 +659,7 @@ property details, marital status, family details, sex, or sexual
 orientation were shared.
 
 The next steps were to use design based inference in *R*, with the
-**survey** and **srvyr** packages to calculate population proportions,
+*survey* and *srvyr* packages to calculate population proportions,
 standard errors and 95% confidence intervals based on the sample data
 collected.
 
@@ -622,7 +674,9 @@ The final stages of the SAPA process involve conducting a second
 stakeholder workshop, where key findings from the household survey are
 shared with representatives of key stakeholders. Any questions raised
 during the workshop are addressed, and actionable ideas are presented.
+:::
 
+::: column-50
 This workshop serves firstly as a review and validation that the data
 collected are likely to reflect the realities on the ground, and
 secondly as a further information-gathering opportunity. The insights
@@ -648,8 +702,15 @@ that the findings are effectively communicated to all relevant
 stakeholders. This includes not only the conservancy management team but
 also local communities, government authorities, NGOs, and other
 interested parties. This has been partly achieved through the second
-workshop discussed above. However, beyond this, clear and transparent
-communication of the assessment results will help foster understanding,
+workshop discussed above. 
+:::
+:::
+
+\newpage
+
+::: wrap-columns
+::: column-50
+However, beyond this, clear and transparent communication of the assessment results will help foster understanding,
 build trust, and encourage collective action towards addressing
 identified issues.
 
@@ -668,7 +729,9 @@ Looking ahead, it is important that an action plan to address the
 identified issues is put in place. This should outline specific
 strategies, activities, timelines, responsibilities, and resources
 required to implement interventions.
+:::
 
+::: column-50
 As was brought up in the second stakeholder workshop, community
 representatives called for greater collaboration with local, regional,
 or national government entities. Therefore, it will be important to
@@ -683,20 +746,30 @@ monitoring progress, Soysambu Conservancy can adapt its strategies and
 interventions to meet evolving social needs and ensure the sustainable
 management of the protected area.
 :::
+:::
 
-\newpage
+</article>
 
 <!-- inverse rust page -->
 
 ::: section-rust-inverse
-
 # Findings
 
 ## Characteristics of the respondents
 
 ### Household head's gender, age, and average number of children
 
-```{r, fig.cap='Gender of respondents', fig.align='center', out.width = '100%'}
+Generally, the SAPA household survey resulted in a sample of 181 households, with 113 men and 68 women participating. As the Figure below shows, across all surveyed locations, the number of male respondents exceeded the number of women, with the greatest gender disparity in respondents found in the communities living within Soysambu (see Figure below). Mbaruk on the other hand, had a more balanced gender balance compared to other locations, with 54% male and 46% female participants.
+
+Other household characteristics, including the mean age of the household head, and the average number of children per household, also varied across the surveyed locations, as shown in the table below. Oljorai stood out with the highest mean number of children per household, while Mbaruk had the lowest. Mbaruk also had the highest mean age of the household head, contrasting with Kiptangwanyi, which had the lowest. Soysambu and Kiptangwanyi showed similar mean ages of the household head, but Soysambu had a slightly higher mean number of children.
+
+:::
+
+<!-- rust page -->
+
+::: section-rust
+
+```{r, fig.cap='Gender of respondents', fig.align='center', out.width = '70%'}
 by_location <- dclus2 %>% 
   group_by(locat, gender) %>% 
   summarise(
@@ -713,11 +786,9 @@ ggplot(by_location, aes(x = locat, y = n, group = gender, fill = gender)) +
   theme_sjplot() + 
   theme(legend.position = c(0.95, 0.95))
 ```
-:::
 
-<!-- rust page -->
-
-::: section-rust
+\ 
+\ 
 
 ```{r}
 add_lot_link(caption = 'Characteristics of households')
@@ -737,48 +808,18 @@ combined_table <- left_join(mean_numb_child_location, mean_age_by_location, by =
   rename("Mean no. of children" = mean_numb_child) %>%
                   mutate_if(is.numeric, round, digits = 1) 
 
-sea_table(combined_table) 
+combined_table %>%
+  sea::sea_table(
+    dark_color = sea_colors("rust_orange"),
+    pale_color = sea_colors("grey"),
+    third_color = "white"
+  ) %>%
+  flextable::autofit()
+
+
+
 ```
 
-<!-- ```{r, fig.cap='Age categories of household heads', fig.align='center', out.width = '100%'} -->
-
-<!-- by_location <- dclus2 %>%  -->
-
-<!--   mutate(age_cat = cut(age, c(18, 25, 35, 55, 100), include.lowest = TRUE, -->
-
-<!--                        labels = c("18-25", "25-35", "35-55", "55 +"))) %>%  -->
-
-<!--   group_by(locat, age_cat) %>%  -->
-
-<!--   summarise(proportion = survey_mean(vartype = "ci", na.rm=TRUE), -->
-
-<!--             total = survey_total(vartype = "ci", na.rm=TRUE), -->
-
-<!--             n= unweighted(n()))  -->
-
-<!-- by_location$age_cat <- by_location$age_cat %>% coalesce(by_location$age_cat, "Didn't answer") -->
-
-<!-- ggplot(by_location, aes(x=locat, y=n, group = age_cat, fill = age_cat)) + -->
-
-<!--   geom_bar(stat = "identity", position = position_dodge(preserve = "single"), width = 0.95) + -->
-
-<!--   #geom_errorbar(data=by_location, aes(ymax = ifelse(proportion_upp > 1, 1, proportion_upp), ymin = ifelse(proportion_low < 0, 0, proportion_low)),  -->
-
-<!--   #              position = position_dodge(preserve = "single", width = 0.95), width = 0.1) + -->
-
-<!--   guides(fill=guide_legend(title=NULL)) + -->
-
-<!--   sea::scale_fill_sea_discrete() + -->
-
-<!--   labs(x="Location", y = "Number of Households") + -->
-
-<!--   #scale_y_continuous(limits=c(0, 1)) + -->
-
-<!--   theme_sjplot() +  -->
-
-<!--   theme(legend.position=c(0.90,0.950)) -->
-
-<!-- ``` -->
 
 ### Principal livelihoods of the households
 
@@ -794,12 +835,6 @@ Following this, the results are presented disaggregated by location.
 ```{r livelihood, fig.cap='Map of principal livelihood activities in surveyed households', fig.align='center', out.width = '90%'}
 knitr::include_graphics('img/map livelihood activity.png')
 ```
-
-<!-- ```{r, fig.cap='Principal livelihood activities in surveyed households', fig.align='center', out.width = '90%'} -->
-
-<!-- knitr::include_graphics('img/principal_livelihood.png') -->
-
-<!-- ``` -->
 
 ### How long household heads have been in the area
 
@@ -904,7 +939,6 @@ initiatives, such as tree planting, contributing to the preservation of
 natural resources and biodiversity. Moreover, Soysambu offers support to
 bush-clearing workers by providing firewood for free, demonstrating a
 commitment to employee welfare and community support.
-
 
 ```{r, fig.cap='Overall positive impacts across all communities', fig.align='center', out.width = '100%'}
 knitr::include_graphics('img/positive impacts overall.png')
@@ -1057,7 +1091,7 @@ killed by wildlife in the last year.
 In terms of wellbeing, the survey looked at this from a number of
 perspectives. Firstly, the respondents were asked about their own
 overall self-assessed well-being. This was achieved by asking the
-household head *How's life* and explaining that 1 means everything is
+household head *"How's life?"* and explaining that 1 means everything is
 very bad and 10 means everything is very good.
 
 ```{r, fig.cap='Responses when asked: How is your life at the moment?', fig.align='center', out.width = '100%'}
@@ -1105,6 +1139,7 @@ ggplot(by_location, aes(x = locat, y = proportion, group = change_wellbeing, fil
   theme_sjplot() + 
   theme(legend.position = c(0.73, 0.9))
 ```
+
 
 Then, once the respondent was asked about the positive and negative
 impacts of Soysambu conservancy, they were asked if they could take into
@@ -1207,7 +1242,7 @@ community representatives for engagements with Soysambu and the channels
 available for communication with them. In Kiptangwani, opinions vary,
 with some residents indicating a lack of participation, others
 acknowledging its existence, and a considerable number chosing to answer
-**Don't know"**, when asked about the extent of their involvement in
+*Don't know"*, when asked about the extent of their involvement in
 decision-making processes.
 
 ```{r, fig.cap='Map of survey locations', fig.align='center', out.width = '120%'}
@@ -1221,13 +1256,12 @@ knitr::include_graphics('img/agree disagree governance theme participation.png')
 One key positive result that did emerge from the survey was that most
 household heads felt that they had medium or high levels of influence on
 decision making in their communities.
+</aside> 
 
 The percentage of households that said they had medium or high levels of
 influence in their communities:
 
 `r wrap_columns_elements(c(big_numbers("100%", "Kiptangwanyi"), big_numbers("98%", "Mbaruk"), big_numbers("96%", "Oljorai"), big_numbers("100%", "Soysambu")))`
-
-</aside>
 
 ### Transparency and access to information
 
@@ -1270,31 +1304,23 @@ area management.
 knitr::include_graphics('img/agree disagree governance theme rights.png')
 ```
 :::
-:::
-
-\newpage
 
 <!-- inverse purple page -->
 
-::: section-purple-inverse
+<div class="section-purple-inverse">
 
-# From assessment to action: stakeholder suggestions for how Soysambu can help
+# From assessment to action
+
+## Stakeholder suggestions for how Soysambu can help
 
 To capture suggestions from stakeholders, during the survey, respondents
-were asked a simple open-ended question: "Are there any other ways, not
-mentioned, that you think Soysambu could help your community?".
-Fruthermore, during the second stakeholder workshop, the 33 participants
+were asked a simple open-ended question: *"Are there any other ways, not mentioned, that you think Soysambu could help your community?"*.
+Furthermore, during the second stakeholder workshop, the 33 participants
 were divided into groups that represented their communities, and were
 given an opportunity to brainstorm and add further suggestions.
 
 In the following section, we outline the main categories under which
 these suggestions fall.
-
-\newpage
-
-<!-- purple page -->
-
-::: section-purple
 
 ## Support for Schools and Education
 
@@ -1302,32 +1328,37 @@ Soysambu Conservancy has provided land for the construction of Lady Anne
 Secondary School. One household participant expressed gratitude to
 Soysambu for this initiative. However, there is a recurring call for
 greater support for schools and education, as highlighted in both the
-open-ended survey questions and the stakeholder workshops. Specifically,
-participants made several requests for investments from Soysambu,
+open-ended survey questions and the stakeholder workshops. 
+
+<!-- purple page -->
+
+::: section-purple
+
+Specifically, participants made several requests for investments from Soysambu,
 including:
 
-a)  Allocation of land between Baraka and Soysambu for the construction
+i)  Allocation of land between Baraka and Soysambu for the construction
     of a primary school and other public utilities, as well as the
     relocation of Kiboko Primary School to this land.
 
-b)  Construction of a primary school in Royal Estate.
+ii)  Construction of a primary school in Royal Estate.
 
-c)  Installation of ablution blocks in primary schools such as Kapkures,
+iii)  Installation of ablution blocks in primary schools such as Kapkures,
     Kambi Turkana, Oldubei, Olesirwa, Kelelwa, and Olepolos.
 
-d)  Establishment of an Early Childhood Education (ECDE) center in Jogoo
+iv)  Establishment of an Early Childhood Education (ECDE) center in Jogoo
     village, addressing a recognized need from community engagement
     sessions.
 
-e)  Development of a nursery school in Kiwanja Ndege and Ngatta areas,
+v)  Development of a nursery school in Kiwanja Ndege and Ngatta areas,
     along with polytechnics and secondary schools.
 
-f)  Implementation of school feeding programs in Ol Jorai Primary
+vi)  Implementation of school feeding programs in Ol Jorai Primary
     School.
 
-g)  Creation of a library in the Mololine area to engage the youth.
+vii)  Creation of a library in the Mololine area to engage the youth.
 
-h)  Provision of transportation for children commuting to Kiboko
+viii)  Provision of transportation for children commuting to Kiboko
     Primary.
 
 Furthermore, workshop participants suggested that Soysambu could offer
@@ -1353,9 +1384,7 @@ for health workers, and an outpatient wing in various locations,
 including Kiungururia.
 
 Similarly, in Oljorai, some respondents stressed the need for improved
-health facilities in Kampi Turkana and Kapkures: **"We need a hospital
-in Kapkures as women are losing children because a hospital is
-lacking"**. The sentiment was echoed during the stakeholder workshops,
+health facilities in Kampi Turkana and Kapkures: *"We need a hospital in Kapkures as women are losing children because a hospital is lacking"*. The sentiment was echoed during the stakeholder workshops,
 where requests for dispensaries at Kampi Turkana and Kapkures, along
 with staff housing at the Oljorai health center, were highlighted.
 
@@ -1377,8 +1406,7 @@ boreholes and the construction of new ones. Participants specifically
 called for a water tower at Kiungururia and a borehole in Echareria
 during the stakeholder workshops, indicating the critical need for
 improved water access for water that passes through through Kiambogo and
-near cultivated land to Soysambu: **"Allow us access the water passing
-through Kiambogo to Dalamere farm."**
+near cultivated land to Soysambu: *"Allow access to the water passing through Kiambogo to [Soysambu]."*
 
 Similarly, in Kasambara, participants echoed the sentiment for enhanced
 water infrastructure, with requests for boreholes at Wamagwathi's farm
@@ -1441,74 +1469,44 @@ the community's desire for diversified livestock options.
 
 ## Environment and Sanitation
 
-Mbaruk; 19% of total Mbaruk respondents expressed a desire for Soysambu
-to address environment-related issues by: installing sanitation points
-near the highway in the Soysambu area, continuing to provide tree
-seedlings, and assisting in raising awareness about environmental
-preservation. Workshop participants from Kasambara requested for fencing
-and trees be provided for planting at Chamuka springs (31%)
+The preservation of the environment and promotion of sanitation also emerged as key priorities and survey respondents and workshop participants emphasized the importance of addressing environmental issues and implementing sanitation measures to improve community well-being.
 
-Oljorai; 1% of total Oljorai respondents wanted Soysambu to help in
-planting trees in the community. This was also raised as a request at
-the workshop with participants wanting the provision of tree seedlings
-for planting in the entire location (7%).
+Respondents from Mbaruk and Oljorai in particular, suggested that Soysambu could address environmental challenges by: installing sanitation points near highways; providing tree seedlings (also mentioned in Oljorai); and raising awareness about environmental conservation. 
+
+Additionally, workshop participants emphasized the importance of fencing and tree planting at Chamuka springs to safeguard natural resources and promote environmental sustainability.
 
 ## Security
 
-As mentioned above, the majority of respondents from communities living
-in Soysambu expressed a greater sense of security for their property.
-Feeling secure is a crucial contributor to wellbeing. However, in other
-areas, this was not always the case. In Mbaruk; 22% of total survey
-respondents requested assistance from Soysambu in the construction of a
-police post in Murang'a Echereria, Mbaruk, and Mololine villages. This
-was also highlighted in the workshop where participants wanted a police
-post in Royal estate (38%), Mbaruk chief's office (23%) and motor
-vehicles for patrol (62%). Kiptangwanyi; the second workshop
-participants highlighted a need for a chief's and assistant chief's
-administration office at the Kiptangwanyi chief's camp (100%).
+Ensuring the safety and security of residents and their property is important for community well-being. While many respondents from communities within Soysambu expressed satisfaction with the prevailing sense of security (see Figure above), it is evident that this is not the case in other areas. 
+
+In Mbaruk, 22% of survey respondents identified the need for additional security measures, specifically requesting assistance from Soysambu in constructing a police post in Murang'a Echereria, Mbaruk, and Mololine villages. This sentiment was further emphasized during the stakeholder workshops, with participants additionally advocating for the establishment of a police post in Royal estate. 
+
+These calls were echoed by respondents from Kiptangwanyi who also highlighted the need for administrative offices for the chief and assistant chiefs at the Kiptangwanyi chief's camp. 
 
 ## Land and Fencing
 
-Mbaruk; 16% of total Mbaruk respondents expressed a variety of desires
-regarding land usage in Soysambu: They requested the opportunity to
-purchase land from Soysambu whenever it becomes available for sale,
-proposed allocating a portion of the land for community use (including
-establishing a market for local produce, a graveyard, and a waste
-disposal site), and they suggested distributing land to squatters in the
-community at affordable rates. In Kiambogo, they conveyed appreciation
-to Soysambu for selling land to their fathers. Soysambu; 35% of Soysambu
-respondents suggested receiving a portion of land from Soysambu at a
-subsidized rate, Soysambu to set aside land for them to cultivate
-vegetables, and advocated for the installation of an electric fence
-around residential areas within Soysambu for enhanced security.
+Land usage and fencing emerged as significant concerns among respondents. During the survey and stakeholder workshops, a number of people expressed appreciation for Soysambu's past initiatives, such as selling land to their fathers in Kiambogo.
+
+In Mbaruk, 16% of respondents expressed various preferences regarding land usage within Soysambu. These included desires to purchase land from Soysambu if it were to become available, allocate portions of land for community purposes such as markets, graveyards, and waste disposal sites, and provide land to squatters at affordable rates. 
+
+In Soysambu, 35% of respondents suggested initiatives to optimize land usage which included requests for subsidized land allocations for cultivation purposes, setting aside land for vegetable farming, and advocating for the installation of electric fences around residential areas to bolster security measures.
+
 
 ## Community representation
 
-Mbaruk; 10% of total Mbaruk's respondents expressed a desire for
-Soysambu to; clearly communicate their rules to the community, hold
-quarterly general meetings with the community and in Pema, one
-respondent requested the election of a community representative.
-Oljorai; 9% of total Mbaruk respondents shared their perspectives on
-community involvement as follows; they emphasised the importance of
-Soysambu fostering positive relationships with local communities,
-advocated for the inclusion of the community in decision-making
-processes, and suggested holding regular meetings between Soysambu and
-the community.
+Based on the governance section, most people across all locations disagreed that there was sufficient transparency and access to information (see Figure above) or equitable benefit sharing (see Figure above). In fact, across all locations, most people felt they were not well informed, didn't have access to timely information about decision made by Soysambu that would affect them, nor that their communities were sharing information with Soysambu. Unsurprisingly, improved community representation emerged as a key recommendation, with survey respondents and stakeholder workshop participants expressing a desire for greater involvement and communication with Soysambu.
 
-Other suggestions that were mentioned which we have not elaborated on
-here include: employment - that Soysambu prioritise community members
-for positions in the conservancy; and community participation in game
-drives to observe wild animals in Soysambu Conservancy.
+For instance, in Mbaruk, a number of respondents emphasized the importance of clear communication from Soysambu regarding community rules and regulations. Additionally, they advocated for the establishment of quarterly general meetings to facilitate open dialogue and transparency. One respondent requested the election of a community representative to enhance community voice and representation.
+
+Similarly, in Oljorai, respondents underscored the importance of fostering positive relationships between Soysambu and local communities. They emphasized the need for community inclusion in decision-making processes and likewise, they suggested holding regular meetings to facilitate ongoing dialogue and collaboration between Soysambu and the community.
 
 ## Harrassment and compensation
 
-In Oljorai, a number of respondents, reported instances of harassment,
-particularly on people gathering firewood. Furthermore, a number of
-people reported that they were harassed in the process of being
-arrested. A number of respondents also expressed their frustration over
-a lack of compensation from the Kenya Wildlife Service (KWS) for damage
-by wild animals to crops and livestock. These issues were not raised in
-other areas.
+In Oljorai, some respondents highlighted instances where individuals gathering firewood experienced perceived harassment. Additionally, there were reports of individuals feeling harassed during law enforcement activities. Concerns were also expressed regarding perceived delays or lack of compensation from the Kenya Wildlife Service (KWS) for damage caused by wildlife to crops and livestock. These issues were not reported in other surveyed areas. It will be important for Soysambu to thoroughly investigate these reported incidents to ensure the well-being and safety of community members.
+
+## Further suggestions
+
+Less frequently mentioned suggestions, or those posing potential implementation challenges, include prioritizing employment opportunities for community members within the conservancy and facilitating community participation in game drives to observe wild animals within the Soysambu Conservancy.
 
 # Recommendations
 
@@ -1520,6 +1518,50 @@ community engagement, and promote equitable outcomes for all
 stakeholders involved.
 
 ## Requests from communities
+
+Here we have included all the suggestions that were made by survey respondents, or in the stakeholder workshops, into a table format. 
+
+
+```{r}
+add_lot_link(caption = 'Community suggestions for other ways Soysambu could help the community.')
+
+df <- data.frame(
+  Category = c(
+    "Support for Schools and Education", "Support for Schools and Education", "Support for Schools and Education",
+    "Support for Schools and Education", "Support for Schools and Education", "Support for Schools and Education",
+    "Support for Schools and Education", "Support for Schools and Education", "Support for Schools and Education", "Support for Health and hospital facilities", "Support for Health and hospital facilities",
+    "Support for Health and hospital facilities", "Support for Health and hospital facilities", "Water Provision Services", "Water Provision Services", "Water Provision Services",
+    "Water Provision Services", "Livestock Management", "Livestock Management", "Livestock Management", "Environment and Sanitation", "Environment and Sanitation",
+    "Environment and Sanitation", "Security", "Security", "Land and Fencing", "Land and Fencing", "Community representation",
+    "Community representation", "Harrassment and compensation", "Further suggestions"
+  ),
+  Suggestion = c(
+    "Allocation of land between Baraka and Soysambu for the construction of a primary school and other public utilities, as well as the relocation of Kiboko Primary School to this land.",
+    "Construction of a primary school in Royal Estate.", "Installation of ablution blocks in primary schools such as Kapkures, Kambi Turkana, Oldubei, Olesirwa, Kelelwa, and Olepolos.",
+    "Establishment of an Early Childhood Education (ECDE) center in Jogoo village, addressing a recognized need from community engagement sessions.",
+    "Development of a nursery school in Kiwanja Ndege and Ngatta areas, along with polytechnics and secondary schools.", "Implementation of school feeding programs in Ol Jorai Primary School.",
+    "Creation of a library in the Mololine area to engage the youth.", "Provision of transportation for children commuting to Kiboko Primary.",
+    "Offering scholarships to the brightest students from primary schools across all areas.", "Construction of hospitals and dispensaries, provision of medical equipment, and upgrades to existing healthcare facilities.",
+    "Establishment of a maternity wing, staff houses for health workers, and outpatient wings.",
+    "Improvement of health facilities in various locations such as Kampi Turkana and Kapkures.", "Equipping the maternity wing at the Elementaita dispensary.", "Installation of water infrastructure including boreholes and water towers.", "Construction of dams, boreholes, and water towers.", "Revival of existing boreholes and extension of water infrastructure.",
+    "Mitigation of water scarcity through the construction of water pans and pipes.", "Access to grazing fields during dry seasons and provision of grass for livestock.",
+    "Education programs on improved livestock management and capacity building.", "Compensation for losses due to wildlife encounters and cessation of harassment by security personnel on herders.",
+    "Installation of sanitation points near highways and provision of tree seedlings.",
+    "Fencing and tree planting at Chamuka springs.", "Raising awareness about environmental preservation.", "Construction of police posts in various locations.",
+    "Establishment of administrative offices for local authorities.", "Purchase and allocation of land for community use.", "Provision of land for cultivation and installation of electric fences.",
+    "Clear communication of rules and regulations, and establishment of quarterly general meetings.", "Fostering positive relationships and inclusion of the community in decision-making processes.",
+    "Investigation of reported harassment incidents and compensation for wildlife-related damages.", "Prioritizing employment opportunities for community members within the conservancy and facilitating community participation in game drives."
+  )
+)
+
+sea_table(df,
+    dark_color = sea_colors("dark_purple"),
+    pale_color = sea_colors("grey"),
+    third_color = "white") %>% 
+  flextable::autofit() %>% 
+    flextable::merge_v(j = c("Category"))
+```
+
 
 ## Agricultural extension services
 
@@ -1573,7 +1615,10 @@ df <- data.frame(
                                   "Practical demonstration of all 3 activities.",
                                   "Practical demonstration of fertilizer and manure application. \n\n Possible provision of inputs for 1 season for participants.")) %>% 
   rename("Disbursement of information" = Disbursement.of.information)
-  sea_table(df) %>% 
+  sea_table(df,
+    dark_color = sea_colors("dark_purple"),
+    pale_color = sea_colors("grey"),
+    third_color = "white") %>% 
   flextable::autofit()
 ```
 
@@ -1591,7 +1636,10 @@ df <- data.frame(
   "Disbursement of information" = c("Practical demonstration of how to plant and education session on importance of certified seeds and contingency crops.", "Practical demonstration.", "Education session e.g videos.", "Practical demonstration and education on alternative storage methods e.g. Hermetic bags.\n\n Possible funding of hermetic bags for participants.")
 )%>% 
   rename("Disbursement of information" = Disbursement.of.information)
-  sea_table(df) %>% 
+  sea_table(df,
+    dark_color = sea_colors("dark_purple"),
+    pale_color = sea_colors("grey"),
+    third_color = "white") %>% 
   flextable::autofit()
 ```
 
@@ -1615,7 +1663,10 @@ df <- data.frame(
 )%>% 
   rename("Disbursement of information" = Disbursement.of.information)
 
-  sea_table(df) %>% 
+  sea_table(df,
+    dark_color = sea_colors("dark_purple"),
+    pale_color = sea_colors("grey"),
+    third_color = "white") %>% 
   flextable::autofit()
 ```
 
@@ -1630,7 +1681,10 @@ df <- data.frame(
   "Disbursement of information" = c("Demonstration on how to create gutters on roofs.  \n \n Demonstration of creating a water pan. \n \n Possible funding of materials e.g. water storage tanks, gutters.", "Demonstration of drip irrigation system. \n \n Possible funding of tanks, irrigation materials.")) %>% 
   rename("Disbursement of information" = Disbursement.of.information)
 
-sea_table(df) %>% 
+  sea_table(df,
+    dark_color = sea_colors("dark_purple"),
+    pale_color = sea_colors("grey"),
+    third_color = "white") %>% 
   flextable::autofit()
 
 ```
@@ -1653,14 +1707,17 @@ df <- data.frame(
 ) %>% 
   rename("Disbursement of information" = Disbursement.of.information)
 
-  sea_table(df) %>% 
+  sea_table(df,
+    dark_color = sea_colors("dark_purple"),
+    pale_color = sea_colors("grey"),
+    third_color = "white") %>% 
   flextable::autofit()
 ```
 
 ```{r, fig.align='center', out.width = '60%'}
 knitr::include_graphics('img/flamingos.png')
 ```
-
+\newpage
 :::
 
 <!-- putting bibliography before appendix -->
@@ -1694,7 +1751,10 @@ data <- data %>%
          "Estimated No. of HHs" = "HHS",
          "Selected" = "Selected")
 
-sea_table(data) 
+sea_table(data,
+    dark_color = sea_colors("grey"),
+    pale_color = sea_colors("white"),
+    ) 
 ```
 
 \newpage
