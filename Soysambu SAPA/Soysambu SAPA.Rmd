@@ -94,7 +94,7 @@ Particular thanks go to: Helen Jerotich, Community Education Officer
 (Soysambu Conservancy); Chief Joseph Mwangi and Assistant Chief Felicah
 Mugi of Mbaruk location; Chief Parit Sururu and Assistant Chief Henry
 Balozi of Kongasis, Oljorai location; and Chief Simon Mathare and
-Assistant Chief Benson Mungai of Kiptangwani location.
+Assistant Chief Benson Mungai of Kiptangwanyi location.
 
 We would also like to acknowledgement the MCA of Eburru Mbaruk Ward,
 Michael Gathanwa, and his ward administration for their insights and
@@ -105,7 +105,8 @@ We also thank the Nyumba Kumi village elders from the three locations
 for their input, as well as the dedicated enumerators involved in
 carrying out the household surveys: Benedicta Wanjiru, Emmanuel Kooli,
 and Paul Waweru.
-:::
+
+
 \newpage
 
 <!-- inverse gunmetal page -->
@@ -138,21 +139,19 @@ water 2) Building or maintaining infrastructure 3) Support for education
 
 Soysambu conservancy provides water to the community either through
 trucks or by building water tanks, ensuring access to clean and safe
-water for local residents.
-
-Soysambu conservancy's support in building or maintaining infrastructure
+water for local residents. Furthermore, support in building or maintaining infrastructure
 including police posts, schools, and roads, were reported to enhance the
 overall quality of life for community members.
 
 Soysambu conservancy's initiative to offer sponsorship opportunities for
 students, enabling access to education and fostering academic
-achievement, was seen as a positive social impact by some households.
+achievement, was seen as a positive social impact.
 Additionally, Soysambu's contributions to local schools, such as
 providing school meals for students, school uniforms, desks, and sports
 equipment, positively impact educational outcomes and student
 well-being. The Conservancy also provides free guided educational trips
-to community members, offering valuable learning experiences and
-fostering appreciation for conservation efforts.
+to community members, offering valuable learning experiences.
+
 
 :::
 
@@ -160,8 +159,7 @@ fostering appreciation for conservation efforts.
 
 ::: section-gunmetal
 
-> We appreciate Soysambu for giving land to construct Lady Anne
-> Secondary School - Respondent from Mbaruk
+> We appreciate Soysambu for providing land to construct Lady Anne Secondary School
 
 Soysambu conservancy's support for health projects, including the
 provision of equipment to clinics and cancer screening for women,
@@ -182,21 +180,17 @@ community support.
 
 ### Negative social impacts
 
-Most negative social impacts across the six case studies fall under five
-main categories: 1) Ecosystem service benefits 2) PA-related employment
-3) PA-supported development projects 4) Reduced human-wildlife conflict,
-and 5) Improved security
+Despite efforts to improve potential negative impacts, some persist. Most negative social impacts across the six case studies fall under these main categories: 1) restricted access to services; 2) unequal distribution of benefits; 3) lack of appreciation during emergencies; 4) human-wildlife conflict; 5) tansmission of disease. 
 
-Short detail about each
+Limited access to certain public utilities, such as roads, creates barriers to mobility and community well-being. Some residents claim that the challenges they face affect their daily lives and overall quality of life.
 
+There was also a perceived unfairness in the distribution of benefits, including employment opportunities and community involvement in development projects, perpetuates feelings of exclusion. Some community members feel marginalized and overlooked in resource allocation and decision-making processes, leading to social tensions and disparities.
+
+Furtermore, some respondents expressed that they felt unappreciated by Soysambu Conservancy, particularly when they provided voluntary assistance during emergencies, such as bush fires. This lack of acknowledgment could result in strained relations between the community and the conservancy.
+
+Some respondents also mentioned that they felt disease transmission from wildlife to livestock poses a significant concern to them. A number also mentioned that conflict with wildlife originating from Soysambu resulted in property damage and some injuries, with a lack of compensation (from KWS). In particular, conflict with baboons, vervet monkeys, porcupines, buffalo, and hyenas was mentioned 
 <!-- quote -->
-
-> Scholarships should be transparent and target vulnerable children
-
-<!-- quote -->
-
-> My child needs compensation. He was injured by a buffalo and was a
-> security in conservancy
+> My son needs compensation, as he was injured by a buffalo while working in the conservancy 
 
 ### Overall contribution to wellbeing
 
@@ -206,12 +200,12 @@ account both positive and negative impacts. There were exceptions,
 particularly in Oljorai and Mbaruk locations, where a few respondents
 felt that Soysambu had increased their well-being.
 
-`r big_numbers("75%", "of those residing in Soysambu felt the conservancy increased their wellbeing")`
+`r big_numbers("75%", "of households residing in Soysambu felt the conservancy increased their wellbeing")`
 
  
 
-On the other hand, approximately
-`r big_numbers("12%", "of respondents living in Oljorai agreed that Soysambu had reduced their overall well-being")`
+On the other hand,
+`r big_numbers("12%", "of respondents living in Oljorai felt Soysambu had reduced their well-being")`
 
 ### Governance
 
@@ -227,23 +221,52 @@ there is participation in Soysambu's decision-making that impacts the
 community. However, in Soysambu itself, a large percentage of people
 feel that there is some level of participation, particularly in knowing
 their community representative for meetings with Soysambu and
-communicating with them. In Kiptangwani, there is a mix in opinions with
+communicating with them. In Kiptangwanyi, there is a mix in opinions with
 most people feeling that there is no participation, some agreeing that
 there is participation, and quite a number do not know whether there is
 any participation.
 
 #### Transparency and access to information
 
-#### Rights
-
-#### Benefit Sharing Process
+There was overall dissatisfaction with transparency and access to information about decisions that were perceived to affect the communities, notably in Kiptangwanyi, Oljorai, and Mbaruk. Soysambu residents show mixed views.
 
 #### Mitigation of Negative Impacts
 
+Residents in Kiptangwanyi, Oljorai, and Mbaruk expressed skepticism about how effective measures to mitigate negative impacts like wildlife damage were, while opinions in Soysambu are more divided.
+
+#### Benefit Sharing Process
+
+There was widespread disagreement across Kiptangwanyi, Mbaruk, and Oljorai regarding perceived fairness in benefit distribution. A few Soysambu residents did feel like there was some benefit sharing.
+
+#### Rights
+
+Views on respect for rights varied, with differing perceptions across all locations, about whether there was recognition and respect for rights of local women and men. 
+
 ### Recommendations going forward
 
-Given that there are significant differences between locations, we
-recommend xyz
+Based on the results of the surveys and the stakeholder workshops there are mixed perceptions about Soysambu conservancy. on the one hand there were a number of positive impacts, and some positive aspects to governance. On the other hand, there was also widespread dissatisfaction, particularly in the communities neighbouring Soysambu, about the perceived negative impacts of the conservancy, the lack of positive improvements in governance, and the fact that many people felt that Soysambu was having no effect, or a negative effect on the wellbeing of their household. 
+
+Nevertheless, the stakeholder workshops demonstrated that there was good will, and that both community representatives and Soysambu conservancy want to engage positively going forward. The survey respondents and workshop participants provided a number of suggestions about the ways in which Soysambu conservancy could take action. 
+
+These insights and requests aimed at enhancing social impacts within and around Soysambu Conservancy, promoting sustainable practices, improving community engagement, and ensuring equitable outcomes for all stakeholders.
+
+Although the specific key requests from the community are shown in Table X below in the "Recommendations" section, here we provide a summary of those.
+
+There were requests to support schools and education generally. These included land allocation for new schools, construction of primary schools, installation of facilities like ablution blocks and libraries, and implementation of school feeding programs. Suggestions also encompassed scholarships and ensuring fairness in scholarship provisions. Tied to this, and requests about livestock and agriculture, were also requests to educate farmers on improved methods. We have provided a number of suggestions on this in the "Recommendations" section. 
+
+There were also a number of requests for health and hospital facilities, namely to improve healthcare infrastructure, including hospitals, medical equipment, and upgraded dispensaries. Other requests included supporting new maternity wings, staff housing, and outpatient wings.
+
+There was a lot of concern expressed over access and provision of water. Therefore there were requests for infrastructure like dams, boreholes, and water towers. Specific locations highlighted for improvement included Kiungururia and Echareria. 
+
+A number of communities rely on livestock as their primary or secondary livelihood. Therefore, there were also a number of livestock focussed requests, including access to grazing fields, provision of fodder and compensation for losses due to wildlife encounters. Stakeholders also emphasized the need for capacity building such as courses on improved livestock management. 
+
+There were also requests to support the community to plant tress in a number of areas (e.g. Chamuka springs), to install sanitation points, and overall to continue raising awareness about environmental conservation. 
+
+Although communities living in Soysambu conservancy expressed a strong sense of security, most communities outside did not, and therefore there were requests for additional security measures, including the construction of police posts and administrative offices for chiefs.
+
+Furthermore, there were requests for land, either to purchase from Soysambu, or to be provided land to cultivate, or to learn about vegetable farming. There were also some requests for electric fences to improve security. 
+
+Finally, in seeking to improve transparency, communication between Soysambu and neighbouring communities, and involvement of communities, there were suggestions to establish regular meetings, to elect representatives specifically for relations with Soysambu, and to work together to foster a positive relationship into the future. 
 
 :::
 
@@ -411,7 +434,7 @@ communities within and surrounding the conservancy.
 Following a meeting and exploratory visit with Soysambu management and
 representatives from neighbouring communities in September 2023 it was
 decided that this SAPA would focus on key neighbouring villages within
-the Oljorai, Kiptangwani, and Mbaruk locations, as well as those living
+the Oljorai, Kiptangwanyi, and Mbaruk locations, as well as those living
 within Soysambu.
 
 Futhermore, at this stage of the process, some of the questions that
@@ -535,7 +558,7 @@ of locations, estimated survey duration and enumerator requirements.
 add_lot_link(caption = 'Table of sample size by location')
 
 data <- data.frame(
-  "Location" = c("Mbaruk", "Oljorai", "Soysambu", "Kiptangwani"),
+  "Location" = c("Mbaruk", "Oljorai", "Soysambu", "Kiptangwanyi"),
   "Respondents" = c(81, 70, 20, 10),
   "Percentage" = c("45%", "39%", "11%", "5%")
 )
@@ -545,12 +568,15 @@ data <- data %>%
          "No. of Respondents" = "Respondents",
          "% of total" = "Percentage")
 data %>%
-  sea::sea_table(
+  sea_table(
     dark_color = sea_colors("gunmetal"),
     pale_color = sea_colors("grey"),
     third_color = "white"
-  ) %>%
-  flextable::autofit()
+  )
+library(kableExtra)
+data %>%
+  kable() %>%
+  kable_styling()
 
 # for reference colours: black, white, grey, pale_green, dark_green, rust_orange, gunmetal, dark_purple
 ```
@@ -639,7 +665,7 @@ information provided was correct.
 No negative feedback or concerns regarding the data collection process
 were received.
 
-```{r, fig.cap='Map of Soysambu with sample sizes from each locations', fig.align='center', out.width = '90%'}
+```{r, fig.cap='Map of Soysambu with sample sizes from each locations', fig.align='center', out.width = '70%'}
 knitr::include_graphics('img/map sample sizes.png')
 ```
 
@@ -815,7 +841,9 @@ combined_table %>%
     third_color = "white"
   ) %>%
   flextable::autofit()
-
+combined_table %>%
+  kable() %>%
+  kable_styling()
 
 
 ```
@@ -830,7 +858,8 @@ exists a satellite urban settlement area where minimal agriculture is
 practiced. The northern region comprises a mix of satellite urban
 communities and pastoralists, while the area along the Nakuru road
 towards Gilgil is predominantly occupied by smallholder farmers.
-Following this, the results are presented disaggregated by location.
+
+However, as we can see in Figure below, for almost all households, cultivation was the principal activity that contributed to the household's livelihood. Following this, pastoralism, and *vibarua* (paid manual labour) were stated in some locations. Finally, in some of the more urbanised areas, people shared that their own business, or a permanent salary (shown as other in Figure below). was the principal livelihood. Figure \ref{fig:liveli2} below shows that the second most important livelihood shows greater variability across locations. 
 
 ```{r livelihood, fig.cap='Map of principal livelihood activities in surveyed households', fig.align='center', out.width = '90%'}
 knitr::include_graphics('img/map livelihood activity.png')
@@ -838,7 +867,12 @@ knitr::include_graphics('img/map livelihood activity.png')
 
 ### How long household heads have been in the area
 
-```{r, fig.cap='Was the household head born in this community?', fig.align='center', out.width = '100%'}
+Part of the survey was to understand the proportion of native-born residents versus migrants in the surveyed locations, by asking This was achieved by asking the respondents, *"Was the household head born in this community?"*
+
+The survey results show that all respondents in the Kiptangwanyi location were not born in the community (note that the sample size in Kiptangwanyi was small, see Table 1). In Mbaruk and Soysambu, a greater percentage of respondents were also not born in the community. This was different in Oljorai where the majority of respondents were been born in the area, with a minority who  immigrated into the area.
+
+
+```{r, fig.cap='Was the household head born in this community?', fig.align='center', out.width = '80%'}
 by_location <- dclus2 %>% 
   group_by(locat, hh_head_born) %>% 
   summarise(proportion = survey_mean(vartype = "ci", na.rm=TRUE),
@@ -949,7 +983,7 @@ knitr::include_graphics('img/positive impacts overall.png')
 The findings of the household survey reveal diverse perspectives across
 the four locations. When the survey respondents were asked about how
 important projects previously implemented by Soysambu were to their
-households the majority of respondents from Kiptangwani location
+households the majority of respondents from Kiptangwanyi location
 assigned a rating of zero, indicating little importance. A significant
 portion expressed low importance, while only a few acknowledged medium
 to high importance, particularly concerning water provision and
@@ -1050,7 +1084,7 @@ a number of them fel that some impacts were of zero importance for
 example conflict with wildlife, little grazing access to Soysambu and
 community not being prioritised in employment by Soysambu.
 
-Opinions among respondents in Kiptangwani location were varied when it
+Opinions among respondents in Kiptangwanyi location were varied when it
 came to negative impacts. A significant majority of respondents
 highlighted that all negative impacts were of high importance and thus
 had a lot of impact on their household wellbeing, except for the
@@ -1094,7 +1128,7 @@ overall self-assessed well-being. This was achieved by asking the
 household head *"How's life?"* and explaining that 1 means everything is
 very bad and 10 means everything is very good.
 
-```{r, fig.cap='Responses when asked: How is your life at the moment?', fig.align='center', out.width = '100%'}
+```{r, fig.cap='Responses when asked: How is your life at the moment?', fig.align='center', out.width = '80%'}
 by_location <- dclus2 %>% 
   mutate(note_life_cat = cut(note_life, c(1, 3, 5, 8, 10), include.lowest = TRUE, labels = c("Very Bad", "Bad", "Good", "Very Good")
   )) %>% 
@@ -1118,7 +1152,7 @@ ggplot(by_location, aes(x = locat, y = proportion, group = note_life_cat, fill =
   theme(legend.position = c(0.9, 0.85))
 ```
 
-```{r, fig.cap='How has the general wellbeing of your household changed over the last 5 years?', fig.align='center', out.width = '100%'}
+```{r, fig.cap='How has the general wellbeing of your household changed over the last 5 years?', fig.align='center', out.width = '80%'}
 by_location <- dclus2 %>% 
   group_by(locat, change_wellbeing) %>% 
   summarise(
@@ -1146,7 +1180,7 @@ impacts of Soysambu conservancy, they were asked if they could take into
 account all of these impacts discussed, and summarise the overall impact
 of Soysambu on the well-being of their household.
 
-```{r, fig.cap='The impact of Soysambu Conservancy on the well-being of their household', fig.align='center', out.width = '120%'}
+```{r, fig.cap='The impact of Soysambu Conservancy on the well-being of their household', fig.align='center', out.width = '80%'}
 by_location <- dclus2 %>% 
   group_by(locat, overall_impact) %>% 
   summarise(
@@ -1176,7 +1210,7 @@ on household wellbeing is changing over time, the respondents were asked
 how has the contribution of Soysambu to your household's well-being
 changed over the past 5 years?
 
-```{r, fig.cap='How has the contribution of Soysambu to your households well-being changed over the past 5 years?', fig.align='center', out.width = '100%'}
+```{r, fig.cap='How has the contribution of Soysambu to your households well-being changed over the past 5 years?', fig.align='center', out.width = '80%'}
 by_location <- dclus2 %>% 
   group_by(locat, contribute_wellbeing) %>% 
   summarise(
@@ -1210,7 +1244,7 @@ felt that Soysambu had increased their well-being.
 
  
 
-On the other hand, approximately
+On the other hand,
 `r big_numbers("12%", "of respondents living in Oljorai agreed that Soysambu had reduced their overall well-being")`
 
 ## Governance
@@ -1222,7 +1256,7 @@ accountability. Unlike management, governance within SAPA is concerned
 with decision-making processes, resource allocation, and ensuring the
 inclusion of all relevant stakeholders in the conservation framework.
 
-Governance within SAPA is characterized by: Recognition and Respect for
+So called "good governance" within SAPA is characterized by: Recognition and Respect for
 Rights; Full and Effective Participation; Transparency and Access to
 Information; Mitigation of Negative Impacts. As part of the SAPA process
 we asked questions about each of these.
@@ -1239,24 +1273,21 @@ decision-making processes that affect their communities. Conversely,
 within Soysambu itself, a notable proportion of individuals perceive a
 degree of participation, particularly in terms of awareness about their
 community representatives for engagements with Soysambu and the channels
-available for communication with them. In Kiptangwani, opinions vary,
+available for communication with them. In Kiptangwanyi, opinions vary,
 with some residents indicating a lack of participation, others
 acknowledging its existence, and a considerable number chosing to answer
-*Don't know"*, when asked about the extent of their involvement in
+*"Don't know"*, when asked about the extent of their involvement in
 decision-making processes.
 
 ```{r, fig.cap='Map of survey locations', fig.align='center', out.width = '120%'}
 knitr::include_graphics('img/agree disagree governance theme participation.png')
 ```
 
-<aside>
-
 #### Level of influence
 
 One key positive result that did emerge from the survey was that most
 household heads felt that they had medium or high levels of influence on
 decision making in their communities.
-</aside> 
 
 The percentage of households that said they had medium or high levels of
 influence in their communities:
@@ -1269,6 +1300,10 @@ Transparency and Access to Information: Facilitating transparency
 through timely access to relevant information in suitable formats,
 thereby promoting openness and trust among stakeholders.
 
+Transparency and timely access to information help to promote openness and trust among stakeholders. To assess this aspect, respondents were given three statements to react to (see Figure below).
+
+In Kiptangwanyi, Oljorai, and Mbaruk locations, results suggest that a substantial proportion of respondents expressed dissatisfaction with the transparency of information. They felt that there were no meetings with Soysambu, and that they did not have timely access to information about decisions affecting the community made by Soysambu. The results were slightly different in the communities living in Soysambu, where although a significant number of respondents disagreed that there was sufficient transparency, a greater proportion agreed with the statements.
+
 ```{r, fig.cap='Agree/Disagree on statements about transparency and access to information', fig.align='center', out.width = '120%'}
 knitr::include_graphics('img/agree disagree governance theme transparency.png')
 ```
@@ -1279,16 +1314,22 @@ Mitigation of Negative Impacts: Implementing effective measures to
 mitigate any adverse effects on indigenous peoples and local
 communities, ensuring their well-being and protection.
 
+Mitigation of negative impacts involves implementing effective measures to address any adverse effects on local communities, safeguarding their wellbeing and interests. This aspect of good governance was assessed through specific statements related to Soysambu and its associated negative impacts, shown in Figure below.
+
+The household survey results show diverse perspectives across locations. In Kiptangwanyi, Oljorai and Mbaruk, most respondents disagreed that an effective system for collecting information on damage caused by wild animals existed, as well a lack of help when serious issues of damage by wild animals did occure.  On the contrary, in communities living in Soysambu, the majority agreed with the two statements. This suggests that some strategies do exist, but they are implemented in different ways across the different locations. 
+
+There was less consensus across Mbaruk, Kiptangwanyi, and Soysambu regarding Soysambu's use of effective measures to mitigate the negative impacts of the conservancy, with more respondents feeling like there were measures to mitigate negative impacts and crop damage. The exception here was Oljorai where the majority still disagreed that there were any measures in place. 
+
 ```{r, fig.cap='Agree/Disagree on statements about mitigation of negative impacts', fig.align='center', out.width = '120%'}
 knitr::include_graphics('img/agree disagree governance theme negative impact.png')
 ```
 
 ### Equitable benefit-sharing processes
 
-Equitable Benefit Sharing: Ensuring that benefits derived from the
-protected area are equitably distributed among relevant stakeholders
-based on agreed-upon targeting options, thus promoting fairness and
-social justice.
+Equitable benefit sharing in SAPA refers to ensuring that benefits derived from the conserved or protected area are equitably distributed among relevant stakeholders based on agreed-upon targeting options, thus promoting fairness and social justice. This can be slighty tricky in the case of private, conserved land. Therefore, the statements given to respondents sought to gauge the extent to which there was any perceived benefit sharing, and whether the allocation of  benefits was gender balanced (see Figure below). 
+
+Across Kiptangwanyi, Mbaruk, and Oljorai locations, almost all respondents disagreed with all statements. A minority of respondents in Soysambu agreed with the statements, which suggests that communities living in Soysambu do receive some benefits that other communities do not. 
+
 
 ```{r, fig.cap='Agree/Disagree on statements about equitable benefit-sharing processes', fig.align='center', out.width = '120%'}
 knitr::include_graphics('img/agree disagree governance theme benefit sharing.png')
@@ -1296,9 +1337,14 @@ knitr::include_graphics('img/agree disagree governance theme benefit sharing.png
 
 ### Rights
 
-Recognition and Respect for Rights: Emphasizing the acknowledgment and
-respect for the rights of all relevant actors involved in the protected
-area management.
+In SAPA, prioritizing recognition and respect for rights of all relevant stakeholders engaged in protected area management is fundamental to good governance. Once more, it is tricky to study this in the context of private conserved land. 
+
+In the survey, respondents were asked whether Soysambu recognizes and respects the rights of local women and men. In response to the overall statement, in Oljorai and Soysambu, the majority disagreed with this statement, with a few in Mbaruk and Kiptangwanyi expressing similar views. Conversely, a few respondents in Kiptangwanyi and Mbaruk, as well as most in Oljorai and Soysambu, agreed with the statement. 
+
+When it came to the community's perceived right to harvest firewood, respondents in Soysambu felt that they had rights to harvest firewood. There were mixed responses in all other locations. 
+
+Regarding law enforcement staff potentially violating the law or local people's rights, the majority of respondents from Kiptangwanyi, Oljorai, and Soysambu disagreed. This result goes counter to some of the claims that were made in the open ended questions (see section on Harassment in "From assessment to action" below). Nevertheless, in Mbaruk, the perception was different as most respondents agreed that there were some violations of their rights. 
+
 
 ```{r, fig.cap='Agree/Disagree on statements about rights', fig.align='center', out.width = '120%'}
 knitr::include_graphics('img/agree disagree governance theme rights.png')
@@ -1310,8 +1356,6 @@ knitr::include_graphics('img/agree disagree governance theme rights.png')
 <div class="section-purple-inverse">
 
 # From assessment to action
-
-## Stakeholder suggestions for how Soysambu can help
 
 To capture suggestions from stakeholders, during the survey, respondents
 were asked a simple open-ended question: *"Are there any other ways, not mentioned, that you think Soysambu could help your community?"*.
@@ -1388,7 +1432,7 @@ health facilities in Kampi Turkana and Kapkures: *"We need a hospital in Kapkure
 where requests for dispensaries at Kampi Turkana and Kapkures, along
 with staff housing at the Oljorai health center, were highlighted.
 
-While there were not specific requests from respondents in Kiptangwani
+While there were not specific requests from respondents in Kiptangwanyi
 during the survey, during the stakeholder workshops, participants
 emphasized the importance of equipping the maternity wing at the
 Elementaita dispensary in Elementaita village.
@@ -1418,7 +1462,7 @@ In Oljorai, a third of those surveyed underscored the necessity for dams
 or water pans to mitigate water scarcity, particularly during dry
 weather.
 
-Respondents from Kiptangwani also expressed a pressing need for
+Respondents from Kiptangwanyi also expressed a pressing need for
 community water provision, with 50% of survey respondents advocating for
 improved water access. Stakeholder workshops reiterated the importance
 of constructing water points and providing water pipes in key areas to
@@ -1438,7 +1482,7 @@ are one of their most important livelihoods. The map below shows that
 the second most important livelihood for most households, is livestock,
 especially in places like Oljorat.
 
-```{r, fig.cap='Map of 2nd most important livelihood in surveyed households', fig.align='center', out.width = '90%'}
+```{r fig, fig.cap='\\label{fig:liveli2}Map of 2nd most important livelihood in surveyed households', fig.align='center', out.width = '90%'}
 knitr::include_graphics('img/map livelihood activity 2.png')
 ```
 
@@ -1560,6 +1604,11 @@ sea_table(df,
     third_color = "white") %>% 
   flextable::autofit() %>% 
     flextable::merge_v(j = c("Category"))
+
+df %>%
+  kable() %>%
+  kable_styling()
+
 ```
 
 
@@ -1620,6 +1669,11 @@ df <- data.frame(
     pale_color = sea_colors("grey"),
     third_color = "white") %>% 
   flextable::autofit()
+  
+  df %>%
+  kable() %>%
+  kable_styling()
+  
 ```
 
 \newpage
@@ -1641,6 +1695,10 @@ df <- data.frame(
     pale_color = sea_colors("grey"),
     third_color = "white") %>% 
   flextable::autofit()
+  
+  df %>%
+  kable() %>%
+  kable_styling()
 ```
 
 \newpage
@@ -1668,6 +1726,10 @@ df <- data.frame(
     pale_color = sea_colors("grey"),
     third_color = "white") %>% 
   flextable::autofit()
+  
+  df %>%
+  kable() %>%
+  kable_styling()
 ```
 
 \newpage
@@ -1687,6 +1749,9 @@ df <- data.frame(
     third_color = "white") %>% 
   flextable::autofit()
 
+  df %>%
+  kable() %>%
+  kable_styling()
 ```
 
 \newpage
@@ -1712,6 +1777,10 @@ df <- data.frame(
     pale_color = sea_colors("grey"),
     third_color = "white") %>% 
   flextable::autofit()
+  
+  df %>%
+  kable() %>%
+  kable_styling()
 ```
 
 ```{r, fig.align='center', out.width = '60%'}
@@ -1755,6 +1824,10 @@ sea_table(data,
     dark_color = sea_colors("grey"),
     pale_color = sea_colors("white"),
     ) 
+
+df %>%
+  kable() %>%
+  kable_styling()
 ```
 
 \newpage
