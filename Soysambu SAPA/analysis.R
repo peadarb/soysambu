@@ -686,7 +686,7 @@ create_ggplot <- function(df) {
     scale_fill_brewer(palette = "PRGn") +
     guides(fill = guide_legend(title = NULL)) +
     labs(x = "", y = "Proportion of Households who feel impact is:") +
-    theme_sjplot() + 
+    sea::theme_sea() + 
     theme(legend.position = "bottom") +
     scale_x_discrete(
       breaks = df$value,
