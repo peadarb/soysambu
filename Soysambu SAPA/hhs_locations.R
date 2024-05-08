@@ -77,9 +77,7 @@ hhs_location2 <- hhs_locations_village %>%
   summarize(mean_latitude = mean(y),
             mean_longitude = mean(x))
 hhs_location <- merge(hhs_location1, hhs_location2, by = 'locat')
-my_palette <- c("#202C39", "#d77e5e", "#3d5919", "#381D2A"
-                #"#e6e7e2","#a4b792",  "#000000","#202C39", "#d77e5e"
-                )
+my_palette <- c("#202C39", "#d77e5e", "#3d5919", "#381D2A","#e6e7e2","#a4b792", "#000000","#202C39")
 
 distinct_colors <- my_palette(length(unique(hhs_location$locat)))
 map <- leaflet(data = hhs_location) %>%

@@ -47,6 +47,11 @@ library(egg)
 library(tibble)
 library(fontawesome)
 library(sea)
+
+```
+
+
+```{r}
 hhs_cleaned <- readRDS("hhs_cleaned.rds")
 #Sustain EA colour pallette
 
@@ -54,6 +59,8 @@ hhs_cleaned <- readRDS("hhs_cleaned.rds")
 dclus2 <- hhs_cleaned %>%
   as_survey_design(c(dnum, snum), fpc = c(fpc1, fpc2))
 ```
+
+\newpage
 
 ### Disclaimer
 
@@ -144,6 +151,11 @@ water for local residents. Furthermore, support in building or
 maintaining infrastructure including police posts, schools, and roads,
 were reported to enhance the overall quality of life for community
 members.
+:::
+
+<!-- gunmetal page -->
+
+::: {.section-gunmetal}
 
 Soysambu conservancy's initiative to offer sponsorship opportunities for
 students, enabling access to education and fostering academic
@@ -153,11 +165,7 @@ meals for students, school uniforms, desks, and sports equipment,
 positively impact educational outcomes and student well-being. The
 Conservancy also provides free guided educational trips to community
 members, offering valuable learning experiences.
-:::
 
-<!-- gunmetal page -->
-
-::: {.section-gunmetal}
 > We appreciate Soysambu for providing land to construct Lady Anne
 > Secondary School
 
@@ -224,6 +232,8 @@ buffalo, and hyenas was mentioned.
 > My son needs compensation, as he was injured by a buffalo while
 > working in the conservancy
 
+\newpage
+
 ### Overall contribution to well-being
 
 The survey results indicated that the majority of respondents perceived
@@ -255,14 +265,14 @@ with most people feeling that there is no participation, some agreeing
 that there is participation, and quite a number do not know whether
 there is any participation.
 
-\newpage
-
 #### Transparency and access to information
 
 There was overall dissatisfaction with transparency and access to
 information about decisions by Soysambu that were perceived to affect
 the communities, notably in Kiptangwanyi, OlJorai, and Mbaruk. Soysambu
 residents show mixed views.
+
+\newpage
 
 #### Mitigation of negative impacts
 
@@ -756,7 +766,7 @@ Sampling locations included the following 8 villages from Mbaruk: Kiwanja Ndege 
 
 From Kiptangwani only Jogoo village.
 
-Soysambu loaction was made up of 4 settlements at Jolai 1,2, Sleeping Warrior Gate, Jolai Gate and Soysambu Area.
+Soysambu location was made up of 4 settlements at Jolai 1 & 2, Sleeping Warrior Gate, Jolai Gate and Soysambu Area.
 
 Each survey began with an explanation of the purpose of the survey, how
 data would be used, confidentiality measures, the participant's rights,
@@ -940,8 +950,9 @@ head, but Soysambu had a slightly higher mean number of children.
       sea::scale_fill_sea_discrete() +
       sea::theme_sea() + 
       theme(legend.position = c(0.95, 0.95))
-    ```
-
+    
+```
+    
 
 ```{r}
     add_lot_link(caption = 'Characteristics of households')
@@ -1371,13 +1382,14 @@ p_mba + theme(legend.position="bottom",         axis.title.y = element_blank(), 
       geom_bar(stat = "identity", position = position_dodge(preserve = "single"), width = 0.95) +
       geom_errorbar(data=by_location, aes(ymax = ifelse(proportion_upp > 1, 1, proportion_upp), ymin = ifelse(proportion_low < 0, 0, proportion_low)), 
                     position = position_dodge(preserve = "single", width = 0.95), width = 0.1) +
-      sea::scale_fill_sea_discrete() +  
       guides(fill = guide_legend(title = NULL)) +
       labs(x = "Location", y = "Proportion of Households") +
       scale_y_continuous(limits=c(0, 1)) +
       theme_sea() + 
+      scale_fill_sea_discrete(colors = c("pale_green", "gunmetal", "dark_purple", "rust_orange")) +
       theme(legend.position = c(0.9, 0.85))
-    ```
+    
+```
 
 \newpage
 
@@ -1673,10 +1685,10 @@ everything is very bad and 10 means everything is very good.
       geom_errorbar(data=by_location, aes(ymax = ifelse(proportion_upp > 1, 1, proportion_upp), ymin = ifelse(proportion_low < 0, 0, proportion_low)), 
                     position = position_dodge(preserve = "single", width = 0.95), width = 0.1) +
       guides(fill = guide_legend(title = NULL)) +
-      sea::scale_fill_sea_discrete() +
       labs(x = "Location", y = "Proportion of Households") +
       scale_y_continuous(limits=c(0, 1)) +
-      sea::theme_sea() + 
+      theme_sea() + 
+      scale_fill_sea_discrete(colors = c("rust_orange", "dark_purple", "gunmetal", "pale_green")) +
       theme(legend.position = c(0.9, 0.85))
 ```
 
@@ -1695,10 +1707,10 @@ everything is very bad and 10 means everything is very good.
       geom_errorbar(data=by_location, aes(ymax = ifelse(proportion_upp > 1, 1, proportion_upp), ymin = ifelse(proportion_low < 0, 0, proportion_low)), 
                     position = position_dodge(preserve = "single", width = 0.95), width = 0.1) +
       guides(fill = guide_legend(title = NULL)) +
-      sea::scale_fill_sea_discrete() +
       labs(x = "Location", y = "Proportion of Households") +
       scale_y_continuous(limits=c(0, 1)) +
       theme_sea() + 
+      scale_fill_sea_discrete(colors = c("pale_green", "dark_purple", "rust_orange")) +
       theme(legend.position = c(0.73, 0.9))
 ```
 
@@ -1716,8 +1728,8 @@ everything is very bad and 10 means everything is very good.
         total = survey_total(vartype = "ci", na.rm = TRUE),
         n = unweighted(n())
       ) %>% 
-      filter(!overall_impact == "I do not want to answer") %>% 
-      mutate(overall_impact = fct_relevel(overall_impact, "Increased our well-being", "Neutral", "Reduced our well-being"))
+      filter(!overall_impact == "I do not want to answer") 
+     # mutate(overall_impact = fct_relevel(overall_impact, "Increased our well-being", "Neutral", "Reduced our well-being"))
 
 
     ggplot(by_location, aes(x = locat, y = proportion, group = overall_impact, fill = overall_impact)) +
@@ -1729,6 +1741,7 @@ everything is very bad and 10 means everything is very good.
       labs(x = "Location", y = "Proportion of Households") +
       scale_y_continuous(limits=c(0, 1)) +
       theme_sea() + 
+      scale_fill_sea_discrete(colors = c("pale_green", "dark_purple", "rust_orange")) +
       theme(legend.position = c(0.72, 0.93))
 ```
 
@@ -1745,8 +1758,8 @@ household's well-being changed over the past 5 years?
         total = survey_total(vartype = "ci", na.rm = TRUE),
         n = unweighted(n())
       ) %>% 
-      filter(!contribute_wellbeing == "I do not want to answer") %>% 
-      mutate(contribute_wellbeing = fct_relevel(contribute_wellbeing, "Increased our well-being", "Neutral", "Reduced our well-being"))
+      filter(!contribute_wellbeing == "I do not want to answer")  
+      #mutate(contribute_wellbeing = fct_relevel(contribute_wellbeing, "Increased our well-being", "Neutral", "Reduced our well-being"))
 
 
     ggplot(by_location, aes(x = locat, y = proportion, group = contribute_wellbeing, fill = contribute_wellbeing)) +
@@ -1758,6 +1771,7 @@ household's well-being changed over the past 5 years?
       labs(x = "Location", y = "Proportion of Households") +
       scale_y_continuous(limits=c(0, 1)) +
       theme_sea() + 
+      scale_fill_sea_discrete(colors = c("pale_green", "dark_purple", "rust_orange")) +
       theme(legend.position = c(0.85, 0.85))
 ```
 
@@ -2099,8 +2113,6 @@ the community's desire for diversified livestock options.
 
 **Action: Engage with rangeland management trainers and implementers such as TruRange, Mara Training Centre, Ol Pejeta, and others to develop a livestock engagement plan and trainings with surrounding communities. **
 
-\newpage
-
 ## Environment and sanitation
 
 The preservation of the environment and promotion of sanitation also
@@ -2203,8 +2215,6 @@ caused by wildlife to crops and livestock. These issues were not
 reported in other surveyed areas. 
 
 **Action: It will be important for Soysambu to thoroughly investigate these reported incidents to ensure the well-being and safety of community members. This includes development and implementing policies**
-
-\newpage
 
 ## Further suggestions
 
@@ -2512,6 +2522,7 @@ ggplot(by_location, aes(x = locat, y = proportion, group = total_tlu_cat, fill =
   labs(x = "Location", y = "Proportion of Households") +
   scale_y_continuous(limits=c(0, 1)) +
   theme_sea() + 
+  scale_fill_sea_discrete(colors = c("rust_orange", "dark_purple", "gunmetal", "dark_green")) +
   theme(legend.position = c(0.9, 0.85))
 ```
 
@@ -2533,11 +2544,11 @@ ggplot(by_location, aes(x = locat, y = proportion, group = crop_acre_cat, fill =
   geom_bar(stat = "identity", position = position_dodge(preserve = "single"), width = 0.95) +
   geom_errorbar(data=by_location, aes(ymax = ifelse(proportion_upp > 1, 1, proportion_upp), ymin = ifelse(proportion_low < 0, 0, proportion_low)), 
                 position = position_dodge(preserve = "single", width = 0.95), width = 0.1) +
-    sea::scale_fill_sea_discrete() +
   guides(fill = guide_legend(title = NULL)) +
   labs(x = "Location", y = "Proportion of Households") +
   scale_y_continuous(limits=c(0, 1)) +
   theme_sea() + 
+  scale_fill_sea_discrete(colors = c("rust_orange", "dark_purple", "gunmetal","pale_green","dark_green")) +
   theme(legend.position = c(0.88, 0.85))
 ```
 
@@ -2555,11 +2566,11 @@ ggplot(by_location, aes(x = locat, y = proportion, group = wild_conf_yn, fill = 
   geom_bar(stat = "identity", position = position_dodge(preserve = "single"), width = 0.95) +
   geom_errorbar(data=by_location, aes(ymax = ifelse(proportion_upp > 1, 1, proportion_upp), ymin = ifelse(proportion_low < 0, 0, proportion_low)), 
                 position = position_dodge(preserve = "single", width = 0.95), width = 0.1) +
-  sea::scale_fill_sea_discrete() +
   guides(fill = guide_legend(title = NULL)) +
   labs(x = "Location", y = "Proportion of Households") +
   scale_y_continuous(limits=c(0, 1)) +
   theme_sea() + 
+  scale_fill_sea_discrete(colors = c("gunmetal", "rust_orange")) +
   theme(legend.position = c(0.9, 0.85))
 ```
 
@@ -2577,11 +2588,11 @@ ggplot(by_location, aes(x = locat, y = proportion, group = crops_damg_yn, fill =
     geom_bar(stat = "identity", position = position_dodge(preserve = "single"), width = 0.95) +
     geom_errorbar(data=by_location, aes(ymax = ifelse(proportion_upp > 1, 1, proportion_upp), ymin = ifelse(proportion_low < 0, 0, proportion_low)), 
                   position = position_dodge(preserve = "single", width = 0.95), width = 0.1) +
-  sea::scale_fill_sea_discrete() +
     guides(fill = guide_legend(title = NULL)) +
     labs(x = "Location", y = "Proportion of Households") +
     scale_y_continuous(limits=c(0, 1)) +
     theme_sea() + 
+    scale_fill_sea_discrete(colors = c("gunmetal", "rust_orange")) +
     theme(legend.position = c(0.88, 0.85))
 ```
 :::
