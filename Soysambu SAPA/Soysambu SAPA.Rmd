@@ -1419,7 +1419,7 @@ household surveys indicate that **transmission of disease from wildlife and live
 - **Restricted access to certain public utilities**, such as roads, creates barriers to mobility and
 community well-being. This was an occasionally cited issue by community members **(35%)**.
 
-### Access to natural resoources
+### Access to natural resources
 - Limited access to grazing areas (44%) and restrictions on tree cutting (60%)
 within Soysambu Conservancy are more minor impacts cited by some community members. 
 
@@ -1647,6 +1647,8 @@ thankfully less than 1% (0.9%) of households reported that a member
 of their household was injured or killed by wildlife in the last
 year
 
+\newpage
+
 #### Households reporting that livestock `r fontawesome::fa("cow")` were damaged by wild animals in the last year
 
 `r wrap_columns_elements(c(big_numbers("10%", "Kiptangwanyi"), big_numbers("25%", "Mbaruk"), big_numbers("50%", "OlJorai"), big_numbers("0%", "Soysambu")))`
@@ -1713,6 +1715,8 @@ everything is very bad and 10 means everything is very good.
       scale_fill_sea_discrete(colors = c("pale_green", "dark_purple", "rust_orange")) +
       theme(legend.position = c(0.73, 0.9))
 ```
+
+\newpage
 
 - However, despite the lowest reporting well-being, **Soysambu residents reported they had the greatest increase in well-being in the last 5 years (54%).**
 
