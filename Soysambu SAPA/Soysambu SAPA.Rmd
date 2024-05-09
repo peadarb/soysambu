@@ -2463,10 +2463,10 @@ knitr::include_graphics('img/flamingos.png')
 ::: {.appendix-section-grey}
 # Appendix
 
-## Appendix 1 - Sample frame
+## Appendix 1 - Sampling of households
 
 ```{r}
-add_lot_link(caption = 'Sampling of households from locations and villages')
+#add_lot_link(caption = 'Sampling of households from locations and villages')
 
 # Create a data frame with the provided data
 data <- data.frame(
@@ -2594,5 +2594,26 @@ ggplot(by_location, aes(x = locat, y = proportion, group = crops_damg_yn, fill =
     theme_sea() + 
     scale_fill_sea_discrete(colors = c("gunmetal", "rust_orange")) +
     theme(legend.position = c(0.88, 0.85))
+```
+
+```{r, fig.cap='Level of education completed by respondents', fig.align='center', out.width = '60%'}
+by_location <- dclus2 %>% 
+  group_by(locat, edu) %>% 
+  summarise(
+    proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+    total = survey_total(vartype = "ci", na.rm = TRUE),
+    n = unweighted(n())
+  ) 
+
+ggplot(by_location, aes(x = locat, y = proportion, group = edu, fill = edu)) +
+ geom_bar(stat = "identity", position = position_dodge(preserve = "single"), width = 0.95) +
+    geom_errorbar(data=by_location, aes(ymax = ifelse(proportion_upp > 1, 1, proportion_upp), ymin = ifelse(proportion_low < 0, 0, proportion_low)), 
+                  position = position_dodge(preserve = "single", width = 0.95), width = 0.1) +
+    guides(fill = guide_legend(title = NULL)) +
+    labs(x = "Location", y = "Proportion of Households") +
+        scale_y_continuous(limits=c(0, 1)) +
+theme_sea() + 
+  scale_fill_sea_discrete(colors = c("rust_orange", "dark_purple", "gunmetal","pale_green","dark_green")) +
+  theme(legend.position = c(0.78, 0.85))
 ```
 :::

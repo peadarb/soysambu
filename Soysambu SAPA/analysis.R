@@ -156,6 +156,27 @@ ggplot(by_location, aes(x=locat, y=n, group = age_cat, fill = age_cat)) +
 
 ggsave(filename = here::here("images", "age_respondents.png"))
 
+# edu --------------------------------- 
+by_location <- dclus2 %>% 
+  group_by(locat, edu) %>% 
+  summarise(
+    proportion = survey_mean(vartype = "ci", na.rm = TRUE),
+    total = survey_total(vartype = "ci", na.rm = TRUE),
+    n = unweighted(n())
+  ) 
+
+ggplot(by_location, aes(x = locat, y = n, group = edu, fill = edu)) +
+  geom_bar(stat = "identity", position = position_dodge(preserve = "single"), width = 0.95) +
+  scale_fill_manual(values = my_palette) +  
+  guides(fill = guide_legend(title = NULL)) +
+  labs(title = "Completed education of respondents", x = "Location", y = "Number of Households") +
+  theme_sjplot() + 
+  theme(legend.position = c(0.90, 0.90))
+
+ggsave(filename = here::here("images", "edu_respondents.png"))
+
+
+
 # children in hhs --------------------------------- 
 
 by_location <- dclus2 %>% 
