@@ -165,7 +165,7 @@ positively impact educational outcomes and student well-being. The
 Conservancy also provides free guided educational trips to community
 members, offering valuable learning experiences.
 
-> We appreciate Soysambu for providing land to construct Lady Anne
+> We appreciate Soysambu for providing land to construct Lady Ann
 > Secondary School
 
 Soysambu conservancy's support for health projects, including the
@@ -385,7 +385,7 @@ Soysambu Conservancy is located within the Rift Valley System. It covers
 Elementeita. Soysambu Conservancy is renowned for its remarkable
 biodiversity, including a population of 170 endangered Nubian Giraffes
 and over 450 bird species, notably hosting 28% of the world's Lesser
-Flamingo population. Indeed Lake Elementaita is one of Kenya's Key
+Flamingo population. Indeed Lake Elmentaita is one of Kenya's Key
 Biodiversity Areas and RAMSAR sites (a wetland that is of international
 importance under the Ramsar Convention). Its rich wildlife habitat is
 home to buffalo, leopard, hippo, hyena, jackal, eland, zebra, impala,
@@ -990,7 +990,7 @@ head, but Soysambu had a slightly higher mean number of children.
 Residents surrounding Soysambu Conservancy engage in various
 economic activities, each with distinct needs. To the south,
 adjacent to Soysambu, are pastoralist communities. Along the
-Pipeline-Elementaita road, there exists a satellite urban settlement
+Pipeline-Elmentaita road, there exists a satellite urban settlement
 area where minimal agriculture is practiced. The northern region
 comprises a mix of satellite urban communities and pastoralists,
 while the area along the Nakuru road towards Gilgil is predominantly
@@ -1120,9 +1120,8 @@ impact.**
     conservation initiatives**, such as tree planting,
     contributing to the preservation of natural resources and
     biodiversity **(21.3%)**
--   Moreover, Soysambu offers support to **bush-clearing workers
-    by providing firewood for free**, demonstrating a commitment
-    to employee welfare and community support **(21.9%).**
+-   Moreover, Soysambu shows a dedication to employee well-being and community
+    assistance **(21.9%)** by **supporting bush-clearing workers with free firewood**.
         
 ```{r, fig.cap='Overall positive impacts across all communities', fig.align='center', out.width = '100%'}
 all_by_location <- data.frame()
@@ -1825,7 +1824,7 @@ participation, others acknowledging its existence, and a
 considerable number chosing to answer *"Don't know"*, when asked
 about the extent of their involvement in decision-making processes.
 
-```{r, fig.cap='Map of survey locations', fig.align='center', out.width = '120%'}
+```{r, fig.cap='Participation in decision-making', fig.align='center', out.width = '120%'}
     knitr::include_graphics('img/agree disagree governance theme participation.png')
 ```
 
@@ -1922,7 +1921,7 @@ In response to the overall statement, in OlJorai and Soysambu, the majority disa
 with this statement, with a few in Mbaruk and Kiptangwanyi expressing similar views.
 
 Conversely, a few respondents in Kiptangwanyi and Mbaruk, as well as most in OlJorai and Soysambu,
-agreed with the statement When it came to the community's perceived right to harvest firewood, respondents in Soysambu felt that they had rights to harvest firewood.
+agreed with the statement. When it came to the community's perceived right to harvest firewood, respondents in Soysambu felt that they had rights to harvest firewood.
 
 There were mixed responses in all other locations regarding law enforcement staff potentially violating the law or
 local people's rights, the majority of respondents from Kiptangwanyi, OlJorai, and Soysambu disagreed. This result goes
@@ -1959,7 +1958,7 @@ stakeholders involved.
 
 ## Support for schools and education
 
-Soysambu Conservancy has provided land for the construction of Lady Anne
+Soysambu Conservancy has provided land for the construction of Lady Ann
 Secondary School. One household participant expressed gratitude to
 Soysambu for this initiative. However, there is a recurring call for
 greater support for schools and education, as highlighted in both the
@@ -2029,7 +2028,7 @@ staff housing at the OlJorai health center, were highlighted.
 - While there were not specific requests from respondents in Kiptangwanyi
 during the survey, during the stakeholder workshops, participants
 emphasized the importance of equipping the maternity wing at the
-Elementaita dispensary in Elementaita village.
+Elmentaita dispensary in Elmentaita village.
 
 **Action: Develop a clear strategy for engaging with health clinics, dispensaries and schools including infrastructure development and support for health workers. CHASE Africa, is one of the leading NGOs in the region, working with conservation practitioners to improve the outcomes of health care in conservation landscapes.**
 
@@ -2069,7 +2068,7 @@ address water challenges effectively.
 - Overall, the stakeholder workshops served to emphasize the requests for
 water distribution infrastructure (e.g. water points at Mwariki C, water
 pipes in Jogoo village), a mega-dam at Soysambu to help harvest water
-heading to Elementaita around Maisha poa area, a water pan in Kampi
+heading to Elmentaita around Maisha poa area, a water pan in Kampi
 Turkana, and a borehole in Ngatta.
 
 **Action: Develop a clear strategy for water provision. Accounting for the supply of water, the trade-offs for livestock and wildlife management, and the roles of WRUA. A consultant, such as Sean Avery, would provide concrete steps forward.**
@@ -2223,7 +2222,9 @@ reported in other surveyed areas.
 
 Less frequently mentioned suggestions, or those posing potential
 implementation challenges, include:
+
  - Prioritizing employment opportunities for community members within the conservancy, which could be advertised and seleected through a community committee. 
+ 
  - Facilitating community participation in game drives to observe wild animals within the Soysambu and better understand the conservation work Soysambu conservancy is conducting.
 
 \newpage
@@ -2257,7 +2258,7 @@ df <- data.frame(
     "Creation of a library in the Mololine area to engage the youth.", "Provision of transportation for children commuting to Kiboko Primary.",
     "Offering scholarships to the brightest students from primary schools across all areas.", "Construction of hospitals and dispensaries, provision of medical equipment, and upgrades to existing healthcare facilities.",
     "Establishment of a maternity wing, staff houses for health workers, and outpatient wings.",
-    "Improvement of health facilities in various locations such as Kampi Turkana and Kapkures.", "Equipping the maternity wing at the Elementaita dispensary.", "Installation of water infrastructure including boreholes and water towers.", "Construction of dams, boreholes, and water towers.", "Revival of existing boreholes and extension of water infrastructure.",
+    "Improvement of health facilities in various locations such as Kampi Turkana and Kapkures.", "Equipping the maternity wing at the Elmentaita dispensary.", "Installation of water infrastructure including boreholes and water towers.", "Construction of dams, boreholes, and water towers.", "Revival of existing boreholes and extension of water infrastructure.",
     "Mitigation of water scarcity through the construction of water pans and pipes.", "Access to grazing fields during dry seasons and provision of grass for livestock.",
     "Education programs on improved livestock management and capacity building.", "Compensation for losses due to wildlife encounters and cessation of harassment by security personnel on herders.",
     "Installation of sanitation points near highways and provision of tree seedlings.",
@@ -2474,7 +2475,7 @@ knitr::include_graphics('img/flamingos.png')
 # Create a data frame with the provided data
 data <- data.frame(
   Location = c("Gilgil", "Gilgil", "Gilgil", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "Soysambu", "Soysambu", "Soysambu", "Soysambu", "Soysambu"),
-  Village = c("Kikopey", "Karura", "Kasarani", "Jogoo", "Mwariki C", "Elmentaita", "Bombo", "Dam", "Old   game", "Miti   Mingi", "Muranga", "Mbaruk Marura", "Pema", "Kiwanja Ndege Mkulima", "Kiambogo", "Kahuho", "Mololine", "Kasambara", "Kiwanja Ndege", "Leleshwa", "Echareria", "Mbaruk", "Oldubey", "Kelelwa", "Central Utut", "Kapkures", "Elementaita Munyaka", "Lokichogio", "Kapedo", "Central hall", "Kongasis", "Block   D", "Gema", "Kampi   shule", "Kongasis   A", "Kongasis   B", "Kongasis   Centre", "Ngatta", "Kampi   Turkana", "Head office", "Soysambu area", "Melia Nyeupe/borehole/nginegii", "Jolai 1, 2, sleeping warrior, jolai gate", "Congreve area"),
+  Village = c("Kikopey", "Karura", "Kasarani", "Jogoo", "Mwariki C", "Elmentaita", "Bombo", "Dam", "Old   game", "Miti   Mingi", "Muranga", "Mbaruk Marura", "Pema", "Kiwanja Ndege Mkulima", "Kiambogo", "Kahuho", "Mololine", "Kasambara", "Kiwanja Ndege", "Leleshwa", "Echareria", "Mbaruk", "Oldubey", "Kelelwa", "Central Utut", "Kapkures", "Elmentaita Munyaka", "Lokichogio", "Kapedo", "Central hall", "Kongasis", "Block   D", "Gema", "Kampi   shule", "Kongasis   A", "Kongasis   B", "Kongasis   Centre", "Ngatta", "Kampi   Turkana", "Head office", "Soysambu area", "Melia Nyeupe/borehole/nginegii", "Jolai 1, 2, sleeping warrior, jolai gate", "Congreve area"),
   `HHS` = c("", "", "", "600", "", "200", "250", "150", "", "", "90", "100", "200", "5000", "70", "200", "80", "100", "200", "80", "300", "500", "260", "282", "178", "274", "600", "400", "189", "700", "", "500", "400", "400", "800", "1300", "1200", "250", "117", "92", "183", "28", "50", "11"),
   Selected = c("", "", "", "yes", "", "", "", "", "", "", "yes", "", "yes", "yes", "yes", "", "yes", "", "", "yes", "yes", "yes", "yes", "yes", "yes", "yes", "", "", "yes", "", "", "", "", "", "", "", "", "yes", "yes", "", "yes", "", "yes", "")
 )
