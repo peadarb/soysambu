@@ -145,7 +145,7 @@ neighbouring or within Soysambu Conservancy were:
 
 5.  Providing outreach services and training
 
-Soysambu conservancy provides water to the community by building water tanks, ensuring access to clean and safe
+Soysambu Conservancy provides water to the community by building water tanks, ensuring access to clean and safe
 water for local residents. Furthermore, support for building or
 maintaining infrastructure, including police posts, schools, and roads,
 were reported to enhance the overall quality of life for community
@@ -156,7 +156,7 @@ members.
 
 ::: {.section-gunmetal}
 
-Soysambu conservancy's initiative to offer sponsorship opportunities for
+Soysambu Conservancy's initiative to offer sponsorship opportunities for
 students, enabling access to education and fostering academic
 achievement, was seen as having a positive social impact. Additionally,
 Soysambu's contributions to local schools, such as providing school
@@ -168,14 +168,14 @@ members, offering valuable learning experiences.
 > We appreciate Soysambu for providing land to construct Lady Ann
 > Secondary School.
 
-Soysambu conservancy's support for health projects, including the
+Soysambu Conservancy's support for health projects, including the
 provision of equipment to clinics and cancer screening for women,
 contributed to improved healthcare access and outcomes within the
 community. Additionally, Soysambu Conservancy also provided anti-rabies
 vaccinations for dogs and donkeys, demonstrating a commitment to
 community health.
 
-Soysambu conservancy also offered outreach services in the form of
+Soysambu Conservancy also offered outreach services in the form of
 training in improved livestock production, health, and waste management,
 empowering residents with valuable knowledge and skills.
 
@@ -295,7 +295,7 @@ and respect for the rights of local women and men.
 ### Recommendations going forward
 
 Based on the results of the surveys and the stakeholder workshops, there
-are mixed perceptions about Soysambu conservancy. On the one hand, there
+are mixed perceptions about Soysambu Conservancy. On the one hand, there
 were a number of positive impacts and some positive aspects to
 governance. On the other hand, there was also widespread
 dissatisfaction, particularly in the communities neighbouring Soysambu,
@@ -378,7 +378,7 @@ those.
 ::: {.section-rust-inverse}
 # Introduction
 
-## Soysambu conservancy
+## Soysambu Conservancy
 
 Soysambu Conservancy is located within the Rift Valley System. It covers
 48,000 acres, encompassing the northern and western shores of Lake
@@ -1069,7 +1069,7 @@ proportions of households across themes suggesting that Soysambu had a high posi
 impact.**
 
 ### Education
--   **Soysambu conservancy's initiative to offer sponsorship
+-   **Soysambu Conservancy's initiative to offer sponsorship
     opportunities for students**, enabling access to education
     and fostering academic achievement, **was seen as a positive
     social impact by some households (19.3%).** 
@@ -1083,7 +1083,7 @@ impact.**
         
 ### Health
 
--   Soysambu conservancy's support for health projects,
+-   Soysambu Conservancy's support for health projects,
     **including the provision of equipment to clinics and cancer
     screening for women**, and contributed to improved
     healthcare access and outcomes within the community
@@ -1094,13 +1094,13 @@ impact.**
     households noting the impact **(17.9%).**
         
 ### Water
--   Soysambu conservancy **provides water to the community**
+-   Soysambu Conservancy **provides water to the community**
     either through trucks or by building water tanks, ensuring
     access to clean and safe water for local residents, and this
     was noted by some households **(21.2%).**
     
 ### Infrastructure and utilities
--   Soysambu conservancy's support in **building or maintaining
+-   Soysambu Conservancy's support in **building or maintaining
     infrastructure** including police posts, schools, and roads,
     was reported to enhance the overall quality of life for
     community members. **This was the most noted benefit across
@@ -1355,7 +1355,7 @@ p_mba + theme(legend.position="bottom",         axis.title.y = element_blank(), 
 ### Feelings of security
 
  This was not across the board, but there were clear results that
- communities living on **Soysambu conservancy felt much more secure than those living outside (100%)**. Feeling secure is a crucial contributor to well-being:
+ communities living on **Soysambu Conservancy felt much more secure than those living outside (100%)**. Feeling secure is a crucial contributor to well-being:
  
 - **40% of respondents in Mbaruk felt insecure or very insecure.**
 
@@ -1524,7 +1524,7 @@ variables <- c(
 )
 
 # List of locations
-locations <- c("Kiptangwanyi", "Ol Jorai", "Mbaruk", "Soysambu")
+locations <- c("Kiptangwanyi", "OlJorai", "Mbaruk", "Soysambu")
 
 # Create an empty list to store results for each location
 all_by_location_list <- list()
@@ -1718,7 +1718,7 @@ everything is very bad and 10 means everything is very good.
 
 - Most other areas reported little change to well-being. 
 
-- Then, once the respondent was asked about the positive and negative impacts of Soysambu conservancy, they were asked if they could take into account all of these impacts discussed, and summarise the overall impact of Soysambu on the well-being of their household. **This confirms that Soysambu conservancy has improved their own residents well-being in the last 5 years.**  
+- Then, once the respondent was asked about the positive and negative impacts of Soysambu Conservancy, they were asked if they could take into account all of these impacts discussed, and summarise the overall impact of Soysambu on the well-being of their household. **This confirms that Soysambu Conservancy has improved their own residents well-being in the last 5 years.**  
 
 ```{r, fig.cap='The impact of Soysambu Conservancy on the well-being of their household', fig.align='center', out.width = '80%'}
     by_location <- dclus2 %>% 
@@ -1942,14 +1942,14 @@ To capture suggestions from stakeholders, during the survey, respondents
 were asked a simple open-ended question: *"Are there any other ways, not
 mentioned, that you think Soysambu could help your community?"*.
 Furthermore, during the second stakeholder workshop, the 33 participants
-were divided into groups that represented their communities, and were
-given an opportunity to brainstorm and add further suggestions based on results form the survey tool.
+were divided into groups that represented their communities and were
+given an opportunity to brainstorm and add further suggestions based on results from the survey tool.
 
 In the following section, we outline the main categories under which
 these suggestions fall. Here, we outline actionable steps and strategies aimed at enhancing the
 conservation efforts and social impact management within and around Soysambu
 Conservancy. Drawing upon the identified challenges and opportunities,
-these recommendations are drawn from the community members, and seek to foster sustainable practices, improve
+these recommendations are drawn from the community members and seek to foster sustainable practices, improve
 community engagement, and promote equitable outcomes for all
 stakeholders involved.
 
@@ -1976,7 +1976,7 @@ ii) Construction of a primary school in Royal Estate.
 iii) Installation of ablution blocks in primary schools such as
      Kapkures, Kampi Turkana, Oldubei, Olesirwa, Kelelwa, and Olepolos.
 
-iv) Establishment of an Early Childhood Education (ECDE) center in Jogoo
+iv) Establishment of an Early Childhood Development Education (ECDE) center in Jogoo
     village, addressing a recognized need from community engagement
     sessions.
 
@@ -1995,9 +1995,9 @@ Furthermore, workshop participants suggested that Soysambu could offer
 scholarships to the brightest students from primary schools across all
 areas. Some respondents expressed concerns about the fairness of
 scholarship provisions, emphasizing the importance of ensuring a fair
-and transparent process and creating a representative and elected committee from all locations to help screen candidates. A similar process has been established successfully in Ol Pejeta conservancy. 
+and transparent process and creating a representative and elected committee from all locations to help screen candidates. A similar process has been established successfully in Ol Pejeta Conservancy. 
 
-**Action: Develop a clear strategy for engaging with schools including infrastructure development, educational content, support for teachers, and bursaries. Lessons can be learned from Lewa, Ol Pejeta, Enonkishu Conservancy and Big Life Foundation.**
+**Action: Develop a clear strategy for engaging with schools, including infrastructure development, educational content, support for teachers, and bursaries. Lessons can be learned from Lewa, Ol Pejeta, Enonkishu Conservancy, and Big Life Foundation.**
 
 ## Health and hospital facilities
 
@@ -2015,19 +2015,19 @@ constructing essential facilities such as a maternity wing, staff houses
 for health workers, and an outpatient wing in various locations,
 including Kiungururia.
 
-- Similarly, in OlJorai, some respondents stressed the need for improved
+- Similarly, in Ol Jorai, some respondents stressed the need for improved
 health facilities in Kampi Turkana and Kapkures: *"We need a hospital in
 Kapkures as women are losing children because a hospital is lacking"*.
 The sentiment was echoed during the stakeholder workshops, where
 requests for dispensaries at Kampi Turkana and Kapkures, along with
-staff housing at the OlJorai health center, were highlighted.
+staff housing at the Ol Jorai health center, were highlighted.
 
-- While there were not specific requests from respondents in Kiptangwanyi
+- While there were no specific requests from respondents in Kiptangwanyi
 during the survey, during the stakeholder workshops, participants
 emphasized the importance of equipping the maternity wing at the
 Elmentaita dispensary in Elmentaita village.
 
-**Action: Develop a clear strategy for engaging with health clinics, dispensaries and schools including infrastructure development and support for health workers. CHASE Africa, is one of the leading NGOs in the region, working with conservation practitioners to improve the outcomes of health care in conservation landscapes.**
+**Action: Develop a clear strategy for engaging with health clinics, dispensaries, and schools, including infrastructure development and support for health workers. CHASE Africa is one of the leading NGOs in the region, working with conservation practitioners to improve the outcomes of health care in conservation landscapes.**
 
 
 ## Water provision services
@@ -2042,17 +2042,16 @@ importance of water infrastructure, including the revival of existing
 boreholes and the construction of new ones. Participants specifically
 called for a water tower at Kiungururia and a borehole in Echareria
 during the stakeholder workshops, indicating the critical need for
-improved water access for water that passes through through Kiambogo and
-near cultivated land to Soysambu: *"Allow access to the water passing
+improved water access: *"Allow access to the water passing
 through Kiambogo to [Soysambu]."*
 
 - Similarly, in Kasambara, participants echoed the sentiment for enhanced
 water infrastructure, with requests for boreholes at Wamagwathi's farm
-and a pipe extension at Kianyeni village, to address water scarcity in
+and a pipe extension at Kianyeni village to address water scarcity in
 the region. In particular, participants called for the existing
 boreholes near African Forest to be revived.
 
-- In OlJorai, a third of those surveyed underscored the necessity for dams
+- In Ol Jorai, a third of those surveyed underscored the necessity for dams
 or water pans to mitigate water scarcity, particularly during dry
 weather.
 
@@ -2063,71 +2062,76 @@ of constructing water points and providing water pipes in key areas to
 address water challenges effectively.
 
 - Overall, the stakeholder workshops served to emphasize the requests for
-water distribution infrastructure (e.g. water points at Mwariki C, water
+water distribution infrastructure (e.g., water points at Mwariki C, water
 pipes in Jogoo village), a mega-dam at Soysambu to help harvest water
-heading to Elmentaita around Maisha poa area, a water pan in Kampi
+heading to Elmentaita around Maisha Poa area, a water pan in Kampi
 Turkana, and a borehole in Ngatta.
 
-**Action: Develop a clear strategy for water provision. Accounting for the supply of water, the trade-offs for livestock and wildlife management, and the roles of WRUA. A consultant, such as Sean Avery, would provide concrete steps forward.**
+**Action: Develop a clear strategy for water provision, accounting for the supply of water, the trade-offs for livestock and wildlife management, and the roles of WRUA. A consultant, such as Sean Avery, would provide concrete steps forward.**
 
 
 ## Livestock management
 
 Livestock management also emerged as a significant concern among the
-communities surveyed, but particularly among those for whom livestock
+communities surveyed, particularly among those for whom livestock
 are one of their most important livelihoods. The map below shows that
-the second most important livelihood for most households, is livestock,
-especially in places like OlJorai.
+the second most important livelihood for most households is livestock,
+especially in places like Ol Jorai.
 
-```{r fig2, fig.cap='Map of 2nd most important livelihood in surveyed households', fig.align='center', out.width = '90%'}
+```{r fig2, fig.cap='Map of the second most important livelihood in surveyed households.', fig.align='center', out.width = '90%'}
 knitr::include_graphics('img/map livelihood activity 2.png')
 ```
 
 Therefore, unsurprisingly, requests and suggestions came primarily from
-OlJorai, where most of those surveyed sought assistance in multiple
+Ol Jorai, where most of those surveyed sought assistance in multiple
 aspects of livestock management, including:
-- access to grazing fields during dry seasons
-- provision of grass for livestock
-- livestock management education programs
-- compensation for losses due to wildlife encounters, 
-- and cessation of harassment by security personnel on
+
+- Access to grazing fields during dry seasons.
+
+- Provision of grass for livestock.
+
+- Livestock management education programs.
+
+- Compensation for losses due to wildlife encounters.
+
+- Cessation of harassment by security personnel on
 herders.
 
 The stakeholder workshops further elucidated the community's requests,
 with a majority emphasizing the need for capacity building on improved
 livestock management, access to grazing areas, hay production (some
-suggested at Nderit primary school), livestock vaccination, and
-infrastructure development such as cattle dips (e.g. at Kampi Shule).
+suggested at Nderit Primary School), livestock vaccination, and
+infrastructure development such as cattle dips (e.g., at Kampi Shule).
 Participants also highlighted the need for measures to mitigate
-wildlife-livestock conflict, from Hyaenas in particular, with some
+wildlife-livestock conflict, particularly from hyenas, with some
 people suggesting the use of traps.
 
 A number of respondents in the Mbaruk area also highlighted the need for
-support in sustainable livestock management, as well as grazing access
+support in sustainable livestock management, grazing access
 (they mentioned on "unused land"), education on livestock management,
 and access to animal vaccination services and artificial insemination.
 Additionally, participants in Kasambara emphasized the long-standing
 request for the provision of dairy goats and dairy cattle, underscoring
 the community's desire for diversified livestock options.
 
-**Action: Engage with rangeland management trainers and implementers such as TruRange, Mara Training Centre, Ol Pejeta, and others to develop a livestock engagement plan and trainings with surrounding communities. **
+**Action: Engage with rangeland management trainers and implementers such as TruRange, Mara Training Centre, Ol Pejeta, and others to develop a livestock engagement plan and training the surrounding communities. **
 
 ## Environment and sanitation
 
 The preservation of the environment and promotion of sanitation also
-emerged as key priorities and survey respondents and workshop
+emerged as key priorities. Survey respondents and workshop
 participants emphasized the importance of addressing environmental
 issues and implementing sanitation measures to improve community
 well-being.
 
-- Respondents from Mbaruk and OlJorai in particular, suggested that
+- Respondents from Mbaruk and Ol Jorai in particular, suggested that
 Soysambu could address environmental challenges by: installing
 sanitation points near highways; providing tree seedlings (also
-mentioned in OlJorai); and raising awareness about environmental
+mentioned in Ol Jorai); and raising awareness about environmental
 conservation.
 
 - Additionally, workshop participants emphasized the importance of fencing
-and tree planting at Chamuka springs to safeguard natural resources and
+and tree planting at Chamuka Springs to safeguard natural resources and
 promote environmental sustainability.
 
 **Action: Select key activities from the list provided and begin implementation. **
@@ -2146,13 +2150,13 @@ security measures, specifically requesting assistance from Soysambu in
 constructing a police post in Murang'a Echereria, Mbaruk, and Mololine
 villages. This sentiment was further emphasized during the stakeholder
 workshops, with participants additionally advocating for the
-establishment of a police post in Royal estate.
+establishment of a police post in Royal Estate.
 
-- These calls were echoed by respondents from Kiptangwanyi who also
+- These calls were echoed by respondents from Kiptangwanyi, who also
 highlighted the need for administrative offices for the chief and
 assistant chiefs at the Kiptangwanyi chief's camp.
 
-**Action: Work with local adminstration to prioritise security projects. **
+**Action: Work with local administration to prioritise security projects. **
 
 ## Land and fencing
 
@@ -2170,7 +2174,7 @@ community purposes such as markets, graveyards, and waste disposal
 sites, and provide land to squatters at affordable rates.
 
 - In Soysambu, 35% of respondents suggested initiatives to optimize land
-usage which included requests for subsidized land allocations for
+usage, which included requests for subsidized land allocations for
 cultivation purposes, setting aside land for vegetable farming, and
 advocating for the installation of electric fences around residential
 areas to bolster security measures.
@@ -2179,9 +2183,9 @@ areas to bolster security measures.
 
 Based on the governance section, most people across all locations
 disagreed that there was sufficient transparency and access to
-information or equitable benefit sharing . In fact, across all locations, most people felt they
-were not well informed, didn't have access to timely information about
-decision made by Soysambu that would affect them, nor that their
+information or equitable benefit-sharing . In fact, across all locations, most people felt they
+were not well-informed, didn't have access to timely information about
+decisions made by Soysambu that would affect them, nor that their
 communities were sharing information with Soysambu. Unsurprisingly,
 improved community representation emerged as a key recommendation, with
 survey respondents and stakeholder workshop participants expressing a
@@ -2194,10 +2198,10 @@ establishment of quarterly general meetings to facilitate open dialogue
 and transparency. One respondent requested the election of a community
 representative to enhance community voice and representation.
 
-Similarly, in OlJorai, respondents underscored the importance of
+Similarly, in Ol Jorai, respondents underscored the importance of
 fostering positive relationships between Soysambu and local communities.
 They emphasized the need for community inclusion in decision-making
-processes and likewise, they suggested holding regular meetings to
+processes and likewise they suggested holding regular meetings to
 facilitate ongoing dialogue and collaboration between Soysambu and the
 community.
 
@@ -2205,7 +2209,7 @@ community.
 
 ## Harrassment and compensation
 
-In OlJorai, some respondents highlighted instances where individuals
+In Ol Jorai, some respondents highlighted instances where individuals
 gathering firewood experienced perceived harassment. Additionally, there
 were reports of individuals feeling harassed during law enforcement
 activities. Concerns were also expressed regarding perceived delays or
@@ -2213,23 +2217,23 @@ lack of compensation from the Kenya Wildlife Service (KWS) for damage
 caused by wildlife to crops and livestock. These issues were not
 reported in other surveyed areas. 
 
-**Action: It will be important for Soysambu to thoroughly investigate these reported incidents to ensure the well-being and safety of community members. This includes development and implementing policies**
+**Action: It will be important for Soysambu to thoroughly investigate these reported incidents to ensure the well-being and safety of community members. This includes developing and implementing policies.**
 
 ## Further suggestions
 
 Less frequently mentioned suggestions, or those posing potential
 implementation challenges, include:
 
- - Prioritizing employment opportunities for community members within the conservancy, which could be advertised and seleected through a community committee. 
+ - Prioritizing employment opportunities for community members within the conservancy, which could be advertised and selected through a community committee. 
  
- - Facilitating community participation in game drives to observe wild animals within the Soysambu and better understand the conservation work Soysambu conservancy is conducting.
+ - Facilitating community participation in game drives to observe wild animals within the Soysambu and better understand the conservation work Soysambu Conservancy is conducting.
 
 \newpage
 
 ## Full list of requests from communities
 
 Here we have included all the suggestions that were made by survey
-respondents, or in the stakeholder workshops, into a table format.
+respondents, or in the stakeholder workshops, in a table format.
 
 ```{r}
 add_lot_link(caption = 'Community suggestions for other ways Soysambu could help the community.')
@@ -2245,12 +2249,12 @@ df <- data.frame(
     "Water Provision Services", "Livestock Management", "Livestock Management", "Livestock Management", 
     "Environment and Sanitation", "Environment and Sanitation",
     "Environment and Sanitation", "Security", "Security", "Land and Fencing", "Land and Fencing", "Community representation",
-    "Community representation", "Harrassment and compensation", "Further suggestions"
+    "Community Representation", "Harassment and Compensation", "Further Suggestions"
   ),
   Suggestion = c(
     "Allocation of land between Baraka and Soysambu for the construction of a primary school and other public utilities, as well as the relocation of Kiboko Primary School to this land.",
     "Construction of a primary school in Royal Estate.", "Installation of ablution blocks in primary schools such as Kapkures, Kampi Turkana, Oldubei, Olesirwa, Kelelwa, and Olepolos.",
-    "Establishment of an Early Childhood Education (ECDE) center in Jogoo village, addressing a recognized need from community engagement sessions.",
+    "Establishment of an Early Childhood Development Education (ECDE) center in Jogoo village, addressing a recognized need from community engagement sessions.",
     "Development of a nursery school in Kiwanja Ndege and Ngatta areas, along with polytechnics and secondary schools.", "Implementation of school feeding programs in Ol Jorai Primary School.",
     "Creation of a library in the Mololine area to engage the youth.", "Provision of transportation for children commuting to Kiboko Primary.",
     "Offering scholarships to the brightest students from primary schools across all areas.", "Construction of hospitals and dispensaries, provision of medical equipment, and upgrades to existing healthcare facilities.",
@@ -2259,7 +2263,7 @@ df <- data.frame(
     "Mitigation of water scarcity through the construction of water pans and pipes.", "Access to grazing fields during dry seasons and provision of grass for livestock.",
     "Education programs on improved livestock management and capacity building.", "Compensation for losses due to wildlife encounters and cessation of harassment by security personnel on herders.",
     "Installation of sanitation points near highways and provision of tree seedlings.",
-    "Fencing and tree planting at Chamuka springs.", "Raising awareness about environmental preservation.", "Construction of police posts in various locations.",
+    "Fencing and tree planting at Chamuka Springs.", "Raising awareness about environmental preservation.", "Construction of police posts in various locations.",
     "Establishment of administrative offices for local authorities.", "Purchase and allocation of land for community use.", "Provision of land for cultivation and installation of electric fences.",
     "Clear communication of rules and regulations, and establishment of quarterly general meetings.", "Fostering positive relationships and inclusion of the community in decision-making processes.",
     "Investigation of reported harassment incidents and compensation for wildlife-related damages.", "Prioritizing employment opportunities for community members within the conservancy and facilitating community participation in game drives."
@@ -2284,7 +2288,7 @@ sea::sea_table(df,
 In the requests and suggestions from those surveyed and workshop
 participants, there were a number of calls for education programs to
 improve livelihoods. For most households, the principal livelihoods are
-still agriculture based (with Kibarua or livestock for some). Soysambu
+still agriculture based (with casual labour or livestock for some). Soysambu
 has already carried out some form of agricultural extension activity
 through the farmer's seminar on livestock production. This could be an
 area that is expanded on to support those in the community who are
@@ -2297,7 +2301,7 @@ income) and become more food secure.
 A needs-based assessment would be required for the target community and
 tracking impact would be a crucial consideration. Changing farming
 practices and behaviours is a particularly challenging objective in the
-short-term as behaviours tend to change over longer periods of time and
+short term as behaviours tend to change over longer periods of time and
 often proof of success of new practices needs to be demonstrated for
 changes in traditional farming practice to be adopted. As such, this
 would be a longer-term programme allowing for shifts in both the
@@ -2314,7 +2318,7 @@ demonstration farms to impart knowledge in a more practical manner and
 allowing for participants to see changes over time.
 
 The tables below set out some examples of how climate smart agriculture
-could be promoted to the smallholder community. These suggestion aim to
+could be promoted to the smallholder community. These suggestions aim to
 increase farmer's knowledge on farming practices that can improve
 productivity in crop or livestock agriculture, and how farmers can adapt
 their practices to accommodate an ever-changing climate.
@@ -2326,12 +2330,12 @@ add_lot_link(caption = 'Agricultural extension - Soil Management')
 
 df <- data.frame(
   Theme = c("Soil health", "Conservation agriculture", "Soil management"),
-  Content = c("Information sharing on what a soil test is and why it is important to do one e.g. can tell the health of the soil, PH levels, which crops can be grown in your soil and which fertilizer to use. \n\n  How to carry out a soil test. Should do a soil test every 3-5 years.",
-              "A way of farming to keep nutrients and moisture in the soil. Helps control pests and diseases. Minimum tillage, mulching, crop rotation",
-              "The importance of fertilizer to return nutrients to soil.   \n\n Different types of fertilizer and nutrients at different stages of growth.   \n\n Manure - helps soil fertility and improves soil health over time – reducing the need for fertilizer."),
+  Content = c("Information sharing on what a soil test is and why it is important to do one e.g., can tell the health of the soil, pH levels, which crops can be grown in your soil and which fertilizer to use. \n\n  How to carry out a soil test. Should do a soil test every 3-5 years.",
+              "A way of farming to keep nutrients and moisture in the soil. Helps control pests and diseases. Involves minimum tillage, mulching, crop rotation",
+              "Emphasizes the importance of fertilizer to return nutrients to the soil.   \n\n Different types of fertilizer and nutrients at various stages of growth.   \n\n Manure - enhances soil fertility and improves soil health over time – reducing the need for fertilizer."),
   "Disbursement of information" = c("Practical demonstration - how to carry out a crop test.  \n\n Potential to fund soil tests for participants. Cost circa 1000 KSH per test.",
-                                  "Practical demonstration of all 3 activities.",
-                                  "Practical demonstration of fertilizer and manure application. \n\n Possible provision of inputs for 1 season for participants.")) %>% 
+                                  "Practical demonstration of all three activities.",
+                                  "Practical demonstration of fertilizer and manure application. \n\n Possible provision of inputs for one season for participants.")) %>% 
   rename("Disbursement of information" = Disbursement.of.information)
 sea::sea_table(df,
     dark_color = sea_colors("dark_purple"),
@@ -2350,11 +2354,11 @@ add_lot_link(caption = 'Agricultural extension - Maize.')
 
 df <- data.frame(
   "Theme" = c("Planting", "Management", "Pests and diseases", "Storage"),
-  "Content" = c("Informing participants that maize does not grow well in acidic soils. Soil test can determine this. What can be done if soil is acidic e.g. add lime.\n\n Selecting the best maize variety for the area and using certified seeds (disease free and guaranteed to germinate).\n\n Consider planting drought resistant crops too e.g. maize and sorghum.\n\n Preparation of land for planting e.g. minimum tillage, marking planting lines, digging planting holes and manure and fertilizer application.\n\n Plant beans between maize rows to boost soil health.",
-                "Importance of weeding, fertiliser and when do apply, soil testing (to gauge best fertilizer).",
+  "Content" = c("Informing participants that maize does not grow well in acidic soils. A soil test can determine suggestions for remedying acidic soil, such as adding lime.\n\n Selecting the best maize variety for the area and using certified seeds (disease-free and guaranteed to germinate).\n\n Consider planting drought-resistant crops like maize and sorghum.\n\n Preparation of land for planting including minimum tillage, marking planting lines, digging planting holes and applying manure and fertilizer.\n\n Plant beans between maize rows to boost soil health.",
+                "Importance of weeding, fertiliser and when to apply, soil testing (to gauge best fertilizer).",
                 "Plant certified seeds, keep farm weed free and rotate crops each season.\n\n Scout for pests and diseases regularly and treat them as you see them.\n\n How to deal with plants once diseased.",
-                "The importance of harvesting and storing appropriately e.g.  Dry maize thoroughly for 2-3 weeks on tarpaulin in the sun.\n\n If storing in a sisal sack – treat maize first with pesticide (can’t be eaten for 6 months after treating)."),
-  "Disbursement of information" = c("Practical demonstration of how to plant and education session on importance of certified seeds and contingency crops.", "Practical demonstration.", "Education session e.g videos.", "Practical demonstration and education on alternative storage methods e.g. Hermetic bags.\n\n Possible funding of hermetic bags for participants.")
+                "The importance of harvesting and storing appropriately e.g., dry maize thoroughly for 2-3 weeks on a tarpaulin in the sun.\n\n If storing in a sisal sack – treat maize first with pesticide (can not be eaten for 6 months after treating)."),
+  "Disbursement of information" = c("Practical demonstration of planting techniques and an educational session on importance of certified seeds and contingency crops.", "Practical demonstration.", "Educational sessions e.g videos.", "Practical demonstration and education on alternative storage methods e.g., hermetic bags.\n\n Possible funding of hermetic bags for participants.")
 )%>% 
   rename("Disbursement of information" = Disbursement.of.information)
 sea::sea_table(df,
@@ -2374,15 +2378,15 @@ add_lot_link(caption = 'Agricultural extension - Livestock')
 
 df <- data.frame(
   "Theme" = c("Cows – housing", "Cows – feeding", "Cows (dairy) - fodder", "Cows (dairy) – hay", "Cows (dairy) – silage"),
-  "Content" = c("Importance of good housing and what a cow shed should consist of e.g. Sleeping area, walking area, feeding area, milking place and calf pen.\n\n Use concrete flooring.\n\n Clean daily and use disinfectant.",
-                 "Ensure good yields with provision of fodder crops, protein supplements (dairy meal, legume plants) along with vitamins and minerals.\n\n What the average healthy cow needs to produce well.",
+  "Content" = c("Importance of good housing and what a cow shed should consist of e.g., sleeping area, walking area, feeding area, milking place and calf pen.\n\n Use concrete flooring.\n\n Clean daily and use disinfectant.",
+                 "Ensure good yields with provision of fodder crops, protein supplements (dairy meal, legume plants), along with vitamins and minerals.\n\n What the average healthy cow needs to produce optimally.",
                  "What grasses can be planted directly into the field and creating a nursery for other fodder grasses.",
                  "Good for adapting to the changing climate.\n\n How to grow and harvest it.",
                  "Planning for the dry season. How to make it and how long it can be stored for."),
   "Disbursement of information" = c("Practical demonstration.",
-                                     "Education session e.g. talk from experts or videos.",
+                                     "Education session e.g., talks from experts or videos.",
                                      "Practical demonstration.",
-                                     "Practical demonstration how and when to cut grass, drying it and storage.",
+                                     "Practical demonstration on how and when to cut grass, dry it, and store it.",
                                      "Practical demonstration on how to make and store silage.")
 )%>% 
   rename("Disbursement of information" = Disbursement.of.information)
@@ -2404,8 +2408,8 @@ add_lot_link(caption = 'Water Management')
 
 df <- data.frame(
   "Theme" = c("Rainwater harvesting", "Water management"),
-  "Content" = c("How to build a rainwater harvesting system by fixing gutters to roofs and connecting to a tank. \n \n Building a water pan that collects and stores surface run off water for crops.", "Installing a drip irrigation system to save time and money. \n \n How solar power can also be used e.g. solar panels and solar pumps."),
-  "Disbursement of information" = c("Demonstration on how to create gutters on roofs.  \n \n Demonstration of creating a water pan. \n \n Possible funding of materials e.g. water storage tanks, gutters.", "Demonstration of drip irrigation system. \n \n Possible funding of tanks, irrigation materials.")) %>% 
+  "Content" = c("How to build a rainwater harvesting system by fixing gutters on roofs and connecting to a tank. \n \n Building a water pan that collects and stores surface runoff water for crops.", "Installing a drip irrigation system to save time and money. \n \n How solar power can also be used e.g., with solar panels and solar pumps."),
+  "Disbursement of information" = c("Demonstration on how to create gutters on roofs.  \n \n Demonstration of creating a water pan. \n \n Possible funding of materials e.g., water storage tanks, gutters.", "Demonstration of a drip irrigation system. \n \n Possible funding of tanks and irrigation materials.")) %>% 
   rename("Disbursement of information" = Disbursement.of.information)
 
 sea::sea_table(df,
@@ -2426,13 +2430,13 @@ add_lot_link(caption = 'Financial literacy')
 df <- data.frame(
   "Theme" = c("Budgeting", "Loans", "Savings", "Insurance"),
   "Content" = c("What is it? Why it’s important.",
-                 "Why take a loan e.g. farm inputs.  Type of loan e.g. bank/SACCO/Chama.\n\n Paying it back, interest, collateral.",
-                 "Why save e.g. gets your through poor yields, buying inputs etc. Work out how much you can afford to save, where to put your money e.g. a bank etc.",
-                 "Why? Changing weather and unexpected losses. How insurance works etc."),
-  "Disbursement of information" = c("Education session – talk given by an expert or video.",
-                                     "Education session – talk given by an expert or video.",
-                                     "Education session – talk given by an expert or video.",
-                                     "Education session – talk given by an expert or video.")
+                 "Why take a loan e.g., for farm inputs.  Type of loan e.g., bank/SACCO/Chama.\n\n Paying it back, interest and collateral.",
+                 "Why save e.g., gets you through poor yields, buying inputs etc. Work out how much you can afford to save, where to put your money e.g., a bank.",
+                 "Why is it important? Changing weather and unexpected losses. How insurance works etc."),
+  "Disbursement of information" = c("Educational session – talk given by an expert or video.",
+                                     "Educational session – talk given by an expert or video.",
+                                     "Educational session – talk given by an expert or video.",
+                                     "Educational session – talk given by an expert or video.")
 ) %>% 
   rename("Disbursement of information" = Disbursement.of.information)
 
@@ -2471,7 +2475,7 @@ knitr::include_graphics('img/flamingos.png')
 
 # Create a data frame with the provided data
 data <- data.frame(
-  Location = c("Gilgil", "Gilgil", "Gilgil", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "OlJorai", "Soysambu", "Soysambu", "Soysambu", "Soysambu", "Soysambu"),
+  Location = c("Gilgil", "Gilgil", "Gilgil", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Soysambu", "Soysambu", "Soysambu", "Soysambu", "Soysambu"),
   Village = c("Kikopey", "Karura", "Kasarani", "Jogoo", "Mwariki C", "Elmentaita", "Bombo", "Dam", "Old   game", "Miti   Mingi", "Muranga", "Mbaruk Marura", "Pema", "Kiwanja Ndege Mkulima", "Kiambogo", "Kahuho", "Mololine", "Kasambara", "Kiwanja Ndege", "Leleshwa", "Echareria", "Mbaruk", "Oldubey", "Kelelwa", "Central Utut", "Kapkures", "Elmentaita Munyaka", "Lokichogio", "Kapedo", "Central hall", "Kongasis", "Block   D", "Gema", "Kampi   shule", "Kongasis   A", "Kongasis   B", "Kongasis   Centre", "Ngatta", "Kampi   Turkana", "Head office", "Soysambu area", "Melia Nyeupe/borehole/nginegii", "Jolai 1, 2, sleeping warrior, jolai gate", "Congreve area"),
   `HHS` = c("", "", "", "600", "", "200", "250", "150", "", "", "90", "100", "200", "5000", "70", "200", "80", "100", "200", "80", "300", "500", "260", "282", "178", "274", "600", "400", "189", "700", "", "500", "400", "400", "800", "1300", "1200", "250", "117", "92", "183", "28", "50", "11"),
   Selected = c("", "", "", "yes", "", "", "", "", "", "", "yes", "", "yes", "yes", "yes", "", "yes", "", "", "yes", "yes", "yes", "yes", "yes", "yes", "yes", "", "", "yes", "", "", "", "", "", "", "", "", "yes", "yes", "", "yes", "", "yes", "")
@@ -2497,11 +2501,11 @@ sea::sea_table(data,
 
 ## Appendix 2 - Additional data
 
-```{r, fig.cap='Map of second most important household livelihood', fig.align='center', out.width = '90%'}
+```{r, fig.cap='Map of the second most important household livelihood.', fig.align='center', out.width = '90%'}
 knitr::include_graphics('img/map livelihood activity 2.png')
 ```
 
-```{r, fig.cap='Livestock as tropical livestock units, per household', fig.align='center', out.width = '60%'}
+```{r, fig.cap='Livestock as tropical livestock units per household.', fig.align='center', out.width = '60%'}
 by_location <- dclus2 %>% 
   mutate(total_tlu_cat = cut(total_tlu, c(0, 0.01, 1, 5, 10, Inf), include.lowest = TRUE,
                                   labels = c("None", "Less than 1", "1 - 5", "5 - 10", "More than 10"))) %>% 
@@ -2527,11 +2531,11 @@ ggplot(by_location, aes(x = locat, y = proportion, group = total_tlu_cat, fill =
   theme(legend.position = c(0.9, 0.85))
 ```
 
-```{r, fig.cap='Did the household cultivate crops in the last year', fig.align='center', out.width = '60%'}
+```{r, fig.cap='Did the household cultivate crops in the last year?', fig.align='center', out.width = '60%'}
 knitr::include_graphics('img/cultivated crops in this location in the last year.png')
 ```
 
-```{r, fig.cap='No. of acres cultivated by the household in their location, in the last year', fig.align='center', out.width = '60%'}
+```{r, fig.cap='Number of acres cultivated by the household in their location in the last year.', fig.align='center', out.width = '60%'}
 by_location <- dclus2 %>% 
   mutate(crop_acre_cat = cut(crop_acre, c(0, 0.01, 1, 5, 10, Inf), include.lowest = TRUE,
                        labels = c("None", "Less than 1 acre", "1 - 5 acres", "5 - 10 acres", "more than 10 acres"))) %>% 
@@ -2553,7 +2557,7 @@ ggplot(by_location, aes(x = locat, y = proportion, group = crop_acre_cat, fill =
   theme(legend.position = c(0.88, 0.85))
 ```
 
-```{r, fig.cap='Livestock damaged by wildlife in the last year', fig.align='center', out.width = '60%'}
+```{r, fig.cap='Livestock damaged by wildlife in the last year.', fig.align='center', out.width = '60%'}
 by_location <- dclus2 %>% 
   group_by(locat, wild_conf_yn) %>% 
   summarise(
@@ -2575,7 +2579,7 @@ ggplot(by_location, aes(x = locat, y = proportion, group = wild_conf_yn, fill = 
   theme(legend.position = c(0.9, 0.85))
 ```
 
-```{r, fig.cap='Cultivated  crops damaged by wildlife in the last year', fig.align='center', out.width = '60%'}
+```{r, fig.cap='Cultivated  crops damaged by wildlife in the last year.', fig.align='center', out.width = '60%'}
 by_location <- dclus2 %>% 
   group_by(locat, crops_damg_yn) %>% 
   summarise(
@@ -2597,7 +2601,7 @@ ggplot(by_location, aes(x = locat, y = proportion, group = crops_damg_yn, fill =
     theme(legend.position = c(0.88, 0.85))
 ```
 
-```{r, fig.cap='Level of education completed by respondents', fig.align='center', out.width = '60%'}
+```{r, fig.cap='Level of education completed by respondents.', fig.align='center', out.width = '60%'}
 by_location <- dclus2 %>% 
   group_by(locat, edu) %>% 
   summarise(
