@@ -1075,11 +1075,29 @@ impact.**
     social impact by some households (19.3%).** 
 -   Additionally, **Soysambu's contributions to local schools**,
     such as providing school meals for students, school
-    uniforms, desks, and sports equipment, **positively impact educational outcomes and student well-being (20.4%)**.  
+    uniforms, desks, and sports equipment, **positively impact educational outcomes and student well-being (20.4%)**. 
 -   The Conservancy also provides **free guided educational
     trips to community members**, offering valuable learning
     experiences and fostering appreciation for conservation
-    efforts, recognised **by some households (19.4%).**
+    efforts, recognised **by some households (19.4%).**    
+    
+<aside>
+
+<center>
+
+<h3><strong> Lady Ann Delamere Secondary School</strong></h3>
+
+</center>
+
+Lady Ann Delamere Secondary School is a mixed day school in Gilgil sub-county, with 165 students. The school was named after Lady Ann Delamere because it stands on 25 acres of land that was generously donated by the Lord Delamere family.
+
+The Soysambu/Delamere estates have played a crucial role in the school's development. Aside from donating land for the school, they have also gifted the school with two cows, which the school can use for milk production. To help secure the school grounds, the estate also planted a live fence of kei-apple. They also supported the construction of the school’s administration block and classroom by providing the necessary building materials. 
+Environmental education is another area where the estate has made a significant impact. They have organized conservation talks and tree-planting activities, fostering a sense of responsibility towards the environment. They also continue to organize complimentary field trips to Soysambu Conservancy for all students, offering a valuable hands-on learning experience. 
+
+Soysambu Conservancy has also recognized the needs of female students, by conducting health talks and donating feminine napkins. Furthermore, managers from Soysambu/Delamere are expected to join the school's board, to ensure ongoing guidance and support.
+
+</aside>
+    
         
 ### Health
 
@@ -1088,11 +1106,44 @@ impact.**
     screening for women**, and contributed to improved
     healthcare access and outcomes within the community
     **(21.1%).**
+
+<aside>
+
+<center>
+
+<h3><strong> Elmenteita Dispensary</strong></h3>
+
+</center>
+
+Elmenteita Dispensary, located in Gilgil sub-county and bordering the Soysambu Conservancy, serves over 6,000 people from neighboring villages. The dispensary was established with support from the Elmenteita Dispensary Self-Help Group (EDSHG) in 2006, it has since received significant backing from the Soysambu Conservancy and the Constituency Development Fund (C.D.F).
+
+Soysambu Conservancy has made numerous contributions to the dispensary, including equipping the maternity wing, repairing it, and ensuring water supply and electricity. The conservancy provided essential medical equipment and supported the outpatient wing with regular nurse visits and covering utility expenses. Additionally, they supplied apparatus for a medical lab, although the lab remains non-operational due to a lack of technicians.
+
+Beyond medical services, the conservancy has enhanced the facility's environment through tree and flower planting, creating a more welcoming and healthy atmosphere for the community. This support has been instrumental in improving healthcare access and quality for the community.
+
+
+</aside> 
+
 -   Additionally, Soysambu Conservancy **also provided
     anti-rabies vaccinations** for dogs and donkeys,
     demonstrating a commitment to community health, with several
     households noting the impact **(17.9%).**
-        
+
+<aside>
+
+<center>
+
+<h3><strong> Rabies Vaccination</strong></h3>
+
+</center>
+
+Rabies is a fatal zoonotic disease transmitted through animal bites, but it is entirely preventable with effective vaccinations. Recognizing this, Soysambu Conservancy, in partnership with the Ministry of Livestock Gilgil office, conducted a vaccination campaign on May 6th and 7th, 2024, targeting dogs, cats, and donkeys in Mbaruk, Elementaita, and Kiungururia villages. The aim was to vaccinate 400 animals to reduce the risk of rabies transmission to humans.
+
+During the two-day campaign, veterinarians and community representatives not only vaccinated the animals but also raised awareness about rabies among the villagers. The campaign, funded by Soysambu Conservancy, successfully vaccinated 131 dogs, 20 cats, and 39 donkeys in Kiungururia; 85 dogs, 12 cats, and 3 donkeys in Elementaita; and 72 dogs, 7 cats, and 21 donkeys in Mbaruk.
+
+The initiative was well-received by the communities, who appreciated the effort to keep rabies at bay. The campaign's success has set the stage for future vaccination efforts to cover other neighboring communities, ensuring wider protection against rabies.
+
+</aside>         
 ### Water
 -   Soysambu Conservancy **provides water to the community**
     either through trucks or by building water tanks, ensuring
@@ -1217,6 +1268,21 @@ across the four locations. When the survey respondents were **asked about how im
  -  **In Mbaruk location, respondents indicated that the previously mentioned projects had zero impact on their households (mean: 96.9%), with very few attributing medium to high importance to any of them.**
      
  - **In the Ol Jorai location, the influence of Soysambu Conservancy on the community appears notably positive (mean: 64%).** A majority of respondents affirmed the high importance of all the projects to their households, with a significant number rating them as of medium importance (mean: 24%). Fewer respondents indicated zero importance (mean: 0.4%), while a minimal number expressed low importance.
+ 
+ <aside>
+
+<center>
+
+<h3><strong> Flash Floods in Ol Jorai</strong></h3>
+
+</center>
+
+In Ol Jorai village, flash floods triggered by heavy downpours in the Eburru hills caused extensive devastation, resulting in the loss of seven lives and numerous livestock, while tens of houses were swept away. Two days after the disaster, affected families began receiving relief aid, including food and non-food items. Soysambu Conservancy, neighboring the affected area, joined other well-wishers in supporting these families by donating Ksh 70,000.
+
+Soysambu distributed the funds to the families who lost loved ones, with each of the seven families receiving Ksh 10,000. Additionally, smaller amounts were given to families whose houses were partially damaged. The flash floods impacted 69 houses, flooded farms, and affected nearby schools. 
+
+</aside> 
+ 
  
  - **In Soysambu, the findings revealed mixed perceptions among residents of the significance of various projects.** While a considerable number regarded most projects as of high importance, some perceived certain initiatives e.g. sponsorship opportunities for students and community education programs, as having zero impact to their households. However, health projects, infrastructure, schools, and water were nearly all highly impactful. Consequently, the number of respondents expressing medium importance to the projects was minimal.
       
@@ -2242,14 +2308,9 @@ df <- data.frame(
   Category = c(
     "Support for Schools and Education", "Support for Schools and Education", "Support for Schools and Education",
     "Support for Schools and Education", "Support for Schools and Education", "Support for Schools and Education",
-    "Support for Schools and Education", "Support for Schools and Education", "Support for Schools and Education", 
+    "Support for Schools and Education", "Support for Schools and Education", "Support for Schools and Education",
     "Support for Health and hospital facilities", "Support for Health and hospital facilities",
-    "Support for Health and hospital facilities", "Support for Health and hospital facilities", 
-    "Water Provision Services", "Water Provision Services", "Water Provision Services",
-    "Water Provision Services", "Livestock Management", "Livestock Management", "Livestock Management", 
-    "Environment and Sanitation", "Environment and Sanitation",
-    "Environment and Sanitation", "Security", "Security", "Land and Fencing", "Land and Fencing", "Community representation",
-    "Community Representation", "Harassment and Compensation", "Further Suggestions"
+    "Support for Health and hospital facilities", "Support for Health and hospital facilities"
   ),
   Suggestion = c(
     "Allocation of land between Baraka and Soysambu for the construction of a primary school and other public utilities, as well as the relocation of Kiboko Primary School to this land.",
@@ -2259,7 +2320,35 @@ df <- data.frame(
     "Creation of a library in the Mololine area to engage the youth.", "Provision of transportation for children commuting to Kiboko Primary.",
     "Offering scholarships to the brightest students from primary schools across all areas.", "Construction of hospitals and dispensaries, provision of medical equipment, and upgrades to existing healthcare facilities.",
     "Establishment of a maternity wing, staff houses for health workers, and outpatient wings.",
-    "Improvement of health facilities in various locations such as Kampi Turkana and Kapkures.", "Equipping the maternity wing at the Elmentaita dispensary.", "Installation of water infrastructure including boreholes and water towers.", "Construction of dams, boreholes, and water towers.", "Revival of existing boreholes and extension of water infrastructure.",
+    "Improvement of health facilities in various locations such as Kampi Turkana and Kapkures.", "Equipping the maternity wing at the Elmentaita dispensary."
+  )
+)
+
+sea::sea_table(df,
+    dark_color = sea_colors("dark_purple"),
+    pale_color = sea_colors("grey"),
+    third_color = "white") %>%
+  flextable::autofit() %>%
+    flextable::merge_v(j = c("Category"))
+#df %>%
+#  kable() %>%
+#  kable_styling()
+```
+\newpage
+
+```{r}
+add_lot_link(caption = 'Community suggestions for other ways Soysambu could help the community.')
+
+df <- data.frame(
+  Category = c(
+    "Water Provision Services", "Water Provision Services", "Water Provision Services",
+    "Water Provision Services", "Livestock Management", "Livestock Management", "Livestock Management",
+    "Environment and Sanitation", "Environment and Sanitation",
+    "Environment and Sanitation", "Security", "Security", "Land and Fencing", "Land and Fencing", "Community Representation",
+    "Community Representation", "Harassment and Compensation", "Further Suggestions"
+  ),
+  Suggestion = c(
+    "Installation of water infrastructure including boreholes and water towers.", "Construction of dams, boreholes, and water towers.", "Revival of existing boreholes and extension of water infrastructure.",
     "Mitigation of water scarcity through the construction of water pans and pipes.", "Access to grazing fields during dry seasons and provision of grass for livestock.",
     "Education programs on improved livestock management and capacity building.", "Compensation for losses due to wildlife encounters and cessation of harassment by security personnel on herders.",
     "Installation of sanitation points near highways and provision of tree seedlings.",
@@ -2273,8 +2362,8 @@ df <- data.frame(
 sea::sea_table(df,
     dark_color = sea_colors("dark_purple"),
     pale_color = sea_colors("grey"),
-    third_color = "white") %>% 
-  flextable::autofit() %>% 
+    third_color = "white") %>%
+  flextable::autofit() %>%
     flextable::merge_v(j = c("Category"))
 #df %>%
 #  kable() %>%
