@@ -1098,7 +1098,7 @@ Soysambu Conservancy has also recognized the needs of female students, by conduc
 
 </aside>
     
-        
+\newpage        
 ### Health
 
 -   Soysambu Conservancy's support for health projects,
@@ -1146,8 +1146,8 @@ The initiative was well-received by the communities, who appreciated the effort 
 </aside>         
 ### Water
 -   Soysambu Conservancy **provides water to the community**
-    either through trucks or by building water tanks, ensuring
-    access to clean and safe water for local residents, and this
+    by building water tanks, ensuring access to clean and safe 
+    water for local residents, and this
     was noted by some households **(21.2%).**
     
 ### Infrastructure and utilities
@@ -1715,7 +1715,7 @@ year.
 
 `r wrap_columns_elements(c(big_numbers("10%", "Kiptangwanyi"), big_numbers("25%", "Mbaruk"), big_numbers("50%", "Ol Jorai"), big_numbers("0%", "Soysambu")))`
 
-#### Households reporting that `r fontawesome::fa("cow")` crops were damaged by wild animals in the last year.
+#### Households reporting that crops `r fontawesome::fa("seedling")` were damaged by wild animals in the last year.
 
 `r wrap_columns_elements(c(big_numbers("80%", "Kiptangwanyi"), big_numbers("24%", "Mbaruk"), big_numbers("17%", "Ol Jorai"), big_numbers("4%", "Soysambu")))`
 
@@ -2337,7 +2337,7 @@ sea::sea_table(df,
 \newpage
 
 ```{r}
-add_lot_link(caption = 'Community suggestions for other ways Soysambu could help the community.')
+
 
 df <- data.frame(
   Category = c(
@@ -2377,7 +2377,7 @@ sea::sea_table(df,
 In the requests and suggestions from those surveyed and workshop
 participants, there were a number of calls for education programs to
 improve livelihoods. For most households, the principal livelihoods are
-still agriculture based (with casual labour or livestock for some). Soysambu
+still agriculture based (with <i> kibarua</i> or livestock for some). Soysambu
 has already carried out some form of agricultural extension activity
 through the farmer's seminar on livestock production. This could be an
 area that is expanded on to support those in the community who are
