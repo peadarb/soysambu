@@ -349,11 +349,6 @@ those.
     like dams, boreholes, and water towers. Specific locations
     highlighted for improvement included Kiungururia and Echareria.
 
--   **Environmental Conservation:** There were also requests to support
-    the community to plant trees in a number of areas (e.g., Chamuka
-    springs), to install sanitation points, and overall, to continue
-    raising awareness about environmental conservation.
-
 -   **Improved Security:** Although communities living in Soysambu
     conservancy expressed a strong sense of security, most communities
     outside did not, and therefore, there were requests for additional
@@ -361,6 +356,11 @@ those.
     administrative offices for chiefs. There were also some requests for
     electric fences to improve security.
 
+-   **Environmental Conservation:** There were also requests to support
+    the community to plant trees in a number of areas (e.g., Chamuka
+    springs), to install sanitation points, and overall, to continue
+    raising awareness about environmental conservation.
+    
 -   **Land:** Furthermore, there were requests for land, either to
     purchase from Soysambu, or to be provided land to cultivate, or to
     learn about vegetables farming.
@@ -382,10 +382,10 @@ those.
 
 Soysambu Conservancy is located within the Rift Valley System. It covers
 48,000 acres, encompassing the northern and western shores of Lake
-Elementeita. Soysambu Conservancy is renowned for its remarkable
+Elmenteita. Soysambu Conservancy is renowned for its remarkable
 biodiversity, including a population of 170 endangered Nubian giraffes
 and over 450 bird species, notably hosting 28% of the world's Lesser
-flamingo population. Indeed Lake Elmentaita is one of Kenya's Key
+flamingo population. Indeed Lake Elmenteita is one of Kenya's Key
 Biodiversity Areas and RAMSAR sites (a wetland that is of international
 importance under the Ramsar Convention). Its rich wildlife habitat is
 home to buffalo, leopard, hippo, hyena, jackal, eland, zebra, impala,
@@ -512,7 +512,7 @@ systems for at least two years. Furthermore, Soysambu Conservancy
 satisfies the second feasibility criterion, as its managers and other key
 stakeholders can convene for face-to-face meetings at least once during
 the assessment process. Additionally, there is a clearly defined zone
-covering Soysambu and its neighboring communities. Finally, the managers
+covering Soysambu and its neighbouring communities. Finally, the managers
 of Soysambu were willing to implement specific action plans aimed at
 improving social impacts and governance within the conservancy.
 :::
@@ -539,7 +539,7 @@ or neighbouring the conservancy are considered during the SAPA process.
 
 Soysambu Conservancy provided a detailed map delineating its boundaries
 and essential physical features such as roads, rivers, and Lake
-Elementeita. This map also included the locations and boundaries of
+Elmenteita. This map also included the locations and boundaries of
 communities within and surrounding the conservancy.
 
 Following a meeting and exploratory visit with Soysambu management and
@@ -988,7 +988,7 @@ head, but Soysambu had a slightly higher mean number of children.
 Residents surrounding Soysambu Conservancy engage in various
 economic activities, each with distinct needs. To the south,
 adjacent to Soysambu, are pastoralist communities. Along the
-Pipeline-Elmentaita road, there exists a satellite urban settlement
+Pipeline-Elmenteita road, there exists a satellite urban settlement
 area where minimal agriculture is practiced. The northern region
 comprises a mix of satellite urban communities and pastoralists,
 while the area along the Nakuru road towards Gilgil is predominantly
@@ -1049,7 +1049,7 @@ owned assets such as a car, motorbike, television, radio, generator,
 smart phone, water tank, pit latrine, and whether they used M-pesa,
 the construction material of their house, how often they skipped
 meals, how many livestock they had, and how large an area they
-cultivated. Based on a principal component analysis, households were
+cultivated (see Appendix Figure 34). Based on a principal component analysis, households were
 categorised into 5 quintiles, and a map of these is shown in Figure
 5 below, followed by two key variables in understanding household-level 
 wealth, namely how often the household were forced to skip a
@@ -1091,10 +1091,9 @@ impact.**
 
 Lady Ann Delamere Secondary School is a mixed day school in Gilgil sub-county, with 165 students. The school was named after Lady Ann Delamere because it stands on 25 acres of land that was generously donated by the Lord Delamere family.
 
-The Soysambu/Delamere estates have played a crucial role in the school's development. Aside from donating land for the school, they have also gifted the school with two cows, which the school can use for milk production. To help secure the school grounds, the estate also planted a live fence of kei-apple. They also supported the construction of the school’s administration block and classroom by providing the necessary building materials. 
-Environmental education is another area where the estate has made a significant impact. They have organized conservation talks and tree-planting activities, fostering a sense of responsibility towards the environment. They also continue to organize complimentary field trips to Soysambu Conservancy for all students, offering a valuable hands-on learning experience. 
+The Soysambu/Delamere estates continue to play an important role in the school's development, and representatives are active participants in the school's board. Aside from donating land for the school, they also gifted the school with two cows, which the school can use for milk production. To help secure the school grounds, they planted a live fence of kei-apple. They also supported the construction of the school’s administration block and classrooms by providing the necessary building materials. 
 
-Soysambu Conservancy has also recognized the needs of female students, by conducting health talks and donating feminine napkins. Furthermore, managers from Soysambu/Delamere are expected to join the school's board, to ensure ongoing guidance and support.
+Environmental education is another area where the estate has made a significant impact. They organize conservation talks and tree-planting activities. They also organize complimentary field trips to Soysambu Conservancy for all students. Finally, they recognize the specific needs of female students, and provide them with gender specific health talks and donated feminine napkins.
 
 </aside>
     
@@ -1115,11 +1114,11 @@ Soysambu Conservancy has also recognized the needs of female students, by conduc
 
 </center>
 
-Elmenteita Dispensary, located in Gilgil sub-county and bordering the Soysambu Conservancy, serves over 6,000 people from neighboring villages. The dispensary was established with support from the Elmenteita Dispensary Self-Help Group (EDSHG) in 2006, it has since received significant backing from the Soysambu Conservancy and the Constituency Development Fund (C.D.F).
+Elmenteita Dispensary, located in Gilgil sub-county and bordering the Soysambu Conservancy, serves over 6,000 people from neighbouring villages. The dispensary was established with support from the Elmenteita Dispensary Self-Help Group (EDSHG) in 2006, it has since received significant backing from the Soysambu Conservancy and the Constituency Development Fund (C.D.F).
 
-Soysambu Conservancy has made numerous contributions to the dispensary, including equipping the maternity wing, repairing it, and ensuring water supply and electricity. The conservancy provided essential medical equipment and supported the outpatient wing with regular nurse visits and covering utility expenses. Additionally, they supplied apparatus for a medical lab, although the lab remains non-operational due to a lack of technicians.
+Soysambu Conservancy has made a number of contributions to the dispensary, including repairing and equipping the maternity wing, as well as ensuring water supply and electricity. The conservancy provided essential medical equipment, covered utility expenses, and financially supported regular nurse visits in the outpatients wing. Additionally, they supplied apparatus for a medical lab, although the lab remains non-operational due to a lack of technicians.
 
-Beyond medical services, the conservancy has enhanced the facility's environment through tree and flower planting, creating a more welcoming and healthy atmosphere for the community. This support has been instrumental in improving healthcare access and quality for the community.
+Beyond medical services, the conservancy has enhanced the facility's environment through tree and flower planting, creating a more welcoming atmosphere for the community.
 
 
 </aside> 
@@ -1137,11 +1136,11 @@ Beyond medical services, the conservancy has enhanced the facility's environment
 
 </center>
 
-Rabies is a fatal zoonotic disease transmitted through animal bites, but it is entirely preventable with effective vaccinations. Recognizing this, Soysambu Conservancy, in partnership with the Ministry of Livestock Gilgil office, conducted a vaccination campaign on May 6th and 7th, 2024, targeting dogs, cats, and donkeys in Mbaruk, Elementaita, and Kiungururia villages. The aim was to vaccinate 400 animals to reduce the risk of rabies transmission to humans.
+Rabies is a fatal zoonotic disease transmitted through animal bites, but it is entirely preventable with effective vaccinations. Recognizing this, Soysambu Conservancy, in partnership with the Ministry of Livestock Gilgil office, conducted a vaccination campaign on May 6th and 7th, 2024, targeting dogs, cats, and donkeys in Mbaruk, Elmenteita, and Kiungururia villages. The aim was to vaccinate 400 animals to reduce the risk of rabies transmission to humans.
 
-During the two-day campaign, veterinarians and community representatives not only vaccinated the animals but also raised awareness about rabies among the villagers. The campaign, funded by Soysambu Conservancy, successfully vaccinated 131 dogs, 20 cats, and 39 donkeys in Kiungururia; 85 dogs, 12 cats, and 3 donkeys in Elementaita; and 72 dogs, 7 cats, and 21 donkeys in Mbaruk.
+During the two-day campaign, veterinarians and community representatives not only vaccinated the animals but also raised awareness about rabies among the villagers. The campaign, funded by Soysambu Conservancy, successfully vaccinated 131 dogs, 20 cats, and 39 donkeys in Kiungururia; 85 dogs, 12 cats, and 3 donkeys in Elmenteita; and 72 dogs, 7 cats, and 21 donkeys in Mbaruk.
 
-The initiative was well-received by the communities, who appreciated the effort to keep rabies at bay. The campaign's success has set the stage for future vaccination efforts to cover other neighboring communities, ensuring wider protection against rabies.
+The initiative was well-received by the communities, who appreciated the effort to keep rabies at bay. The campaign's success has set the stage for future vaccination efforts to cover other neighbouring communities, ensuring wider protection against rabies.
 
 </aside>         
 ### Water
@@ -1169,8 +1168,7 @@ The initiative was well-received by the communities, who appreciated the effort 
     conservation initiatives**, such as tree planting,
     contributing to the preservation of natural resources and
     biodiversity **(21.3%)**.
--   Moreover, Soysambu shows a dedication to employee well-being and community
-    assistance **(21.9%)** by **supporting bush-clearing workers with free firewood**.
+-   Moreover, **(21.9%)** of households noted they felt support when they were provided with **free firewood while bush-clearing**.
         
 ```{r, fig.cap='Overall positive impacts across all communities.', fig.align='center', out.width = '100%'}
 all_by_location <- data.frame()
@@ -1237,7 +1235,7 @@ variables <- c(
         value == "educate_comm" ~ "Education (e.g. livestock production, health talks, waste management)",
         value == "sponsor" ~ "Sponsorship opportunities for students",
         value == "educatn_trips" ~ "Guided educational trips to Soysambu",
-        value == "envt_conservatn" ~ "Assist in environmental conservation e.g tree planting",
+        value == "envt_conservatn" ~ "Assist in environmental conservation e.g. tree planting",
         value == "offer_firewd" ~ "Offer firewood to bush-clearing workers"
       ))
 
@@ -1263,7 +1261,7 @@ variables <- c(
 The findings of the household survey reveal diverse perspectives
 across the four locations. When the survey respondents were **asked about how important projects previously implemented by Soysambu were to their households.**
  
- - **The majority of respondents from Kiptangwanyi location suggested Soysambu had a low (mean: 43%) or zero (mean: 52%), indicating some impact of Sosyambu, but little major impact across all categories**. A significant portion expressed low importance, while only a few acknowledged medium to high importance, particularly concerning water provision and infrastructure development.
+ - **The majority of respondents from Kiptangwanyi location suggested Soysambu had a low (mean: 43%) or zero (mean: 52%) impact, indicating some impact of Soysambu, but little major impact across all categories**. A significant portion expressed low importance, while only a few acknowledged medium to high importance, particularly concerning water provision and infrastructure development.
      
  -  **In Mbaruk location, respondents indicated that the previously mentioned projects had zero impact on their households (mean: 96.9%), with very few attributing medium to high importance to any of them.**
      
@@ -1277,9 +1275,7 @@ across the four locations. When the survey respondents were **asked about how im
 
 </center>
 
-In Ol Jorai village, flash floods triggered by heavy downpours in the Eburru hills caused extensive devastation, resulting in the loss of seven lives and numerous livestock, while tens of houses were swept away. Two days after the disaster, affected families began receiving relief aid, including food and non-food items. Soysambu Conservancy, neighboring the affected area, joined other well-wishers in supporting these families by donating Ksh 70,000.
-
-Soysambu distributed the funds to the families who lost loved ones, with each of the seven families receiving Ksh 10,000. Additionally, smaller amounts were given to families whose houses were partially damaged. The flash floods impacted 69 houses, flooded farms, and affected nearby schools. 
+In Ol Jorai village, flash floods triggered by heavy downpours in the Eburru hills caused extensive devastation, resulting in the loss of seven lives and numerous livestock, while 69 houses were destroyed. Two days after the disaster, affected families began receiving relief aid, including food and non-food items. Soysambu Conservancy contributed to these efforts by donating Ksh 10,000 to each of families who lost loved ones. Additionally, smaller amounts were given to families whose houses were partially damaged. 
 
 </aside> 
  
@@ -1362,7 +1358,7 @@ Soysambu distributed the funds to the families who lost loved ones, with each of
           value == "educate_comm" ~ "Education (e.g. livestock production, health talks, waste management)",
           value == "sponsor" ~ "Sponsorship opportunities for students",
           value == "educatn_trips" ~ "Guided educational trips to Soysambu",
-          value == "envt_conservatn" ~ "Assist in environmental conservation e.g tree planting",
+          value == "envt_conservatn" ~ "Assist in environmental conservation e.g. tree planting",
           value == "offer_firewd" ~ "Offer firewood to bush-clearing workers"
         ))
       
@@ -1541,7 +1537,7 @@ all_by_location <- all_by_location %>%
     value == "soys_appreciate" ~ "Lack of appreciation when Soysambu receive help from community",
     value == "involved_projects" ~ "Community are not involved in development projects",
     value == "priority_employ" ~ "Community not prioritised in employment in Soysambu",
-    value == "access_restrictn" ~ "Restriction on acccess to public utilities (e.g.roads)",
+    value == "access_restrictn" ~ "Restriction on access to public utilities (e.g. roads)",
     value == "compensation_wild" ~ "No KWS compensation for damages by wildlife",
     value == "conflict_wild" ~ "Conflict with wildlife from Soysambu",
     value == "transmn_diseases" ~ "Transmission of disease from wildlife and livestock in Soysambu"
@@ -1568,9 +1564,9 @@ Considerable differences in perceived impact exist between locations.
 
 - **In Ol Jorai**,  findings suggest that respondents considered nearly all of the highlighted negative impacts as of **high importance (mean: 88%)**, implying a detrimental effect on their household well-being. Fewer respondents felt that the impacts were of medium importance, while a number of them feel that some impacts were of zero importance, for example, conflict with wildlife, little grazing access to Soysambu and community not being prioritised in employment by Soysambu.
 
-- Opinions among respondents in **Kiptangwanyi** location were varied and **slighlty lower (mean: 70%)** when it came to negative impacts. A significant majority of respondents highlighted that all negative impacts were of high importance and thus had a lot of impact on their household well-being, except for the restriction of access to public utilities, where most respondents expressed a perception of zero importance. 
+- Opinions among respondents in **Kiptangwanyi** location were varied and **slightly lower (mean: 70%)** when it came to negative impacts. A significant majority of respondents highlighted that all negative impacts were of high importance and thus were having an impact on their household well-being, except for the restriction of access to public utilities, where most respondents expressed a perception of zero importance. 
 
-- **In Mbaruk**, negative aspects of Soysambu were the least reported **(mean: 60%)**. There was little negative impact reported around access to roads and access for cutting of trees. 
+- **In Mbaruk**, negative aspects of Soysambu were reported slightly less often **(mean: 60%)**. A lack of community involvement in development projects and the community not being prioritised in employment in Soysambu were rated highest in terms of negative impacts. However, there was little negative impact reported around access to roads and access for cutting of trees. 
 
 - **In Soysambu**, negative aspects of the conservancy were mixed, with almost no households feeling an impact of restrictions on roads or tree cutting.  However, there was considerable negative impact reported from conflict with wildlife from Soysambu, and lack of KWS compensation. They also felt they are not involved in development projects or employment opportunities. 
 
@@ -1988,7 +1984,7 @@ Conversely, a few respondents in Kiptangwanyi and Mbaruk, as well as most in Ol 
 agreed with the statement. When it came to the community's perceived right to harvest firewood, respondents in Soysambu felt that they had the right to harvest firewood.
 
 There were mixed responses in all other locations regarding law enforcement staff potentially violating the law or
-local people's rights. The majority of respondents from Kiptangwanyi, Ol Jorai, and Soysambu disagreed. This result counters to some of the claims that were made in the open ended questions (see the section in "From assessment to action" below).
+local people's rights. The majority of respondents from Kiptangwanyi, Ol Jorai, and Soysambu disagreed. This result is slightly different to claims that were made in the open ended questions (see the section in "From assessment to action" below).
 
 Nevertheless, in Mbaruk, the perception was different, as most respondents agreed that there were some violations of their
 rights.
@@ -2091,7 +2087,7 @@ staff housing at the Ol Jorai health center, were highlighted.
 - While there were no specific requests from respondents in Kiptangwanyi
 during the survey, during the stakeholder workshops, participants
 emphasized the importance of equipping the maternity wing at the
-Elmentaita dispensary in Elmentaita village.
+Elmenteita dispensary in Elmenteita village.
 
 **Action: Develop a clear strategy for engaging with health clinics, dispensaries, and schools, including infrastructure development and support for health workers. CHASE Africa is one of the leading NGOs in the region, working with conservation practitioners to improve the outcomes of health care in conservation landscapes.**
 
@@ -2130,7 +2126,7 @@ address water challenges effectively.
 - Overall, the stakeholder workshops served to emphasize the requests for
 water distribution infrastructure (e.g., water points at Mwariki C, water
 pipes in Jogoo village), a mega-dam at Soysambu to help harvest water
-heading to Elmentaita around Maisha Poa area, a water pan in Kampi
+heading to Elmenteita around Maisha Poa area, a water pan in Kampi
 Turkana, and a borehole in Ngatta.
 
 **Action: Develop a clear strategy for water provision, accounting for the supply of water, the trade-offs for livestock and wildlife management, and the roles of WRUA. A consultant, such as Sean Avery, would provide concrete steps forward.**
@@ -2273,7 +2269,7 @@ community.
 
 **Action: Creation of a community committee, with fair representation of all communities and their membership, including youth and women, and participation in community project and program development could be an important next step.**
 
-## Harrassment and compensation
+## Harassment and compensation
 
 In Ol Jorai, some respondents highlighted instances where individuals
 gathering firewood experienced perceived harassment. Additionally, there
@@ -2281,9 +2277,9 @@ were reports of individuals feeling harassed during law enforcement
 activities. Concerns were also expressed regarding perceived delays or
 lack of compensation from the Kenya Wildlife Service (KWS) for damage
 caused by wildlife to crops and livestock. These issues were not
-reported in other surveyed areas. 
+reported in other surveyed areas. After these issues were raised, Soysambu conducted a review, re-fresher training in law enforcement, and updated their internal policies.
 
-**Action: It will be important for Soysambu to thoroughly investigate these reported incidents to ensure the well-being and safety of community members. This includes developing and implementing policies.**
+**Action: Soysambu will investigate all reported incidents to ensure the well-being and safety of community members.**
 
 ## Further suggestions
 
@@ -2320,7 +2316,7 @@ df <- data.frame(
     "Creation of a library in the Mololine area to engage the youth.", "Provision of transportation for children commuting to Kiboko Primary.",
     "Offering scholarships to the brightest students from primary schools across all areas.", "Construction of hospitals and dispensaries, provision of medical equipment, and upgrades to existing healthcare facilities.",
     "Establishment of a maternity wing, staff houses for health workers, and outpatient wings.",
-    "Improvement of health facilities in various locations such as Kampi Turkana and Kapkures.", "Equipping the maternity wing at the Elmentaita dispensary."
+    "Improvement of health facilities in various locations such as Kampi Turkana and Kapkures.", "Equipping the maternity wing at the Elmenteita dispensary."
   )
 )
 
@@ -2447,7 +2443,7 @@ df <- data.frame(
                 "Importance of weeding, fertiliser and when to apply, soil testing (to gauge best fertilizer).",
                 "Plant certified seeds, keep farm weed free and rotate crops each season.\n\n Scout for pests and diseases regularly and treat them as you see them.\n\n How to deal with plants once diseased.",
                 "The importance of harvesting and storing appropriately e.g., dry maize thoroughly for 2-3 weeks on a tarpaulin in the sun.\n\n If storing in a sisal sack – treat maize first with pesticide (can not be eaten for 6 months after treating)."),
-  "Disbursement of information" = c("Practical demonstration of planting techniques and an educational session on importance of certified seeds and contingency crops.", "Practical demonstration.", "Educational sessions e.g videos.", "Practical demonstration and education on alternative storage methods e.g., hermetic bags.\n\n Possible funding of hermetic bags for participants.")
+  "Disbursement of information" = c("Practical demonstration of planting techniques and an educational session on importance of certified seeds and contingency crops.", "Practical demonstration.", "Educational sessions e.g. videos.", "Practical demonstration and education on alternative storage methods e.g., hermetic bags.\n\n Possible funding of hermetic bags for participants.")
 )%>% 
   rename("Disbursement of information" = Disbursement.of.information)
 sea::sea_table(df,
@@ -2565,7 +2561,7 @@ knitr::include_graphics('img/flamingos.png')
 # Create a data frame with the provided data
 data <- data.frame(
   Location = c("Gilgil", "Gilgil", "Gilgil", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Kiptangwanyi", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Mbaruk", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Ol Jorai", "Soysambu", "Soysambu", "Soysambu", "Soysambu", "Soysambu"),
-  Village = c("Kikopey", "Karura", "Kasarani", "Jogoo", "Mwariki C", "Elmentaita", "Bombo", "Dam", "Old   game", "Miti   Mingi", "Muranga", "Mbaruk Marura", "Pema", "Kiwanja Ndege Mkulima", "Kiambogo", "Kahuho", "Mololine", "Kasambara", "Kiwanja Ndege", "Leleshwa", "Echareria", "Mbaruk", "Oldubey", "Kelelwa", "Central Utut", "Kapkures", "Elmentaita Munyaka", "Lokichogio", "Kapedo", "Central hall", "Kongasis", "Block   D", "Gema", "Kampi   shule", "Kongasis   A", "Kongasis   B", "Kongasis   Centre", "Ngatta", "Kampi   Turkana", "Head office", "Soysambu area", "Melia Nyeupe/borehole/nginegii", "Jolai 1, 2, sleeping warrior, jolai gate", "Congreve area"),
+  Village = c("Kikopey", "Karura", "Kasarani", "Jogoo", "Mwariki C", "Elmenteita", "Bombo", "Dam", "Old   game", "Miti   Mingi", "Muranga", "Mbaruk Marura", "Pema", "Kiwanja Ndege Mkulima", "Kiambogo", "Kahuho", "Mololine", "Kasambara", "Kiwanja Ndege", "Leleshwa", "Echareria", "Mbaruk", "Oldubey", "Kelelwa", "Central Utut", "Kapkures", "Elmenteita Munyaka", "Lokichogio", "Kapedo", "Central hall", "Kongasis", "Block   D", "Gema", "Kampi   shule", "Kongasis   A", "Kongasis   B", "Kongasis   Centre", "Ngatta", "Kampi   Turkana", "Head office", "Soysambu area", "Melia Nyeupe/borehole/nginegii", "Jolai 1, 2, sleeping warrior, jolai gate", "Congreve area"),
   `HHS` = c("", "", "", "600", "", "200", "250", "150", "", "", "90", "100", "200", "5000", "70", "200", "80", "100", "200", "80", "300", "500", "260", "282", "178", "274", "600", "400", "189", "700", "", "500", "400", "400", "800", "1300", "1200", "250", "117", "92", "183", "28", "50", "11"),
   Selected = c("", "", "", "yes", "", "", "", "", "", "", "yes", "", "yes", "yes", "yes", "", "yes", "", "", "yes", "yes", "yes", "yes", "yes", "yes", "yes", "", "", "yes", "", "", "", "", "", "", "", "", "yes", "yes", "", "yes", "", "yes", "")
 )
@@ -2709,5 +2705,66 @@ ggplot(by_location, aes(x = locat, y = proportion, group = edu, fill = edu)) +
 theme_sea() + 
   scale_fill_sea_discrete(colors = c("rust_orange", "dark_purple", "gunmetal","pale_green","dark_green")) +
   theme(legend.position = c(0.78, 0.85))
+```
+
+
+```{r, fig.cap='Box plots to show the proportion of ownership for a subset of assets, by location. Red crosses represent the mean value and blue crosses represent the median. ', fig.align='center', out.width = '100%'}
+hhs_pca_eda <- hhs_cleaned %>% 
+  select(dnum, snum, fpc1, fpc2, stype, inter_phon, norm_phon, radio, torch,  tv, elec, gen, 
+         solar_elec, piki, vehicle, table, sofa, pit_lat, tank, mpesa,skip_meal, wall,fuel,
+         total_tlu, crop_acre, "_index", locat) %>% 
+  mutate(inter_phon = ifelse(inter_phon == "Yes", 1, 0),
+         norm_phon = ifelse(norm_phon == "Yes", 1, 0),
+         radio = ifelse(radio == "Yes", 1, 0),
+         torch = ifelse(torch == "Yes", 1, 0),
+         tv = ifelse(tv == "Yes", 1, 0),
+         elec = ifelse(elec == "Yes", 1, 0),
+         gen = ifelse(gen == "Yes", 1, 0),
+         solar_elec = ifelse(solar_elec == "Yes", 1, 0),
+         piki = ifelse(piki == "Yes", 1, 0),
+         vehicle = ifelse(vehicle == "Yes", 1, 0),
+         table = ifelse(table == "Yes", 1, 0),
+         sofa = ifelse(sofa == "Yes", 1, 0),
+         pit_lat = ifelse(pit_lat == "Yes", 1, 0),
+         tank = ifelse(tank == "Yes", 1, 0),
+         mpesa = ifelse(mpesa == "Yes", 1, 0),
+         gas_fuel = ifelse(fuel == "Gas", 1, 0),
+         skip_meal = ifelse(skip_meal == "Never", 1, 0),
+         brick_cement_wall = ifelse(wall == "Bricks (or mud bricks) with Cement (Durable)", 1, 0),
+         crop_acre= ifelse(crop_acre > 1, 1, 0),
+         total_tlu = coalesce(total_tlu, 0),
+         total_tlu= ifelse(total_tlu > 1, 1, 0),
+         any_elec = ifelse(elec == 1 | solar_elec == 1, 1, 0)) %>% 
+  select(-c(elec, solar_elec, wall, fuel)) %>%
+  rename("Water tank" = tank, "Radio" = radio, "Livestock no." = total_tlu, "Crop acreage" = crop_acre, "Torch" = torch, "Smart phone" = inter_phon, "Motorbike" = piki, "TV" = tv, "Electricity" = any_elec)
+
+hhs_pca_eda_subset_all <- hhs_pca_eda %>% 
+  select(!c(dnum, snum, fpc1, fpc2, stype, "_index", sofa, gas_fuel, gen, pit_lat, mpesa, table, vehicle, brick_cement_wall, norm_phon, skip_meal)) %>%
+  na.omit()
+
+hhs_pca_eda_subset_all$locat <- factor(hhs_pca_eda_subset_all$locat)
+
+create_plot <- function(data, locat_value) {
+  filtered_data <- data %>% filter(locat == locat_value) %>% na.omit()
+  clean_data <- na.omit(stack(filtered_data))
+  
+  ggplot(clean_data, aes(x = reorder(ind, values, FUN = mean), y = values)) + 
+    geom_boxplot(fill = "#90918E") +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+    stat_summary(fun = mean, geom = "point", size = 5, color = "red", shape = 3) +
+    stat_summary(fun = median, geom = "point", size = 5, color = "blue", shape = 3) +
+    guides(fill = guide_legend(title = NULL)) + 
+    labs(x = "", y = "Proportion", title = paste(locat_value)) +
+    scale_y_continuous(limits = c(min(clean_data$values, na.rm = TRUE), max(clean_data$values, na.rm = TRUE))) + 
+    theme_sea() +  
+    theme(legend.position = "none", axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+}
+
+locat_values <- unique(hhs_pca_eda_subset_all$locat)
+
+plots <- lapply(locat_values, function(loc) create_plot(hhs_pca_eda_subset_all, loc))
+
+combined_plot <- cowplot::plot_grid(plotlist = plots, ncol = 2)
+print(combined_plot)
 ```
 :::
