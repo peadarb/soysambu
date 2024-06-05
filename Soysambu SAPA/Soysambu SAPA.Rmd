@@ -735,12 +735,12 @@ questions, the information the survey was to capture, and why this was
 important. The enumerators were trained in the use of ODK and Kobo
 Toolbox. The training also included a review of survey and research
 ethics, and appropriate behaviour before and after the survey.
+
+The enumerators conducted practice interviews, focused on comprehension
+and questionnaire adjustments.
 :::
 
 ::: {.column-50}
-The enumerators conducted practice interviews, focused on comprehension
-and questionnaire adjustments.
-
 Following successful completion of the training, the enumerators were
 equipped with smartphones, battery banks, notebooks, and backpacks. They
 were clearly instructed on the sampling approach, with each enumerator
@@ -766,11 +766,12 @@ From Kiptangwani, only Jogoo village was selected.
 
 The Soysambu location was made up of 4 settlements at Jolai 1 & 2, Sleeping Warrior Gate, Jolai Gate, and Soysambu Area.
 
+:::
+:::
+
 Each survey began with an explanation of the purpose of the survey, how
 data would be used, confidentiality measures, the participant's rights,
 and sought their consent before proceeding.
-:::
-:::
 
 Following each survey, the respondent was given a small token of
 appreciation in the form of sugar.
@@ -2198,6 +2199,7 @@ promote environmental sustainability.
 
 **Action: Select key activities from the list provided and begin implementation. **
 
+\newpage
 ## Security
 
 
@@ -2241,6 +2243,7 @@ cultivation purposes, setting aside land for vegetable farming, and
 advocating for the installation of electric fences around residential
 areas to bolster security measures.
 
+\newpage
 ## Community representation
 
 Based on the governance section, most people across all locations
@@ -2281,6 +2284,7 @@ reported in other surveyed areas. After these issues were raised, Soysambu condu
 
 **Action: Soysambu will investigate all reported incidents to ensure the well-being and safety of community members.**
 
+\newpage
 ## Further suggestions
 
 Less frequently mentioned suggestions, or those posing potential
